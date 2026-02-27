@@ -1,3 +1,12 @@
+# UIUX
+
+## steps to init
+1. npm i 
+2. npm run dev
+3. localhost:3000
+
+## notes
+
 npx create-next-app@latest .
 npx shadcn@latest init
 
