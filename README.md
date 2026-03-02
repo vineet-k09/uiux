@@ -4,7 +4,7 @@
 1. npm i 
 2. npm run dev
 3. localhost:3000
-
+gggg
 ## notes
 
 npx create-next-app@latest .
