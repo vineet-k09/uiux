@@ -1,11 +1,9 @@
-'use client';
-
-import React, { useLayoutEffect, useRef } from 'react';
+import { useLayoutEffect, useRef } from 'react';
 import Image from 'next/image';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-export default function HomeHeader() {
+export default function Intro() {
   const background = useRef<HTMLDivElement | null>(null);
   const introImage = useRef<HTMLDivElement | null>(null);
 
@@ -49,7 +47,7 @@ export default function HomeHeader() {
         {/* Intro Image */}
         <div
           ref={introImage}
-          className="absolute w-[350px] h-[475px] brightness-[0.7]"
+          className="absolute w-87.5 h-118.75 brightness-[0.7]"
         >
           <Image
             src="/landing_centre2.png"
@@ -61,7 +59,7 @@ export default function HomeHeader() {
         </div>
 
         {/* Text */}
-        <h1 className="z-[3] text-white text-[3vw] text-center whitespace-nowrap">
+        <h1 className="z-3 text-white text-[3vw] text-center whitespace-nowrap">
           Building Smarter Solutions for a Digital-First World
         </h1>
 

@@ -55,7 +55,7 @@ export default function Projects() {
         <div ref={container} className="relative text-white mt-[25vh] p-[10%]">
 
             {/* Description Section */}
-            <div className="flex h-[700px] justify-between gap-[5%]">
+            <div className="flex h-175 justify-between gap-[5%]">
 
                 {/* Pinned Image */}
                 <div
@@ -90,14 +90,14 @@ export default function Projects() {
             </div>
 
             {/* Project List */}
-            <div className="flex flex-col mt-[200px]">
+            <div className="flex flex-col mt-50">
                 {projects.map((project, index) => (
                     <div
                         key={index}
                         onMouseOver={() => setSelectedProject(index)}
                         className="uppercase text-[3vw] border-b border-white flex justify-end"
                     >
-                        <h2 className="mt-[40px] mb-[20px] cursor-default">
+                        <h2 className="mt-10 mb-5 cursor-default">
                             {project.title}
                         </h2>
                     </div>

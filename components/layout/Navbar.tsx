@@ -5,10 +5,10 @@ import globals from "../../data/globals.json"
 
 export default function Navbar() {
     return (
-        <nav className="flex flex-row justify-between pt-2 px-4">
+        <nav className="flex flex-row justify-between pt-2 px-4 ">
              {/* left */}
             <div className="w-[33%] ">
-                <Link href={'/'} className="grid  items-baseline">
+                <Link href={'/'} className="grid items-baseline">
                 <div className="col-1">
                     <VIVA /> 
                 </div>

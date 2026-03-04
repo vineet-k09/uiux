@@ -1,6 +1,3 @@
-
-'use client';
-
 import { useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -75,25 +72,25 @@ export default function ParallaxCards() {
       {stickyCardsData.map((card) => (
         <section
           key={card.index}
-          className="sticky-card relative w-full h-[100svh] p-6 flex gap-12 bg-white will-change-transform max-[1000px]:flex-col max-[1000px]:gap-0 "
+          className="sticky-card relative w-full h-svh p-6 flex gap-12 bg-white will-change-transform max-[1000px]:flex-col max-[1000px]:gap-0 "
         >
           {/* Overlay */}
-          <div className="absolute inset-0 bg-black/50 opacity-[var(--after-opacity)] transition-opacity duration-100 pointer-events-none z-20" />
+          <div className="absolute inset-0 bg-black/50 opacity-(--after-opacity)] transition-opacity duration-100 pointer-events-none z-20" />
 
           {/* Index */}
-          <div className="flex-[2] text-2xl font-medium relative z-50 text-black">
+          <div className="flex-2 text-2xl font-medium relative z-50 text-black">
             {card.index}
           </div>
 
           {/* Content */}
-          <div className="flex-[4] pt-6">
+          <div className="flex-4 pt-6">
             <div className="w-3/4 flex flex-col gap-6 max-[1000px]:w-full text-black">
               <h2 className="text-4xl font-semibold  relative z-50">
                 {card.title}
               </h2>
 
               <div className="flex gap-6 max-[1000px]:flex-col max-[1000px]:gap-2">
-                <p className="flex-[4] text-base leading-relaxed relative z-50">
+                <p className="flex-4 text-base leading-relaxed relative z-50">
                   {card.description}
                 </p>
               </div>
@@ -101,8 +98,8 @@ export default function ParallaxCards() {
           </div>
 
           {/* Image */}
-          <div className="relative flex-[4]">
-            <div className="aspect-[5/3] relative">
+          <div className="relative flex-4">
+            <div className="aspect-5/3 relative">
               <Image
                 src={card.image}
                 alt={card.title}
