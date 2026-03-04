@@ -1,19 +1,12 @@
 import React, { useLayoutEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-const phrases = [
-  "We help businesses ",
-  "streamline operations, scale faster,",
-  " and make data-driven decisions  ",
-  "through innovative technology",
-  "and thoughtful design."
-];
+import globals from "../../../data/globals.json"
 
 export default function Description() {
   return (
     <div className="relative text-white text-[3vw] uppercase mt-[30vw] ml-[10vw]">
-      {phrases.map((phrase, index) => (
+      {globals.phrases.map((phrase, index) => (
         <AnimatedText key={index}>{phrase}</AnimatedText>
       ))}
     </div>

@@ -3,35 +3,12 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 import Image from 'next/image';
+import globals from "../../../data/globals.json"
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function ParallaxCards() {
-  const container = useRef<HTMLDivElement | null>(null);
-
-  const stickyCardsData = [
-    {
-      index: '01',
-      title: 'What is Big brain department',
-      image: '/sticky-cards/card_1.png',
-      description:
-        'Every element is built to snap into place. We design modular systems where clarity, structure, and reuse come first—no clutter, no excess.',
-    },
-    {
-      index: '02',
-      title: 'Who we serve',
-      image: '/sticky-cards/card_2.png',
-      description:
-        'From soft gradients to hard edges, our design language draws from real-world materials—elevating interfaces that feel both digital and tangible.',
-    },
-    {
-      index: '03',
-      title: 'How we work',
-      image: '/sticky-cards/card_3.png',
-      description:
-        'Details matter. We work with intention—aligning pixels, calibrating contrast, and obsessing over every edge until it just feels right.',
-    }
-  ];
+  const container = useRef<HTMLDivElement | null>(null); 
 
   useGSAP(
     () => {
@@ -69,7 +46,7 @@ export default function ParallaxCards() {
 
   return (
     <main ref={container}>
-      {stickyCardsData.map((card) => (
+      {globals.stickyCardsData.map((card) => (
         <section
           key={card.index}
           className="sticky-card relative w-full h-svh p-6 flex gap-12 bg-white will-change-transform max-[1000px]:flex-col max-[1000px]:gap-0 "

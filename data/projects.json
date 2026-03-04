@@ -1,0 +1,25 @@
+{ "projects":[
+    { "title": "Salar de Atacama", "src": "salar_de_atacama.jpg" },
+    { "title": "Valle de la luna", "src": "valle_de_la_muerte.jpeg" },
+    { "title": "Miscanti Lake", "src": "miscani_lake.jpeg" },
+    { "title": "Miniques Lagoons", "src": "miniques_lagoon.jpg" }
+],
+"cards": [
+    {
+        "title": "Innovation First",
+        "desc": "We continuously explore new technologies to build smarter, faster, and future-ready solutions."
+    },
+    {
+        "title": "User-Centered Design",
+        "desc": "Every product is crafted with real users in mind, ensuring intuitive experiences and lasting impact."
+    },
+    {
+        "title": "Scalable Solutions",
+        "desc": "Our systems are designed to grow with your business, handling complexity without compromising performance."
+    },
+    {
+        "title": "Trust & Transparency",
+        "desc": "We believe in clear communication, reliable delivery, and building long-term partnerships."
+    }
+]
+}

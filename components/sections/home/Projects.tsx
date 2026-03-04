@@ -4,31 +4,8 @@ import React, { useState, useLayoutEffect, useRef } from 'react';
 import Image from 'next/image';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import projects from '@/data/projects.json'
 
-const projects = [
-    { title: 'Salar de Atacama', src: 'salar_de_atacama.jpg' },
-    { title: 'Valle de la luna', src: 'valle_de_la_muerte.jpeg' },
-    { title: 'Miscanti Lake', src: 'miscani_lake.jpeg' },
-    { title: 'Miniques Lagoons', src: 'miniques_lagoon.jpg' },
-];
-const cards = [
-    {
-        title: 'Innovation First',
-        desc: 'We continuously explore new technologies to build smarter, faster, and future-ready solutions.'
-    },
-    {
-        title: 'User-Centered Design',
-        desc: 'Every product is crafted with real users in mind, ensuring intuitive experiences and lasting impact.'
-    },
-    {
-        title: 'Scalable Solutions',
-        desc: 'Our systems are designed to grow with your business, handling complexity without compromising performance.'
-    },
-    {
-        title: 'Trust & Transparency',
-        desc: 'We believe in clear communication, reliable delivery, and building long-term partnerships.'
-    }
-];
 export default function Projects() {
     const [selectedProject, setSelectedProject] = useState(0);
     const container = useRef<HTMLDivElement | null>(null);
@@ -72,7 +49,7 @@ export default function Projects() {
                 </div>
 
                 <div className="grid h-full w-[60%] grid-cols-2 grid-rows-2 gap-[3vw]">
-                    {cards.map((card, index) => (
+                    {projects.cards.map((card, index) => (
                         <div
                             key={index}
                             className="flex flex-col justify-between border border-white/30 bg-white/5 p-[2vw] backdrop-blur-md transition-all duration-300 hover:-translate-y-2 hover:border-white/60"
@@ -91,7 +68,7 @@ export default function Projects() {
 
             {/* Project List */}
             <div className="flex flex-col mt-50">
-                {projects.map((project, index) => (
+                {projects.projects.map((project, index) => (
                     <div
                         key={index}
                         onMouseOver={() => setSelectedProject(index)}

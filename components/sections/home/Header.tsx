@@ -2,6 +2,7 @@ import { useLayoutEffect, useRef } from 'react';
 import Image from 'next/image';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import globals from '@/data/globals.json'
 
 export default function Intro() {
   const background = useRef<HTMLDivElement | null>(null);
@@ -60,7 +61,7 @@ export default function Intro() {
 
         {/* Text */}
         <h1 className="z-3 text-white text-[3vw] text-center whitespace-nowrap">
-          Building Smarter Solutions for a Digital-First World
+          {globals.IntroText}
         </h1>
 
       </div>
