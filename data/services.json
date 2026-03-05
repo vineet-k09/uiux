@@ -1,0 +1,327 @@
+{
+  "domains": [
+    {
+      "id": "customer-care",
+      "name": "Customer Care",
+      "description": "Customer care services focus on improving user satisfaction through responsive support, automated assistance, and intelligent issue resolution systems.",
+      "services": [
+        {
+          "id": "ai-chat-support",
+          "name": "AI Chat Support",
+          "description": "Automated conversational agents that assist customers with queries, troubleshooting, and service navigation in real-time.",
+          "use_cases": [
+            {
+              "title": "24/7 Automated Customer Support",
+              "problem": "Customers require instant assistance even outside business hours.",
+              "solution": "Deploy AI chatbots trained on knowledge bases to handle FAQs and escalate complex issues to human agents.",
+              "impact": "Reduced support response time by 70% and improved customer satisfaction scores."
+            },
+            {
+              "title": "Order Status Automation",
+              "problem": "Support teams receive a high volume of repetitive order status requests.",
+              "solution": "Integrate chatbot systems with order management APIs to provide real-time updates.",
+              "impact": "Reduced repetitive tickets and allowed agents to focus on complex customer issues."
+            },
+            
+        {
+          "title": "E-Commerce Platform Development",
+          "problem": "Businesses need scalable online storefronts capable of handling high traffic.",
+          "solution": "Develop modern web apps using scalable frameworks with integrated payment and inventory systems.",
+          "impact": "Improved customer engagement and increased online sales."
+        },
+        {
+          "title": "On-Demand Service App",
+          "problem": "Customers need convenient access to services through mobile devices.",
+          "solution": "Develop mobile applications with real-time notifications, location tracking, and payment integration.",
+          "impact": "Improved customer accessibility and higher service adoption rates."
+        },
+            {
+              "title": "Automated Ticket Routing",
+              "problem": "Support tickets are often delayed due to manual routing.",
+              "solution": "Implement rule-based ticket classification and automatic routing to relevant teams.",
+              "impact": "Improved resolution time and reduced operational overhead."
+            }
+          ]
+        }, {
+          "id": "ai-chat-support1",
+          "name": "AI Chat Support",
+          "description": "Automated conversational agents that assist customers with queries, troubleshooting, and service navigation in real-time.",
+          "use_cases": [
+            {
+              "title": "24/7 Automated Customer Support",
+              "problem": "Customers require instant assistance even outside business hours.",
+              "solution": "Deploy AI chatbots trained on knowledge bases to handle FAQs and escalate complex issues to human agents.",
+              "impact": "Reduced support response time by 70% and improved customer satisfaction scores."
+            },
+            {
+              "title": "Order Status Automation",
+              "problem": "Support teams receive a high volume of repetitive order status requests.",
+              "solution": "Integrate chatbot systems with order management APIs to provide real-time updates.",
+              "impact": "Reduced repetitive tickets and allowed agents to focus on complex customer issues."
+            },
+            
+        {
+          "title": "E-Commerce Platform Development",
+          "problem": "Businesses need scalable online storefronts capable of handling high traffic.",
+          "solution": "Develop modern web apps using scalable frameworks with integrated payment and inventory systems.",
+          "impact": "Improved customer engagement and increased online sales."
+        },
+        {
+          "title": "On-Demand Service App",
+          "problem": "Customers need convenient access to services through mobile devices.",
+          "solution": "Develop mobile applications with real-time notifications, location tracking, and payment integration.",
+          "impact": "Improved customer accessibility and higher service adoption rates."
+        },
+            {
+              "title": "Automated Ticket Routing",
+              "problem": "Support tickets are often delayed due to manual routing.",
+              "solution": "Implement rule-based ticket classification and automatic routing to relevant teams.",
+              "impact": "Improved resolution time and reduced operational overhead."
+            }
+          ]
+        }, {
+          "id": "ai-chat-support2",
+          "name": "AI Chat Support",
+          "description": "Automated conversational agents that assist customers with queries, troubleshooting, and service navigation in real-time.",
+          "use_cases": [
+            {
+              "title": "24/7 Automated Customer Support",
+              "problem": "Customers require instant assistance even outside business hours.",
+              "solution": "Deploy AI chatbots trained on knowledge bases to handle FAQs and escalate complex issues to human agents.",
+              "impact": "Reduced support response time by 70% and improved customer satisfaction scores."
+            },
+            {
+              "title": "Order Status Automation",
+              "problem": "Support teams receive a high volume of repetitive order status requests.",
+              "solution": "Integrate chatbot systems with order management APIs to provide real-time updates.",
+              "impact": "Reduced repetitive tickets and allowed agents to focus on complex customer issues."
+            },
+            
+        {
+          "title": "E-Commerce Platform Development",
+          "problem": "Businesses need scalable online storefronts capable of handling high traffic.",
+          "solution": "Develop modern web apps using scalable frameworks with integrated payment and inventory systems.",
+          "impact": "Improved customer engagement and increased online sales."
+        },
+        {
+          "title": "On-Demand Service App",
+          "problem": "Customers need convenient access to services through mobile devices.",
+          "solution": "Develop mobile applications with real-time notifications, location tracking, and payment integration.",
+          "impact": "Improved customer accessibility and higher service adoption rates."
+        },
+            {
+              "title": "Automated Ticket Routing",
+              "problem": "Support tickets are often delayed due to manual routing.",
+              "solution": "Implement rule-based ticket classification and automatic routing to relevant teams.",
+              "impact": "Improved resolution time and reduced operational overhead."
+            }
+          ]
+        }, {
+          "id": "ai-chat-support3",
+          "name": "AI Chat Support",
+          "description": "Automated conversational agents that assist customers with queries, troubleshooting, and service navigation in real-time.",
+          "use_cases": [
+            {
+              "title": "24/7 Automated Customer Support",
+              "problem": "Customers require instant assistance even outside business hours.",
+              "solution": "Deploy AI chatbots trained on knowledge bases to handle FAQs and escalate complex issues to human agents.",
+              "impact": "Reduced support response time by 70% and improved customer satisfaction scores."
+            },
+            {
+              "title": "Order Status Automation",
+              "problem": "Support teams receive a high volume of repetitive order status requests.",
+              "solution": "Integrate chatbot systems with order management APIs to provide real-time updates.",
+              "impact": "Reduced repetitive tickets and allowed agents to focus on complex customer issues."
+            },
+            
+        {
+          "title": "E-Commerce Platform Development",
+          "problem": "Businesses need scalable online storefronts capable of handling high traffic.",
+          "solution": "Develop modern web apps using scalable frameworks with integrated payment and inventory systems.",
+          "impact": "Improved customer engagement and increased online sales."
+        },
+        {
+          "title": "On-Demand Service App",
+          "problem": "Customers need convenient access to services through mobile devices.",
+          "solution": "Develop mobile applications with real-time notifications, location tracking, and payment integration.",
+          "impact": "Improved customer accessibility and higher service adoption rates."
+        },
+            {
+              "title": "Automated Ticket Routing",
+              "problem": "Support tickets are often delayed due to manual routing.",
+              "solution": "Implement rule-based ticket classification and automatic routing to relevant teams.",
+              "impact": "Improved resolution time and reduced operational overhead."
+            }
+          ]
+        }, {
+          "id": "ai-chat-support4",
+          "name": "AI Chat Support",
+          "description": "Automated conversational agents that assist customers with queries, troubleshooting, and service navigation in real-time.",
+          "use_cases": [
+            {
+              "title": "24/7 Automated Customer Support",
+              "problem": "Customers require instant assistance even outside business hours.",
+              "solution": "Deploy AI chatbots trained on knowledge bases to handle FAQs and escalate complex issues to human agents.",
+              "impact": "Reduced support response time by 70% and improved customer satisfaction scores."
+            },
+            {
+              "title": "Order Status Automation",
+              "problem": "Support teams receive a high volume of repetitive order status requests.",
+              "solution": "Integrate chatbot systems with order management APIs to provide real-time updates.",
+              "impact": "Reduced repetitive tickets and allowed agents to focus on complex customer issues."
+            },
+            
+        {
+          "title": "E-Commerce Platform Development",
+          "problem": "Businesses need scalable online storefronts capable of handling high traffic.",
+          "solution": "Develop modern web apps using scalable frameworks with integrated payment and inventory systems.",
+          "impact": "Improved customer engagement and increased online sales."
+        },
+        {
+          "title": "On-Demand Service App",
+          "problem": "Customers need convenient access to services through mobile devices.",
+          "solution": "Develop mobile applications with real-time notifications, location tracking, and payment integration.",
+          "impact": "Improved customer accessibility and higher service adoption rates."
+        },
+            {
+              "title": "Automated Ticket Routing",
+              "problem": "Support tickets are often delayed due to manual routing.",
+              "solution": "Implement rule-based ticket classification and automatic routing to relevant teams.",
+              "impact": "Improved resolution time and reduced operational overhead."
+            }
+          ]
+        }]
+    },
+    {
+      "id": "data-analytics",
+      "name": "Data Analytics",
+      "description": "Data analytics services transform raw organizational data into actionable insights for decision-making and strategic planning.",
+      "services": [
+        {
+          "id": "business-dashboard",
+          "name": "Business Intelligence Dashboards",
+          "description": "Interactive dashboards that visualize business performance metrics and operational insights.",
+          "use_cases": [
+            {
+              "title": "Sales Performance Monitoring",
+              "problem": "Executives lack real-time visibility into regional sales performance.",
+              "solution": "Develop dashboards integrating CRM and transaction data with visual analytics.",
+              "impact": "Enabled faster strategic decisions and improved sales forecasting accuracy."
+            }
+          ]
+        },
+        {
+          "id": "predictive-analytics",
+          "name": "Predictive Analytics",
+          "description": "Machine learning models that forecast trends, detect anomalies, and predict outcomes based on historical data.",
+          "use_cases": [
+            {
+              "title": "Customer Churn Prediction",
+              "problem": "Companies struggle to identify customers likely to leave their services.",
+              "solution": "Apply predictive models using behavioral and transaction data.",
+              "impact": "Enabled proactive retention strategies and reduced churn rates."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cloud-services",
+      "name": "Cloud Services",
+      "description": "Cloud services enable scalable, reliable, and secure infrastructure for modern digital applications.",
+      "services": [
+        {
+          "id": "cloud-migration",
+          "name": "Cloud Migration",
+          "description": "Moving on-premise applications and systems to cloud infrastructure for improved scalability and reliability.",
+          "use_cases": [
+            {
+              "title": "Legacy System Migration",
+              "problem": "Legacy systems running on outdated hardware limit scalability and increase maintenance costs.",
+              "solution": "Migrate applications to containerized cloud environments.",
+              "impact": "Improved system reliability and reduced infrastructure costs."
+            }
+          ]
+        },
+        {
+          "id": "devops-automation",
+          "name": "DevOps Automation",
+          "description": "CI/CD pipelines and infrastructure automation that accelerate software delivery.",
+          "use_cases": [
+            {
+              "title": "Continuous Deployment Pipeline",
+              "problem": "Manual deployment processes slow down feature releases.",
+              "solution": "Implement CI/CD pipelines with automated testing and container deployment.",
+              "impact": "Reduced deployment time and improved release reliability."
+            }
+          ]
+        }
+      ]
+    }
+    ,
+{
+  "id": "cyber-security",
+  "name": "Cyber Security",
+  "description": "Cyber security services protect digital systems, networks, and data from unauthorized access, attacks, and vulnerabilities.",
+  "services": [
+    {
+      "id": "threat-monitoring",
+      "name": "Threat Monitoring",
+      "description": "Continuous monitoring of network activity to detect and respond to potential security threats.",
+      "use_cases": [
+        {
+          "title": "Real-Time Intrusion Detection",
+          "problem": "Organizations struggle to detect malicious activity in large network environments.",
+          "solution": "Deploy intrusion detection systems combined with AI-based anomaly detection.",
+          "impact": "Early detection of cyber threats and reduced potential security breaches."
+        }
+      ]
+    },
+    {
+      "id": "data-protection",
+      "name": "Data Protection & Encryption",
+      "description": "Security mechanisms that ensure sensitive information remains protected both in transit and at rest.",
+      "use_cases": [
+        {
+          "title": "Secure Customer Data Storage",
+          "problem": "Sensitive customer data is vulnerable to unauthorized access.",
+          "solution": "Implement encryption, role-based access controls, and secure key management.",
+          "impact": "Improved compliance with data protection regulations and enhanced user trust."
+        }
+      ]
+    }
+  ]
+},
+{
+  "id": "ai-automation",
+  "name": "AI Automation",
+  "description": "AI automation solutions streamline business processes by combining artificial intelligence with workflow automation.",
+  "services": [
+    {
+      "id": "document-processing",
+      "name": "Intelligent Document Processing",
+      "description": "AI systems that extract, classify, and process data from documents such as invoices, forms, and contracts.",
+      "use_cases": [
+        {
+          "title": "Invoice Processing Automation",
+          "problem": "Manual invoice processing is slow and error-prone.",
+          "solution": "Use OCR and machine learning models to extract invoice data and automatically update accounting systems.",
+          "impact": "Reduced processing time and minimized human errors."
+        }
+      ]
+    },
+    {
+      "id": "workflow-automation",
+      "name": "Business Workflow Automation",
+      "description": "Automated workflows that streamline repetitive business operations.",
+      "use_cases": [
+        {
+          "title": "Employee Onboarding Automation",
+          "problem": "HR teams manually handle multiple onboarding tasks.",
+          "solution": "Automate account creation, document submission, and training assignments through workflow systems.",
+          "impact": "Faster onboarding and reduced administrative workload."
+        }
+      ]
+    }
+  ]
+}]}
