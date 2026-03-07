@@ -4,9 +4,108 @@
       "id": "customer-care",
       "name": "Customer Care",
       "description": "Customer care services focus on improving user satisfaction through responsive support, automated assistance, and intelligent issue resolution systems.",
-      "services": [
-        {
-          "id": "ai-chat-support",
+      "services": [{
+  "id": "ai-chat-support1",
+  "name": "Voice Bot Support",
+  "description": "AI-powered voice assistants that handle customer calls and provide automated support through natural speech interaction.",
+  "use_cases": [
+    {
+      "title": "Automated Call Center Handling",
+      "problem": "Customer support teams struggle with high call volumes during peak hours.",
+      "solution": "Deploy voice bots capable of answering common questions and routing complex issues to human agents.",
+      "impact": "Reduced call waiting times and improved service efficiency."
+    },
+    {
+      "title": "Appointment Scheduling via Voice",
+      "problem": "Customers often need assistance booking appointments through support lines.",
+      "solution": "Voice assistants integrated with scheduling systems allow users to book or modify appointments.",
+      "impact": "Improved booking convenience and reduced manual scheduling workload."
+    },
+    {
+      "title": "Voice-Based Order Tracking",
+      "problem": "Customers frequently call to check delivery updates.",
+      "solution": "Voice bots integrated with logistics APIs provide real-time shipment tracking.",
+      "impact": "Reduced repetitive support calls and improved delivery transparency."
+    }
+  ]
+},
+{
+  "id": "ai-chat-support2",
+  "name": "Customer Self-Service Portal",
+  "description": "Interactive customer portals that allow users to manage requests, access knowledge bases, and resolve issues independently.",
+  "use_cases": [
+    {
+      "title": "Knowledge Base Assistance",
+      "problem": "Customers cannot easily find answers to common questions.",
+      "solution": "Implement searchable knowledge bases powered by AI recommendations.",
+      "impact": "Reduced support tickets and empowered customers with self-service tools."
+    },
+    {
+      "title": "Account Issue Resolution",
+      "problem": "Users need assistance resetting passwords or updating account settings.",
+      "solution": "Provide automated workflows and guided troubleshooting steps.",
+      "impact": "Reduced dependency on human agents and faster issue resolution."
+    },
+    {
+      "title": "Customer Feedback Collection",
+      "problem": "Businesses lack structured feedback from customers after support interactions.",
+      "solution": "Embed automated feedback forms and sentiment analysis tools.",
+      "impact": "Improved service quality through actionable customer insights."
+    }
+  ]
+},
+{
+  "id": "ai-chat-support3",
+  "name": "Multilingual Chat Assistance",
+  "description": "AI chat systems capable of supporting customers in multiple languages for global user bases.",
+  "use_cases": [
+    {
+      "title": "Global Customer Support",
+      "problem": "Companies expanding internationally struggle with language barriers.",
+      "solution": "Deploy multilingual chatbots with automatic language detection.",
+      "impact": "Expanded global reach and improved support accessibility."
+    },
+    {
+      "title": "Localized Product Guidance",
+      "problem": "Users in different regions require localized product explanations.",
+      "solution": "Provide region-specific product information through multilingual AI assistants.",
+      "impact": "Improved product understanding and higher customer engagement."
+    },
+    {
+      "title": "Real-Time Translation for Agents",
+      "problem": "Support teams cannot communicate with customers speaking different languages.",
+      "solution": "Implement AI translation tools integrated with chat platforms.",
+      "impact": "Enabled cross-language communication and improved service coverage."
+    }
+  ]
+},
+{
+  "id": "ai-chat-support4",
+  "name": "Customer Sentiment Analysis",
+  "description": "AI systems that analyze customer conversations to identify satisfaction levels and emotional tone.",
+  "use_cases": [
+    {
+      "title": "Support Conversation Monitoring",
+      "problem": "Companies struggle to identify frustrated customers during support interactions.",
+      "solution": "Analyze chat transcripts using NLP models to detect negative sentiment.",
+      "impact": "Enabled proactive intervention by supervisors and improved customer satisfaction."
+    },
+    {
+      "title": "Service Quality Insights",
+      "problem": "Businesses lack insight into the effectiveness of support interactions.",
+      "solution": "Use AI to analyze conversation trends and agent performance.",
+      "impact": "Improved training programs and service quality."
+    },
+    {
+      "title": "Product Feedback Mining",
+      "problem": "Customer chats contain valuable product feedback that often goes unnoticed.",
+      "solution": "Apply text analytics to extract product improvement suggestions.",
+      "impact": "Better product development informed by real customer insights."
+    }
+  ]
+}
+, {
+          "id": "ai-chat-support34",
           "name": "AI Chat Support",
           "description": "Automated conversational agents that assist customers with queries, troubleshooting, and service navigation in real-time.",
           "use_cases": [
@@ -43,118 +142,7 @@
             }
           ]
         }, {
-          "id": "ai-chat-support1",
-          "name": "AI Chat Support",
-          "description": "Automated conversational agents that assist customers with queries, troubleshooting, and service navigation in real-time.",
-          "use_cases": [
-            {
-              "title": "24/7 Automated Customer Support",
-              "problem": "Customers require instant assistance even outside business hours.",
-              "solution": "Deploy AI chatbots trained on knowledge bases to handle FAQs and escalate complex issues to human agents.",
-              "impact": "Reduced support response time by 70% and improved customer satisfaction scores."
-            },
-            {
-              "title": "Order Status Automation",
-              "problem": "Support teams receive a high volume of repetitive order status requests.",
-              "solution": "Integrate chatbot systems with order management APIs to provide real-time updates.",
-              "impact": "Reduced repetitive tickets and allowed agents to focus on complex customer issues."
-            },
-            
-        {
-          "title": "E-Commerce Platform Development",
-          "problem": "Businesses need scalable online storefronts capable of handling high traffic.",
-          "solution": "Develop modern web apps using scalable frameworks with integrated payment and inventory systems.",
-          "impact": "Improved customer engagement and increased online sales."
-        },
-        {
-          "title": "On-Demand Service App",
-          "problem": "Customers need convenient access to services through mobile devices.",
-          "solution": "Develop mobile applications with real-time notifications, location tracking, and payment integration.",
-          "impact": "Improved customer accessibility and higher service adoption rates."
-        },
-            {
-              "title": "Automated Ticket Routing",
-              "problem": "Support tickets are often delayed due to manual routing.",
-              "solution": "Implement rule-based ticket classification and automatic routing to relevant teams.",
-              "impact": "Improved resolution time and reduced operational overhead."
-            }
-          ]
-        }, {
-          "id": "ai-chat-support2",
-          "name": "AI Chat Support",
-          "description": "Automated conversational agents that assist customers with queries, troubleshooting, and service navigation in real-time.",
-          "use_cases": [
-            {
-              "title": "24/7 Automated Customer Support",
-              "problem": "Customers require instant assistance even outside business hours.",
-              "solution": "Deploy AI chatbots trained on knowledge bases to handle FAQs and escalate complex issues to human agents.",
-              "impact": "Reduced support response time by 70% and improved customer satisfaction scores."
-            },
-            {
-              "title": "Order Status Automation",
-              "problem": "Support teams receive a high volume of repetitive order status requests.",
-              "solution": "Integrate chatbot systems with order management APIs to provide real-time updates.",
-              "impact": "Reduced repetitive tickets and allowed agents to focus on complex customer issues."
-            },
-            
-        {
-          "title": "E-Commerce Platform Development",
-          "problem": "Businesses need scalable online storefronts capable of handling high traffic.",
-          "solution": "Develop modern web apps using scalable frameworks with integrated payment and inventory systems.",
-          "impact": "Improved customer engagement and increased online sales."
-        },
-        {
-          "title": "On-Demand Service App",
-          "problem": "Customers need convenient access to services through mobile devices.",
-          "solution": "Develop mobile applications with real-time notifications, location tracking, and payment integration.",
-          "impact": "Improved customer accessibility and higher service adoption rates."
-        },
-            {
-              "title": "Automated Ticket Routing",
-              "problem": "Support tickets are often delayed due to manual routing.",
-              "solution": "Implement rule-based ticket classification and automatic routing to relevant teams.",
-              "impact": "Improved resolution time and reduced operational overhead."
-            }
-          ]
-        }, {
-          "id": "ai-chat-support3",
-          "name": "AI Chat Support",
-          "description": "Automated conversational agents that assist customers with queries, troubleshooting, and service navigation in real-time.",
-          "use_cases": [
-            {
-              "title": "24/7 Automated Customer Support",
-              "problem": "Customers require instant assistance even outside business hours.",
-              "solution": "Deploy AI chatbots trained on knowledge bases to handle FAQs and escalate complex issues to human agents.",
-              "impact": "Reduced support response time by 70% and improved customer satisfaction scores."
-            },
-            {
-              "title": "Order Status Automation",
-              "problem": "Support teams receive a high volume of repetitive order status requests.",
-              "solution": "Integrate chatbot systems with order management APIs to provide real-time updates.",
-              "impact": "Reduced repetitive tickets and allowed agents to focus on complex customer issues."
-            },
-            
-        {
-          "title": "E-Commerce Platform Development",
-          "problem": "Businesses need scalable online storefronts capable of handling high traffic.",
-          "solution": "Develop modern web apps using scalable frameworks with integrated payment and inventory systems.",
-          "impact": "Improved customer engagement and increased online sales."
-        },
-        {
-          "title": "On-Demand Service App",
-          "problem": "Customers need convenient access to services through mobile devices.",
-          "solution": "Develop mobile applications with real-time notifications, location tracking, and payment integration.",
-          "impact": "Improved customer accessibility and higher service adoption rates."
-        },
-            {
-              "title": "Automated Ticket Routing",
-              "problem": "Support tickets are often delayed due to manual routing.",
-              "solution": "Implement rule-based ticket classification and automatic routing to relevant teams.",
-              "impact": "Improved resolution time and reduced operational overhead."
-            }
-          ]
-        }, {
-          "id": "ai-chat-support4",
+          "id": "ai-chat-support44",
           "name": "AI Chat Support",
           "description": "Automated conversational agents that assist customers with queries, troubleshooting, and service navigation in real-time.",
           "use_cases": [

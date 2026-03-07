@@ -24,7 +24,7 @@ export default function ServicePanel({
     const [openService, setOpenService] = useState<string | null>(null)
 
     return (
-        <div className="w-105 border-r border-neutral-800 p-8 overflow-y-auto">
+        <div className="w-105 border-r border-neutral-800 p-8 overflow-y-auto no-scrollbar">
 
             <motion.div
                 key={domain.id}
