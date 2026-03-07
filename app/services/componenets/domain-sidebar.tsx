@@ -42,10 +42,10 @@ export default function Sidebar({
                 {domains.map((domain: DomainItem) => (
                     <motion.button
                         key={domain.id}
-                        onClick={() => setActiveDomain(domain)}
+                        onMouseEnter={() => setActiveDomain(domain)}
                         whileHover={{ x: 5 }}
                         className={`text-left px-4 py-2 rounded-lg transition
-            ${activeDomain.id === domain.id
+        ${activeDomain.id === domain.id
                                 ? "bg-indigo-600"
                                 : "hover:bg-neutral-800"
                             }`}

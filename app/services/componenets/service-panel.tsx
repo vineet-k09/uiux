@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { DomainItem } from "./domain-sidebar";
+import { DomainItem } from "./domain-sidebar"
 import { useState } from "react"
 
 type UseCase = {
@@ -10,7 +10,6 @@ type UseCase = {
     solution: string
     impact: string
 }
-
 
 type Props = {
     domain: DomainItem
@@ -29,10 +28,13 @@ export default function ServicePanel({
 
             <motion.div
                 key={domain.id}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, 
+                    // x: -20 
+                }}
+                animate={{ opacity: 1, 
+                    // x: 0 
+                }}
             >
-
                 <h1 className="text-2xl font-bold">
                     {domain.name}
                 </h1>
@@ -40,7 +42,6 @@ export default function ServicePanel({
                 <p className="text-neutral-400 text-sm mt-2 mb-8">
                     {domain.description}
                 </p>
-
             </motion.div>
 
             <div className="space-y-4">
@@ -52,15 +53,12 @@ export default function ServicePanel({
                     return (
                         <div
                             key={service.id}
-                            className="border border-neutral-800 rounded-xl"
+                            className="border border-neutral-800 rounded-xl hover:bg-linear-to-br hover:from-indigo-600/20 hover:to-purple-600/20"
+                            onMouseEnter={() => setOpenService(service.id)}
+                            onMouseLeave={() => setOpenService(null)}
                         >
 
-                            <button
-                                onClick={() =>
-                                    setOpenService(isOpen ? null : service.id)
-                                }
-                                className="w-full text-left p-4 flex justify-between items-center"
-                            >
+                            <div className="w-full text-left p-4 flex justify-between items-center">
 
                                 <span className="font-medium">
                                     {service.name}
@@ -70,7 +68,7 @@ export default function ServicePanel({
                                     {isOpen ? "-" : "+"}
                                 </span>
 
-                            </button>
+                            </div>
 
                             <motion.div
                                 initial={false}
@@ -87,15 +85,15 @@ export default function ServicePanel({
                                         {service.description}
                                     </p>
 
-                                    <div className="space-y-2">
+                                    <div className="space-y-2 gap-2">
 
                                         {service.use_cases.map(u => (
                                             <button
                                                 key={u.title}
-                                                onClick={() => setActiveUseCase(u)}
-                                                className="block text-left hover:text-indigo-400 transition"
+                                                onMouseEnter={() => setActiveUseCase(u)}
+                                                className="block hover:text-indigo-400 transition bg-indigo-600 text-white p-2 rounded-4xl w-full"
                                             >
-                                                • {u.title}
+                                                {u.title}
                                             </button>
                                         ))}
 
