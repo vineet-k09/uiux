@@ -6,6 +6,7 @@ import Sidebar from "./componenets/domain-sidebar";
 import ServiceCanvas from "./componenets/service-canvas";
 import ServicePanel from "./componenets/service-panel";
 import UseCasePanel from "./componenets/usecase-panel";
+import ExpandingGrid from "./componenets/expanding-controller";
 import type { UseCase } from "./componenets/usecase-panel";
 
 export default function Services() {
@@ -55,6 +56,27 @@ export default function Services() {
                 />
                 {activeUseCase && <UseCasePanel useCase={activeUseCase} />}
             </section>
+            
+            <section className="flex h-screen">
+
+                <Sidebar
+                    domains={domains.domains}
+                    activeDomain={activeDomain}
+                    setActiveDomain={setActiveDomain}
+                />
+
+                <div className="flex-1 overflow-y-auto p-8">
+
+                    <ExpandingGrid
+                        services={activeDomain.services}
+                        setActiveUseCase={setActiveUseCase}
+                    />
+
+                </div>
+
+
+            </section>
+
         </div>
     )
 }
