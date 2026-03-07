@@ -4,6 +4,7 @@ import Intro from '@/components/sections/home/Header';
 import Description from '@/components/sections/home/Description';
 import Projects from '@/components/sections/home/Projects';
 import ParallaxCards from '@/components/sections/home/parallaxCards';
+import ContactUs from '@/components/sections/home/ContactUs';
 import { useEffect } from 'react';
 
 export default function LandingPage() {
@@ -21,6 +22,7 @@ export default function LandingPage() {
         <Description />
         <Projects />
         <ParallaxCards/>
+        <ContactUs />
       </main>
   )
 }

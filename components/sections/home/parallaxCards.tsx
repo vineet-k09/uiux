@@ -78,7 +78,7 @@ export default function ParallaxCards() {
           <div className="absolute inset-0 bg-black/50 opacity-(--after-opacity)] transition-opacity duration-100 pointer-events-none z-20" />
 
           {/* Index */}
-          <div className="flex-2 text-2xl font-medium relative z-50 text-black">
+          <div className="flex-2 text-6xl font-medium relative z-50 text-black">
             {card.index}
           </div>
 
