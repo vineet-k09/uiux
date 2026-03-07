@@ -1,3 +1,4 @@
+```ts
 "use client"
 
 import domains from "@/data/services.json";
@@ -14,6 +15,7 @@ export default function Services() {
     const [activeUseCase, setActiveUseCase] = useState<UseCase>(domains.domains[0].services[0].use_cases[0]);
     return (
         <div className="bg-neutral-950 text-white">
+            
             {/* <section className="section bg-brand">
                 <div className="container-main">
                     <h1 className="text-gradient">
@@ -55,7 +57,7 @@ export default function Services() {
                 />
                 {activeUseCase && <UseCasePanel useCase={activeUseCase} />}
             </section>
-
+            
             <section className="flex h-full">
 
                 <Sidebar
@@ -79,3 +81,4 @@ export default function Services() {
         </div>
     )
 }
+```

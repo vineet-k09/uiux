@@ -29,7 +29,7 @@ export default function ServiceCanvas({ domain }: { domain: DomainItem }) {
                 <AnimatePresence>
                     {domain.services.map((service: DomainItem["services"][number]) => (
                         <ServiceCard key={service.id} service={{ name: service.name, description: service.description, useCases: service.use_cases }}
-                         />
+                        />
                     ))}
                 </AnimatePresence>
 

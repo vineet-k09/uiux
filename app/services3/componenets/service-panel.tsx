@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { DomainItem } from "./domain-sidebar"
+import { DomainItem } from "../../services/componenets/domain-sidebar"
 import { useState } from "react"
 
 type UseCase = {
