@@ -26,7 +26,7 @@ export default function UseCasePanel({ useCase }: { useCase: UseCase }) {
                         className="max-w-xl space-y-6"
                     >
 
-                        <h2 className="text-3xl font-bold">
+                        <h2 className="text-3xl font-bold ">
                             {useCase.title}
                         </h2>
 

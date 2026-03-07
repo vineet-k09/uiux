@@ -35,7 +35,7 @@ export default function ServicePanel({
                     // x: 0 
                 }}
             >
-                <h1 className="text-2xl font-bold">
+                <h1 className="text-2xl font-bold text-gradient">
                     {domain.name}
                 </h1>
 

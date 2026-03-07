@@ -14,7 +14,7 @@ export default function ServiceCanvas({ domain }: { domain: DomainItem }) {
                 animate={{ opacity: 1, y: 0 }}
                 className="mb-10"
             >
-                <h1 className="text-3xl font-bold">
+                <h1 className="text-3xl font-bold text-gradient">
                     {domain.name}
                 </h1>
 

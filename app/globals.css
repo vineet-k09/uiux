@@ -18,6 +18,100 @@
   }
 }
 
+:root {
+
+  /* -------------------------
+     BRAND COLORS
+     ------------------------- */
+
+  /* Deep purple background */
+  --brand-bg: oklch(0.18 0.08 290);
+
+  /* Slightly lighter surface */
+  --brand-surface: oklch(0.22 0.09 290);
+
+  /* Pink accent */
+  --brand-accent: oklch(0.74 0.22 340);
+
+  /* Gradient used for highlights */
+  --brand-gradient: linear-gradient(135deg,
+      oklch(0.6 0.2 280),
+      oklch(0.72 0.22 340));
+
+
+  /* -------------------------
+     TYPOGRAPHY SCALE
+     ------------------------- */
+
+  --text-h1: 3.5rem;
+  /* hero heading */
+  --text-h2: 2.2rem;
+  /* section heading */
+  --text-body: 1.05rem;
+  /* paragraph */
+
+
+  /* -------------------------
+     LAYOUT SYSTEM
+     ------------------------- */
+
+  --container-main: 1200px;
+  --section-space: 6rem;
+}
+
+@layer utilities {
+
+  /* brand background */
+  .bg-brand {
+    background: var(--brand-bg);
+  }
+
+  /* card surface */
+  .surface {
+    background: var(--brand-surface);
+  }
+
+  /* gradient text */
+  .text-gradient {
+    background: var(--brand-gradient);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  /* layout container */
+  .container-main {
+    max-width: var(--container-main);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* section spacing */
+  .section {
+    padding-top: var(--section-space);
+    padding-bottom: var(--section-space);
+  }
+
+}
+
+@layer base {
+
+  h1 {
+    font-size: var(--text-h1);
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  h2 {
+    font-size: var(--text-h2);
+    font-weight: 600;
+  }
+
+  p {
+    font-size: var(--text-body);
+  }
+
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {

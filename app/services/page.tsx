@@ -13,6 +13,31 @@ export default function Services() {
     const [activeUseCase, setActiveUseCase] = useState<UseCase>(domains.domains[0].services[0].use_cases[0]);
     return (
         <div className="bg-neutral-950 text-white">
+            {/* <section className="section bg-brand">
+
+                <div className="container-main">
+
+                    <h1 className="text-gradient">
+                        AI Powered Customer Support
+                    </h1>
+
+                    <h2 className="mt-8">
+                        Intelligent Service Automation
+                    </h2>
+
+                    <p className="mt-4 max-w-xl">
+                        AI driven systems automate support interactions,
+                        reduce waiting time and improve customer experience
+                        with intelligent routing and voice automation.
+                    </p>
+
+                    <div className="surface-card mt-10">
+                        Service Card Example
+                    </div>
+
+                </div>
+
+            </section> */}
             <section className="flex h-screen">
 
                 <Sidebar
