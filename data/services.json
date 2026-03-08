@@ -4,7 +4,8 @@
       "id": "customer-care",
       "name": "Customer Care",
       "description": "Customer care services focus on improving user satisfaction through responsive support, automated assistance, and intelligent issue resolution systems.",
-      "services": [
+      "services": 
+      [
         {
           "id": "ai-chat-support",
           "name": "AI Chat Support",

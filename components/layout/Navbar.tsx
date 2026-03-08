@@ -22,7 +22,7 @@ export default function Navbar() {
             {/* center */}
             <div className="items-center flex flex-row justify-center gap-3 w-[33%]">
             <Link href={'/about'}>/about</Link>
-            <Link href={'/services'}>/services</Link>
+            <Link href={'/services_2'}>/services</Link>
             </div>
 
             {/* right */}
