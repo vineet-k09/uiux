@@ -1,21 +1,9 @@
 'use client'
 
+import { Service } from "@/types/services";
 import { motion, useTransform, MotionValue, useScroll } from "framer-motion";
 import { useRef } from "react";
 
-export interface UseCase {
-  title: string
-  problem: string
-  solution: string
-  impact: string
-}
-
-export interface Service {
-  id: string
-  name: string
-  description: string
-  use_cases: UseCase[]
-}
 
 interface CardProps {
   i: number

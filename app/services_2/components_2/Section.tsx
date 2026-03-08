@@ -3,7 +3,8 @@
 import { useRef } from "react"
 import { useScroll, motion } from "framer-motion"
 
-import Card, { Service } from "./Card"
+import Card from "./Card"
+import { Service } from "@/types/services"
 interface SectionProps {
     title: string
     description: string
