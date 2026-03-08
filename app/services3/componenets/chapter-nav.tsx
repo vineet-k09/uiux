@@ -39,12 +39,12 @@ export default function ChapterNav({
     onDomainClick,
 }: ChapterNavProps) {
     return (
-        <aside className="sticky top-0 h-screen w-16 shrink-0 flex flex-col items-center justify-center gap-5 border-r border-neutral-800/50 bg-neutral-950/90 backdrop-blur-sm z-30">
+        <aside className="sticky top-0 h-screen shrink-0 flex flex-col items-center justify-center gap-5 border-r border-neutral-800/50 bg-neutral-950/90 backdrop-blur-sm z-30">
             {/* Vertical guide line */}
-            <div className="absolute left-1/2 -translate-x-1/2 h-full w-px bg-gradient-to-b from-transparent via-neutral-800/50 to-transparent pointer-events-none" />
+            <div className="absolute left-1/2 -translate-x-1/2 h-full w-px bg-linear-to-b from-transparent via-neutral-800/50 to-transparent pointer-events-none" />
 
             {domains.map((domain, i) => {
-                const Icon = DOMAIN_ICONS[domain.id] ?? Bot
+                // const Icon = DOMAIN_ICONS[domain.id] ?? Bot
                 const color = DOMAIN_COLORS[domain.id] ?? "#6366f1"
                 const isActive = activeDomainId === domain.id
 
@@ -60,7 +60,7 @@ export default function ChapterNav({
                     >
                         {/* Icon button */}
                         <motion.div
-                            className="w-9 h-9 rounded-xl flex items-center justify-center border transition-colors duration-300"
+                            className="h-9 rounded-xl flex items-center justify-center border transition-colors duration-300"
                             animate={{
                                 backgroundColor: isActive
                                     ? color + "25"
@@ -70,20 +70,21 @@ export default function ChapterNav({
                                     : "#262626",
                             }}
                         >
-                            <Icon
+                            {/* <Icon
                                 size={16}
                                 style={{
                                     color: isActive ? color : "#525252",
                                     transition: "color 0.3s",
                                 }}
-                            />
+                            /> */}
+                            {domain.name}
                         </motion.div>
 
                         {/* Active indicator — right edge bar */}
                         {isActive && (
                             <motion.div
                                 layoutId="chapterIndicator"
-                                className="absolute -right-[17px] top-1/2 -translate-y-1/2 w-[3px] h-6 rounded-full"
+                                className="absolute -right-4.25 top-1/2 -translate-y-1/2 w-0.75 h-6 rounded-full"
                                 style={{ backgroundColor: color }}
                                 initial={{ opacity: 0, scaleY: 0 }}
                                 animate={{ opacity: 1, scaleY: 1 }}
@@ -91,16 +92,9 @@ export default function ChapterNav({
                             />
                         )}
 
-                        {/* Chapter number label */}
-                        <div
-                            className="absolute -bottom-4 left-1/2 -translate-x-1/2 font-mono text-[9px] tracking-widest transition-colors duration-300"
-                            style={{ color: isActive ? color : "#404040" }}
-                        >
-                            {String(i + 1).padStart(2, "0")}
-                        </div>
 
                         {/* Tooltip */}
-                        <div className="absolute left-[52px] top-1/2 -translate-y-1/2 bg-neutral-900 border border-neutral-700/60 rounded-lg px-3 py-1.5 text-xs text-white whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none shadow-xl z-50">
+                        <div className="absolute left-13 top-1/2 -translate-y-1/2 bg-neutral-900 border border-neutral-700/60 rounded-lg px-3 py-1.5 text-xs text-white whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none shadow-xl z-50">
                             {domain.name}
                             <div className="absolute right-full top-1/2 -translate-y-1/2 border-4 border-transparent border-r-neutral-700/60" />
                         </div>

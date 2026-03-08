@@ -73,19 +73,6 @@ const DomainSection = forwardRef<HTMLElement, DomainSectionProps>(
                     transition={{ duration: 0.65, ease: "easeOut" }}
                     className="relative z-10 mb-14"
                 >
-                    {/* Chapter label */}
-                    <div className="flex items-center gap-3 mb-5">
-                        <span
-                            className="font-mono text-[11px] tracking-[0.22em] uppercase font-medium"
-                            style={{ color }}
-                        >
-                            Chapter {String(index + 1).padStart(2, "0")}
-                        </span>
-                        <div
-                            className="h-px w-12 rounded-full"
-                            style={{ backgroundColor: color + "55" }}
-                        />
-                    </div>
 
                     {/* Icon + Title row */}
                     <div className="flex items-start gap-5">
@@ -112,7 +99,7 @@ const DomainSection = forwardRef<HTMLElement, DomainSectionProps>(
                     </div>
 
                     {/* Badges */}
-                    <div className="flex gap-2.5 mt-6 ml-[76px]">
+                    <div className="flex gap-2.5 mt-6 ml-19">
                         <span
                             className="text-[11px] font-medium px-3 py-1.5 rounded-full"
                             style={{
