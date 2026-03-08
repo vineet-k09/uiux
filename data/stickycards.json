@@ -1,0 +1,46 @@
+{
+  "stickyCardsData": [
+    {
+      "type": "who",
+      "title": "Who Are We?",
+      "description": "We are a global AI and data company helping enterprises scale.",
+      "tags": ["AI", "Data", "Automation"],
+      "stats": [
+        { "value": 20, "suffix": "+", "label": "Locations" },
+        { "value": 600, "suffix": "+", "label": "Markets" },
+        { "value": 5, "suffix": "M+", "label": "Users" }
+      ]
+    },
+    {
+      "type": "why",
+      "title": "Why us?",
+      "description": "We combine cutting-edge AI with enterprise-grade infrastructure to deliver results.",
+      "cards": [
+        {
+          "title": "AI Expertise",
+          "description": "Deep expertise in machine learning and generative AI."
+        },
+        {
+          "title": "Scalable Systems",
+          "description": "Infrastructure designed for enterprise scale."
+        },
+        {
+          "title": "Fast Delivery",
+          "description": "Rapid product deployment cycles."
+        }
+      ]
+    },
+    {
+      "type": "serve",
+      "title": "Who we serve?",
+      "description": "We serve leading enterprises across industries, including tech, finance, and retail.",
+      "logos": [
+        "/logos/google.svg",
+        "/logos/amazon.svg",
+        "/logos/netflix.svg",
+        "/logos/meta.svg",
+        "/logos/microsoft.svg"
+      ]
+    }
+  ]
+}
