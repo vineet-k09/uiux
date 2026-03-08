@@ -41,8 +41,8 @@ const TopicDetail = ({ domain }: TopicDetailProps) => {
                     transition={{ delay: sIdx * 0.08 + i * 0.04 }}
                     className="group rounded-xl border border-[hsl(0,0%,16%)] bg-[hsl(0,0%,9%)] p-4 md:p-5 hover:border-[hsl(340,75%,55%,0.3)] transition-colors duration-300 relative overflow-hidden"
                   >
-                    {/* Gradient hover glow */}
-                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none bg-gradient-to-br from-[hsl(340,75%,55%,0.1)] to-[hsl(280,60%,50%,0.1)]" />
+                    {/* linear hover glow */}
+                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none bg-linear-to-br from-[hsl(340,75%,55%,0.1)] to-[hsl(280,60%,50%,0.1)]" />
 
                     <div className="relative z-10 space-y-3">
                       <h4 className="text-sm font-bold text-[hsl(340,75%,55%)]">
@@ -61,10 +61,10 @@ const TopicDetail = ({ domain }: TopicDetailProps) => {
 
                         {/* Connector line */}
                         <div className="hidden md:flex items-center shrink-0">
-                          <div className="w-8 h-0.5 bg-gradient-to-r from-[hsl(340,75%,55%,0.4)] to-[hsl(280,60%,50%,0.4)]" />
+                          <div className="w-8 h-0.5 bg-linear-to-r from-[hsl(340,75%,55%,0.4)] to-[hsl(280,60%,50%,0.4)]" />
                         </div>
                         <div className="flex md:hidden justify-center">
-                          <div className="h-6 w-0.5 bg-gradient-to-b from-[hsl(340,75%,55%,0.4)] to-[hsl(280,60%,50%,0.4)]" />
+                          <div className="h-6 w-0.5 bg-linear-to-b from-[hsl(340,75%,55%,0.4)] to-[hsl(280,60%,50%,0.4)]" />
                         </div>
 
                         {/* Solution */}
@@ -76,10 +76,10 @@ const TopicDetail = ({ domain }: TopicDetailProps) => {
 
                         {/* Connector line */}
                         <div className="hidden md:flex items-center shrink-0">
-                          <div className="w-8 h-0.5 bg-gradient-to-r from-[hsl(280,60%,50%,0.4)] to-[hsl(280,40%,18%,0.4)]" />
+                          <div className="w-8 h-0.5 bg-linear-to-r from-[hsl(280,60%,50%,0.4)] to-[hsl(280,40%,18%,0.4)]" />
                         </div>
                         <div className="flex md:hidden justify-center">
-                          <div className="h-6 w-0.5 bg-gradient-to-b from-[hsl(280,60%,50%,0.4)] to-[hsl(280,40%,18%,0.4)]" />
+                          <div className="h-6 w-0.5 bg-linear-to-b from-[hsl(280,60%,50%,0.4)] to-[hsl(280,40%,18%,0.4)]" />
                         </div>
 
                         {/* Impact */}

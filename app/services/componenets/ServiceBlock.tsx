@@ -1,10 +1,10 @@
 "use client"
 
 import { motion } from "framer-motion"
-import UseCaseCardNew from "./usecase-card-new"
-import type { DomainItem } from "../../services/componenets/domain-sidebar"
+import { Domain } from "@/types/services"
+import TopicDetail from "./TopicDetail"
 
-type Service = DomainItem["services"][number]
+type Service = Domain["services"][number]
 
 interface ServiceBlockProps {
     service: Service
@@ -28,7 +28,7 @@ export default function ServiceBlock({
             <div className="flex items-stretch gap-4 mb-5">
                 {/* Left accent bar */}
                 <div
-                    className="w-[3px] rounded-full shrink-0"
+                    className="w-0.75 rounded-full shrink-0"
                     style={{ backgroundColor: accentColor + "70" }}
                 />
                 <div>
@@ -42,14 +42,9 @@ export default function ServiceBlock({
             </div>
 
             {/* Use case cards */}
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3 pl-4">
+            <div className="flex flex-col gap-5">
                 {service.use_cases.map((useCase, i) => (
-                    <UseCaseCardNew
-                        key={useCase.title + i}
-                        useCase={useCase}
-                        accentColor={accentColor}
-                        index={i}
-                    />
+                    <TopicDetail  key={i} domain={useCase} />
                 ))}
             </div>
         </motion.div>

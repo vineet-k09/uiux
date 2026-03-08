@@ -17,7 +17,10 @@ export default function DomainShowcase() {
 
   // Fix hydration mismatch
   useEffect(() => {
-    setMounted(true);
+    const timer = setTimeout(() => {
+      setMounted(true);
+    }, 0);
+    return () => clearTimeout(timer);
   }, []);
 
   useEffect(() => {
@@ -56,10 +59,10 @@ export default function DomainShowcase() {
 
   return (
     <div className="min-h-screen bg-viva flex flex-col md:flex-row p-4 md:p-6 lg:p-10">
-      <div className="w-full max-w-7xl lg:max-w-[1400px] mx-auto flex flex-col md:flex-row gap-4 md:gap-6 lg:gap-10">
+      <div className="w-full max-w-7xl lg:max-w-350 mx-auto flex flex-col md:flex-row gap-4 md:gap-6 lg:gap-10">
 
         {/* Navigation */}
-        <div className="md:w-[260px] lg:w-[320px] shrink-0 md:flex md:items-center">
+        <div className="md:w-65 lg:w-[320px] shrink-0 md:flex md:items-center">
           <div
             className="flex md:flex-col gap-2 
             overflow-x-auto md:overflow-x-visible 

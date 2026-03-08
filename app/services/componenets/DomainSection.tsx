@@ -10,8 +10,8 @@ import {
     Bot,
     type LucideIcon,
 } from "lucide-react"
-import type { DomainItem } from "../../services/componenets/domain-sidebar"
-import ServiceBlock from "./service-block"
+import { Domain } from "@/types/services"
+import ServiceBlock from "./ServiceBlock"
 
 const DOMAIN_ICONS: Record<string, LucideIcon> = {
     "customer-care": Headphones,
@@ -30,7 +30,7 @@ export const DOMAIN_COLORS: Record<string, string> = {
 }
 
 interface DomainSectionProps {
-    domain: DomainItem
+    domain: Domain
     index: number
 }
 
@@ -77,7 +77,7 @@ const DomainSection = forwardRef<HTMLElement, DomainSectionProps>(
                     {/* Icon + Title row */}
                     <div className="flex items-start gap-5">
                         <motion.div
-                            className="w-14 h-14 rounded-2xl flex items-center justify-center shrink-0 mt-1"
+                            className="w-14 h-14 rounded-2xl flex items-center justify-center shrink-0 mt-1 md:mt-4"
                             style={{
                                 backgroundColor: color + "18",
                                 border: `1px solid ${color}35`,

@@ -1,81 +1,71 @@
 "use client"
 
-import domains from "@/data/services.json";
-import { useState } from "react";
-import Sidebar from "./componenets/domain-sidebar";
-import ServiceCanvas from "./componenets/service-canvas";
-import ServicePanel from "./componenets/service-panel";
-import UseCasePanel from "./componenets/usecase-panel";
-import ExpandingGrid from "./componenets/expanding-controller";
-import type { UseCase } from "./componenets/usecase-panel";
+import domainsData from "@/data/services.json"
+import { useState, useRef, useEffect, useCallback } from "react"
+import ChapterNav from "./componenets/ChapterNav"
+import DomainSection from "./componenets/DomainSection"
+import { Domain } from "@/types/services"
+
+const domains = domainsData.domains as Domain[]
 
 export default function Services() {
-    const [activeDomain, setActiveDomain] = useState(domains.domains[0])
-    const [activeUseCase, setActiveUseCase] = useState<UseCase>(domains.domains[0].services[0].use_cases[0]);
+    const [activeDomainId, setActiveDomainId] = useState(domains[0].id)
+    const sectionRefs = useRef<(HTMLElement | null)[]>([])
+
+
+    useEffect(() => {
+        const elements = sectionRefs.current.filter(Boolean)
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        setActiveDomainId(entry.target.id)
+                    }
+                })
+            },
+            {
+                rootMargin: "-40% 0px -40% 0px",
+                threshold: 0,
+            }
+        )
+
+        elements.forEach((el) => observer.observe(el!))
+
+        return () => observer.disconnect()
+    }, [])
+
+    const scrollToDomain = useCallback((id: string) => {
+        setActiveDomainId(id)
+
+        const el = document.getElementById(id)
+        if (el) {
+            el.scrollIntoView({ behavior: "smooth", block: "start" })
+        }
+    }, [])
+
     return (
-        <div className="bg-neutral-950 text-white">
-            {/* <section className="section bg-brand">
-                <div className="container-main">
-                    <h1 className="text-gradient">
-                        AI Powered Customer Support
-                    </h1>
-                    <h2 className="mt-8">
-                        Intelligent Service Automation
-                    </h2>
-                    <p className="mt-4 max-w-xl">
-                        AI driven systems automate support interactions,
-                        reduce waiting time and improve customer experience
-                        with intelligent routing and voice automation.
-                    </p>
-                    <div className="surface-card mt-10">
-                        Service Card Example
-                    </div>
-                </div>
-            </section> */}
+        <div className="bg-neutral-950 text-white min-h-screen flex" suppressHydrationWarning>
 
-            <section className="flex h-screen">
-                <Sidebar
-                    domains={domains.domains}
-                    activeDomain={activeDomain}
-                    setActiveDomain={setActiveDomain}
-                />
-                <ServiceCanvas domain={activeDomain} />
-            </section>
+            <ChapterNav
+                domains={domains}
+                activeDomainId={activeDomainId}
+                onDomainClick={scrollToDomain}
+            />
 
 
-            <section className="flex h-screen">
-                <Sidebar
-                    domains={domains.domains}
-                    activeDomain={activeDomain}
-                    setActiveDomain={setActiveDomain}
-                />
-                <ServicePanel
-                    domain={activeDomain}
-                    setActiveUseCase={(useCase) => setActiveUseCase(useCase)}
-                />
-                {activeUseCase && <UseCasePanel useCase={activeUseCase} />}
-            </section>
-
-            <section className="flex h-full">
-
-                <Sidebar
-                    domains={domains.domains}
-                    activeDomain={activeDomain}
-                    setActiveDomain={setActiveDomain}
-                />
-
-                <div className="flex-1 overflow-y-auto p-8">
-
-                    <ExpandingGrid
-                        services={activeDomain.services}
-                        setActiveUseCase={setActiveUseCase}
+            <main className="flex-1 min-w-0">
+                {domains.map((domain, i) => (
+                    <DomainSection
+                        key={domain.id}
+                        domain={domain}
+                        index={i}
+                        ref={(el: HTMLElement | null) => {
+                            sectionRefs.current[i] = el
+                        }}
                     />
-
-                </div>
-
-
-            </section>
-
+                ))}
+            </main>
         </div>
     )
 }

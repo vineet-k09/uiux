@@ -53,56 +53,6 @@
       "impact": "Improved service quality through actionable customer insights."
     }
   ]
-},
-{
-  "id": "ai-chat-support3",
-  "name": "Multilingual Chat Assistance",
-  "description": "AI chat systems capable of supporting customers in multiple languages for global user bases.",
-  "use_cases": [
-    {
-      "title": "Global Customer Support",
-      "problem": "Companies expanding internationally struggle with language barriers.",
-      "solution": "Deploy multilingual chatbots with automatic language detection.",
-      "impact": "Expanded global reach and improved support accessibility."
-    },
-    {
-      "title": "Localized Product Guidance",
-      "problem": "Users in different regions require localized product explanations.",
-      "solution": "Provide region-specific product information through multilingual AI assistants.",
-      "impact": "Improved product understanding and higher customer engagement."
-    },
-    {
-      "title": "Real-Time Translation for Agents",
-      "problem": "Support teams cannot communicate with customers speaking different languages.",
-      "solution": "Implement AI translation tools integrated with chat platforms.",
-      "impact": "Enabled cross-language communication and improved service coverage."
-    }
-  ]
-},
-{
-  "id": "ai-chat-support4",
-  "name": "Customer Sentiment Analysis",
-  "description": "AI systems that analyze customer conversations to identify satisfaction levels and emotional tone.",
-  "use_cases": [
-    {
-      "title": "Support Conversation Monitoring",
-      "problem": "Companies struggle to identify frustrated customers during support interactions.",
-      "solution": "Analyze chat transcripts using NLP models to detect negative sentiment.",
-      "impact": "Enabled proactive intervention by supervisors and improved customer satisfaction."
-    },
-    {
-      "title": "Service Quality Insights",
-      "problem": "Businesses lack insight into the effectiveness of support interactions.",
-      "solution": "Use AI to analyze conversation trends and agent performance.",
-      "impact": "Improved training programs and service quality."
-    },
-    {
-      "title": "Product Feedback Mining",
-      "problem": "Customer chats contain valuable product feedback that often goes unnoticed.",
-      "solution": "Apply text analytics to extract product improvement suggestions.",
-      "impact": "Better product development informed by real customer insights."
-    }
-  ]
 }
 , {
           "id": "ai-chat-support34",
@@ -120,25 +70,6 @@
               "problem": "Support teams receive a high volume of repetitive order status requests.",
               "solution": "Integrate chatbot systems with order management APIs to provide real-time updates.",
               "impact": "Reduced repetitive tickets and allowed agents to focus on complex customer issues."
-            },
-            
-        {
-          "title": "E-Commerce Platform Development",
-          "problem": "Businesses need scalable online storefronts capable of handling high traffic.",
-          "solution": "Develop modern web apps using scalable frameworks with integrated payment and inventory systems.",
-          "impact": "Improved customer engagement and increased online sales."
-        },
-        {
-          "title": "On-Demand Service App",
-          "problem": "Customers need convenient access to services through mobile devices.",
-          "solution": "Develop mobile applications with real-time notifications, location tracking, and payment integration.",
-          "impact": "Improved customer accessibility and higher service adoption rates."
-        },
-            {
-              "title": "Automated Ticket Routing",
-              "problem": "Support tickets are often delayed due to manual routing.",
-              "solution": "Implement rule-based ticket classification and automatic routing to relevant teams.",
-              "impact": "Improved resolution time and reduced operational overhead."
             }
           ]
         }, {
