@@ -114,12 +114,12 @@ export default function ParallaxCardstrial() {
           <div className="absolute inset-0 bg-black/50 opacity-[var(--after-opacity)] transition-opacity duration-100 pointer-events-none z-20" />
 
           {/* LEFT SIDE */}
-          <div className="flex-2 text-6xl font-medium relative z-50 text-black">
+          <div className="mt-10 flex-2 text-6xl font-medium relative z-50 text-black">
             {String(index + 1).padStart(2, "0")}
           </div>
 
           {/* CONTENT */}
-          <div className="flex-4 pt-6 relative z-50 text-black">
+          <div className="mt-10 flex-4 pt-6 relative z-50 text-black">
 
             {/* WHO ARE WE */}
             {card.type === "who" && (
@@ -197,7 +197,6 @@ export default function ParallaxCardstrial() {
                 <p className="text-base leading-relaxed">
                   {card.description}
                 </p>
-
 
                 <div className="grid grid-cols-3 md:grid-cols-5 gap-12 items-center">
                   {card.logos?.map((logo: string) => (
