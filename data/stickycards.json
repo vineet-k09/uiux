@@ -35,11 +35,11 @@
       "title": "Who we serve?",
       "description": "We serve leading enterprises across industries, including tech, finance, and retail.",
       "logos": [
-        "/logos/google.svg",
-        "/logos/amazon.svg",
-        "/logos/netflix.svg",
-        "/logos/meta.svg",
-        "/logos/microsoft.svg"
+        "/google.svg",
+        "/reddit.svg",
+        "/microstrategy.svg",
+        "/meta.svg",
+        "/relianceindustrieslimited.svg"
       ]
     }
   ]
