@@ -6,6 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { useGSAP } from "@gsap/react"
 import Image from "next/image"
 import stickyCardsData from "../../../../data/stickycards.json"
+import SplitFadeText from "@/components/motion/SplitText"
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -127,7 +128,7 @@ export default function ParallaxCardstrial() {
                 <h2 className="text-4xl font-semibold">{card.title}</h2>
 
                 <p className="text-base leading-relaxed">
-                  {card.description}
+                  <SplitFadeText text={card.description} />
                 </p>
 
                 {/* tags */}
@@ -168,7 +169,7 @@ export default function ParallaxCardstrial() {
                 <h2 className="text-4xl font-semibold">{card.title}</h2>
 
                 <p className="text-base leading-relaxed">
-                  {card.description}
+                  <SplitFadeText text={card.description} />
                 </p>
 
 
@@ -195,7 +196,7 @@ export default function ParallaxCardstrial() {
               <div className="flex flex-col gap-10">
                 <h2 className="text-4xl font-semibold">{card.title}</h2>
                 <p className="text-base leading-relaxed">
-                  {card.description}
+                  <SplitFadeText text={card.description} />
                 </p>
 
                 <div className="grid grid-cols-3 md:grid-cols-5 gap-12 items-center">
