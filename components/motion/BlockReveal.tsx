@@ -64,7 +64,7 @@ export default function BlockReveal({ children, delay = 0 }: BlockRevealProps) {
 
       <div
         ref={blockRef}
-        className="absolute inset-0 pointer-events-none origin-left scale-x-0 bg-gradient-to-r from-[#ff5874] to-[#e767f9]"
+        className="absolute inset-0 pointer-events-none origin-left scale-x-0 bg-linear-to-r from-[#ff5874] to-[#e767f9]"
       />
     </div>
   )

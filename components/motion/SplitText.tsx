@@ -11,7 +11,7 @@ export default function SplitFadeText({ text, className }: Props) {
   const words = text.split(" ")
 
   return (
-    <p className={`flex flex-wrap justify-center ${className}`}>
+    <p className={`flex flex-wrap  ${className}`}>
       {words.map((word, i) => (
         <motion.span
           key={i}
