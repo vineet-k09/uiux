@@ -19,10 +19,7 @@ export default function LandingPage() {
   }, [])
   return (
       <main >
-        <Intro />
-        <Description />
         <Projects />
-        {/* <ParallaxCards/> */}
         <ParallaxCardstrial />
         <ContactUs />
       </main>
