@@ -1,13 +1,14 @@
 "use client"
 
-import Intro from '@/components/sections/home/Header';
-import Description from '@/components/sections/home/Description';
+// import Intro from '@/components/sections/home/Header';
+// import Description from '@/components/sections/home/Description';
 import Projects from '@/components/sections/home/Projects';
-import ParallaxCards from '@/components/sections/home/parallaxCards';
+// import ParallaxCards from '@/components/sections/home/parallaxCards';
 import ParallaxCardstrial from './ParallaxCard_Section/parallaxCards copy';
 import Value from '@/components/sections/home/Value';
 import ContactUs from '@/components/sections/home/ContactUs';
 import { useEffect } from 'react';
+import ParticleBackground from '@/components/ui/ParticleBackground';
 
 export default function LandingPage() {
   useEffect(() => {
@@ -19,8 +20,11 @@ export default function LandingPage() {
     )()
   }, [])
   return (
-      <main >
-        
+      <main>
+        <section className="relative h-screen flex items-center justify-center overflow-hidden">
+{/* HOME HERO SECTION */}
+        <ParticleBackground />
+        </section>
         <Projects />
         <ParallaxCardstrial />
         <Value />
