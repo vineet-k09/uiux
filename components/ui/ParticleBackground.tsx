@@ -24,76 +24,103 @@ export default function ParticleBackground() {
       // particlesLoaded={Particles}
       className="absolute inset-0 -z-10 pointer-events-none"
       options={{
-        fullScreen: false,
+  fullScreen: true,
 
-        particles: {
-          number: {
-            value: 60,
-            density: {
-              enable: true,
-            //   area: 800
-            }
-          },
+  fpsLimit: 60,
 
-          color: {
-            value: "#ffffff"
-          },
+  particles: {
+    number: {
+      value: 150,
+      density: {
+        enable: true
+      }
+    },
 
-          shape: {
-            type: "circle"
-          },
+    color: {
+      value: "#ff0000"
+    },
 
-          opacity: {
-            value: 0.5
-          },
+    shape: {
+      type: "circle"
+    },
 
-          size: {
-            value: { min: 1, max: 3 }
-          },
+    opacity: {
+      value: { min: 0.1, max: 0.5 },
+      animation: {
+        enable: true,
+        speed: 3,
+        sync: false
+      }
+    },
 
-          move: {
-            enable: true,
-            speed: 0.6,
-            direction: "none",
-            random: false,
-            straight: false,
-            outModes: {
-              default: "out"
-            }
-          },
+    size: {
+      value: { min: 0.1, max: 6 },
+      animation: {
+        enable: true,
+        speed: 20,
+        sync: false
+      }
+    },
 
-          links: {
-            enable: false
-          }
-        },
+    move: {
+      enable: true,
+      speed: 1.2,
+      direction: "none",
+      random: true,
+      straight: false,
+      outModes: {
+        default: "out"
+      }
+    },
 
-        interactivity: {
-          events: {
-            onHover: {
-              enable: false,
-              mode: "repulse"
-            },
+    links: {
+      enable: true,
+      distance: 120,
+  color: "#ffffff",
+  opacity: 0.4,
+  width: 1
+    },
+    
+  },
 
-            onClick: {
-              enable: false,
-              mode: "push"
-            }
-          },
+  interactivity: {
+    events: {
+      onHover: {
+        enable: true,
+        mode: ["grab", "bubble"]
+      },
 
-          modes: {
-            repulse: {
-              distance: 120,
-              duration: 0.4
-            },
+      onClick: {
+        enable: false,
+        mode: "push"
+      },
 
-            push: {
-              quantity: 4
-            }
-          }
-        },
+      // resize: true
+    },
 
-        detectRetina: true
-      }}
+    modes: {
+      attract: {
+        distance: 200,
+        duration: 0.4,
+        factor: 1,
+        maxSpeed: 50,
+        speed: 1
+      },
+
+      push: {
+        quantity: 4
+      },
+      bubble: {
+  distance: 200,
+  size: 10,
+  duration: 2,
+  opacity: 1
+},
+    }
+  },
+
+  detectRetina: true
+}}
     />
   )
 }
