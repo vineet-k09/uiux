@@ -45,7 +45,7 @@ export default function Services() {
     }, [])
 
     return (
-        <div className="bg-neutral-950 text-white min-h-screen flex" suppressHydrationWarning>
+        <div className="text-white min-h-screen flex" suppressHydrationWarning>
 
             <ChapterNav
                 domains={domains}

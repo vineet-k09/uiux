@@ -23,10 +23,11 @@ export default function ChapterNav({
     onDomainClick,
 }: ChapterNavProps) {
     return (
-        <aside className="sticky top-0 h-screen w-64 shrink-0 flex flex-col items-start justify-center gap-6 px-8 border-r border-neutral-800/60 bg-neutral-950/95 backdrop-blur-sm z-30">
+        <aside className="sticky top-0 h-screen w-64 shrink-0 flex flex-col items-start justify-center gap-6 px-8 border-r border-neutral-800/60 backdrop-blur-sm z-30">
 
-            {/* vertical guide line */}
-            <div className="absolute left-1/2 -translate-x-1/2 h-full w-px bg-linear-to-b from-transparent via-neutral-800/50 to-transparent pointer-events-none" />
+            <div className="absolute left-1/2 -translate-x-1/2 h-full w-px 
+            
+            pointer-events-none" />
 
             {domains.map((domain) => {
                 const color = DOMAIN_COLORS[domain.id] ?? "#6366f1"

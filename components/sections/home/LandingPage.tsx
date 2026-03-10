@@ -9,6 +9,7 @@ import Value from '@/components/sections/home/Value';
 import ContactUs from '@/components/sections/home/ContactUs';
 import { useEffect } from 'react';
 import ParticleBackground from '@/components/ui/ParticleBackground';
+import HeroContent from './HeroContent';
 
 export default function LandingPage() {
   useEffect(() => {
@@ -24,6 +25,7 @@ export default function LandingPage() {
         <section className="relative h-screen flex items-center justify-center overflow-hidden">
 {/* HOME HERO SECTION */}
         <ParticleBackground />
+        <HeroContent />
         </section>
         <Projects />
         <ParallaxCardstrial />

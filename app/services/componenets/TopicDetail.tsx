@@ -13,7 +13,10 @@ const TopicDetail = ({ domain }: TopicDetailProps) => {
         animate={{ opacity: 1, y: 0, scale: 1 }}
         exit={{ opacity: 0, y: -20, scale: 0.97 }}
         transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-        className="rounded-2xl border border-[hsl(0,0%,16%)] bg-[hsl(0,0%,7%)] p-5 md:p-10 shadow-lg max-h-[80vh] flex flex-col overflow-y-auto"
+        className="rounded-2xl border border-[hsl(0,0%,16%)] 
+        bg-[hsl(0,0%,7%)] 
+
+        p-5 md:p-10 shadow-lg max-h-[80vh] flex flex-col overflow-y-auto"
       >
         <div className="space-y-8 flex-1 ">
             <motion.div

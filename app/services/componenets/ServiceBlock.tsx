@@ -42,7 +42,7 @@ export default function ServiceBlock({
             </div>
 
             {/* Use case cards */}
-            <div className="flex flex-col gap-5">
+            <div className=" flex flex-col gap-5">
                 {service.use_cases.map((useCase, i) => (
                     <TopicDetail  key={i} domain={useCase} />
                 ))}
