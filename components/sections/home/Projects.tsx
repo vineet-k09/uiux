@@ -29,18 +29,18 @@ export default function Projects() {
     }, []);
 
     return (
-        <div ref={container} className="relative text-white mt-[25vh] p-[10%]">
+        <div ref={container} className="relative  text-white mt-[25vh] p-[10%]">
 
             {/* Description Section */}
-            <div className="flex h-175 justify-between gap-[5%]">
+            <div className="flex h-175 justify-between gap-[5%] ">
 
                 {/* Pinned Image */}
                 <div
                     ref={imageContainer}
-                    className="relative h-full w-[40%]"
+                    className="relative h-full w-[40%] "
                 >
                     <Image
-                        src="/landing_img3.png"
+                        src="/Tower.jpg"
                         alt="project image"
                         fill
                         priority
@@ -48,11 +48,11 @@ export default function Projects() {
                     />
                 </div>
 
-                <div className="grid h-full w-[60%] grid-cols-2 grid-rows-2 gap-[3vw]">
+                <div className="grid h-full w-[60%] grid-cols-2 grid-rows-2 gap-[3vw] ">
                     {projects.cards.map((card, index) => (
                         <div
                             key={index}
-                            className="flex flex-col justify-between border border-white/30 bg-white/5 p-[2vw] backdrop-blur-md transition-all duration-300 hover:-translate-y-2 hover:border-white/60"
+                            className="flex flex-col justify-between rounded-lg border border-white/30 bg-white/5 p-[2vw] backdrop-blur-md transition-all duration-300 hover:-translate-y-2 hover:border-white/60"
                         >
                             <h3 className="text-[1.6vw] uppercase tracking-wide">
                                 {card.title}
