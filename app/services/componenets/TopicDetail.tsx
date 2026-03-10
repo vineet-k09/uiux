@@ -29,12 +29,15 @@ const TopicDetail = ({ domain, accentColor }: TopicDetailProps) => {
           >
 
             {/* hover glow */}
-            <div
-              className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
-              style={{
-                background: `radial-gradient(circle at 20% 20%, ${accentColor}22, transparent 70%)`
-              }}
-            />
+<div
+  className="
+  absolute inset-0 
+  opacity-0 group-hover:opacity-50 
+  transition-opacity duration-500 
+  pointer-events-none
+  bg-[radial-gradient(circle_at_20%_20%,rgba(255,85,116,0.35),transparent_40%),radial-gradient(circle_at_80%_80%,rgba(231,103,249,0.25),transparent_40%),linear-gradient(135deg,#0f0f14_0%,#151521_40%,#1a1a2a_100%)]
+"
+/>
 
             <div className="relative z-10 space-y-5">
 
