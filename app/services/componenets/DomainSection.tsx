@@ -22,11 +22,11 @@ const DOMAIN_ICONS: Record<string, LucideIcon> = {
 }
 
 export const DOMAIN_COLORS: Record<string, string> = {
-    "customer-care": "#6366f1",
-    "data-analytics": "#10b981",
-    "cloud-services": "#0ea5e9",
-    "cyber-security": "#f43f5e",
-    "ai-automation": "#8b5cf6",
+    "customer-care": "#E60000",
+    "data-analytics": "#9C2AA0",
+    "cloud-services": "#E60000",
+    "cyber-security": "#9C2AA0",
+    "ai-automation": "#E60000",
 }
 
 interface DomainSectionProps {
@@ -38,6 +38,13 @@ const DomainSection = forwardRef<HTMLElement, DomainSectionProps>(
     ({ domain, index }, ref) => {
         const Icon = DOMAIN_ICONS[domain.id] ?? Bot
         const color = DOMAIN_COLORS[domain.id] ?? "#6366f1"
+        const OPPOSITE_COLORS: Record<string, string> = {
+            "#E60000": "#9C2AA0",
+            "#9C2AA0": "#E60000",
+        }
+
+        const oppositeColor = OPPOSITE_COLORS[color] ?? "#9C2AA0"
+
         const totalUseCases = domain.services.reduce(
             (acc, s) => acc + s.use_cases.length,
             0
@@ -50,13 +57,26 @@ const DomainSection = forwardRef<HTMLElement, DomainSectionProps>(
                 className="relative min-h-screen pt-24 pb-28 px-10 lg:px-20"
             >
                 {/* Ambient radial glow for domain */}
+
                 <div
                     className="absolute inset-0 pointer-events-none"
                     style={{
-                        background: `radial-gradient(ellipse 55% 35% at 15% 25%, ${color}0e, transparent 65%)`,
+                        background: `
+linear-gradient(
+180deg,
+${color}20 10%,
+${oppositeColor}25 30%,
+transparent 75%
+),
+linear-gradient(
+180deg,
+rgba(255,255,255,0.03) 0%,
+rgba(0,0,0,0.25) 100%
+)
+`
                     }}
                 />
-
+                <div className="absolute inset-0 opacity-[0.08] bg-[radial-gradient(circle,white_1px,transparent_1px)] [background-size:22px_22px]" />
                 {/* Top separator line with accent fade */}
                 <div
                     className="absolute top-0 left-0 right-0 h-px pointer-events-none"
@@ -74,10 +94,10 @@ const DomainSection = forwardRef<HTMLElement, DomainSectionProps>(
                     className="relative z-10 mb-14"
                 >
 
-                    {/* Icon + Title row */}
-                    <div className="flex items-start gap-5">
+                    <div className="flex flex-col items-center text-center gap-5">
+
                         <motion.div
-                            className="w-14 h-14 rounded-2xl flex items-center justify-center shrink-0 mt-1 md:mt-4"
+                            className="w-14 h-14 rounded-2xl flex items-center justify-center shrink-0"
                             style={{
                                 backgroundColor: color + "18",
                                 border: `1px solid ${color}35`,
@@ -85,47 +105,24 @@ const DomainSection = forwardRef<HTMLElement, DomainSectionProps>(
                             whileHover={{ scale: 1.08 }}
                             transition={{ type: "spring", stiffness: 300, damping: 20 }}
                         >
-                            <Icon size={26} style={{ color }} />
+                            <Icon size={26} style={{ color: color }} />
                         </motion.div>
-
-                        <div className="flex-1">
-                            <h2 className="text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-[1.05] tracking-tight mb-3">
+                        <div>
+                            <h2 className="text-5xl lg:text-superh1 xl:text-superh1 font-bold leading-[1.05] tracking-tight mb-3">
                                 {domain.name}
                             </h2>
-                            <p className="text-neutral-400 text-[15px] leading-relaxed max-w-2xl">
+
+                            <p className="text-h2 leading-relaxed max-w-2xl mx-auto">
                                 {domain.description}
                             </p>
                         </div>
+
                     </div>
 
-                    {/* Badges */}
-                    <div className="flex gap-2.5 mt-6 ml-19">
-                        <span
-                            className="text-[11px] font-medium px-3 py-1.5 rounded-full"
-                            style={{
-                                color,
-                                backgroundColor: color + "15",
-                                border: `1px solid ${color}30`,
-                            }}
-                        >
-                            {domain.services.length} Services
-                        </span>
-                        <span
-                            className="text-[11px] font-medium px-3 py-1.5 rounded-full"
-                            style={{
-                                color,
-                                backgroundColor: color + "15",
-                                border: `1px solid ${color}30`,
-                            }}
-                        >
-                            {totalUseCases} Use Cases
-                        </span>
-                    </div>
                 </motion.div>
 
                 {/* Divider */}
-                <div className="relative z-10 h-px bg-neutral-800/50 mb-12" />
-
+                <div className="relative z-10 h-px bg-white/30 mb-12" />
                 {/* ── Services ── */}
                 <div className="relative z-10 space-y-16">
                     {domain.services.map((service, i) => (

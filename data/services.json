@@ -20,12 +20,6 @@
       "problem": "Customers often need assistance booking appointments through support lines.",
       "solution": "Voice assistants integrated with scheduling systems allow users to book or modify appointments.",
       "impact": "Improved booking convenience and reduced manual scheduling workload."
-    },
-    {
-      "title": "Voice-Based Order Tracking",
-      "problem": "Customers frequently call to check delivery updates.",
-      "solution": "Voice bots integrated with logistics APIs provide real-time shipment tracking.",
-      "impact": "Reduced repetitive support calls and improved delivery transparency."
     }
   ]
 },
@@ -45,71 +39,9 @@
       "problem": "Users need assistance resetting passwords or updating account settings.",
       "solution": "Provide automated workflows and guided troubleshooting steps.",
       "impact": "Reduced dependency on human agents and faster issue resolution."
-    },
-    {
-      "title": "Customer Feedback Collection",
-      "problem": "Businesses lack structured feedback from customers after support interactions.",
-      "solution": "Embed automated feedback forms and sentiment analysis tools.",
-      "impact": "Improved service quality through actionable customer insights."
     }
   ]
-}
-, {
-          "id": "ai-chat-support34",
-          "name": "AI Chat Support",
-          "description": "Automated conversational agents that assist customers with queries, troubleshooting, and service navigation in real-time.",
-          "use_cases": [
-            {
-              "title": "24/7 Automated Customer Support",
-              "problem": "Customers require instant assistance even outside business hours.",
-              "solution": "Deploy AI chatbots trained on knowledge bases to handle FAQs and escalate complex issues to human agents.",
-              "impact": "Reduced support response time by 70% and improved customer satisfaction scores."
-            },
-            {
-              "title": "Order Status Automation",
-              "problem": "Support teams receive a high volume of repetitive order status requests.",
-              "solution": "Integrate chatbot systems with order management APIs to provide real-time updates.",
-              "impact": "Reduced repetitive tickets and allowed agents to focus on complex customer issues."
-            }
-          ]
-        }, {
-          "id": "ai-chat-support44",
-          "name": "AI Chat Support",
-          "description": "Automated conversational agents that assist customers with queries, troubleshooting, and service navigation in real-time.",
-          "use_cases": [
-            {
-              "title": "24/7 Automated Customer Support",
-              "problem": "Customers require instant assistance even outside business hours.",
-              "solution": "Deploy AI chatbots trained on knowledge bases to handle FAQs and escalate complex issues to human agents.",
-              "impact": "Reduced support response time by 70% and improved customer satisfaction scores."
-            },
-            {
-              "title": "Order Status Automation",
-              "problem": "Support teams receive a high volume of repetitive order status requests.",
-              "solution": "Integrate chatbot systems with order management APIs to provide real-time updates.",
-              "impact": "Reduced repetitive tickets and allowed agents to focus on complex customer issues."
-            },
-            
-        {
-          "title": "E-Commerce Platform Development",
-          "problem": "Businesses need scalable online storefronts capable of handling high traffic.",
-          "solution": "Develop modern web apps using scalable frameworks with integrated payment and inventory systems.",
-          "impact": "Improved customer engagement and increased online sales."
-        },
-        {
-          "title": "On-Demand Service App",
-          "problem": "Customers need convenient access to services through mobile devices.",
-          "solution": "Develop mobile applications with real-time notifications, location tracking, and payment integration.",
-          "impact": "Improved customer accessibility and higher service adoption rates."
-        },
-            {
-              "title": "Automated Ticket Routing",
-              "problem": "Support tickets are often delayed due to manual routing.",
-              "solution": "Implement rule-based ticket classification and automatic routing to relevant teams.",
-              "impact": "Improved resolution time and reduced operational overhead."
-            }
-          ]
-        }]
+}]
     },
     {
       "id": "data-analytics",

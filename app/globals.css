@@ -26,6 +26,7 @@
 
   /* Deep purple background */
   --brand-bg: #36013f;
+  /* --brand-bg: #000000;  */
 
   /* Slightly lighter surface */
   --brand-surface: oklch(0.22 0.09 290);
@@ -38,14 +39,11 @@
       oklch(0.6 0.2 280),
       oklch(0.72 0.22 340));
 
-
   /* -------------------------
      TYPOGRAPHY SCALE
      ------------------------- */
-
-  --text-h1: 3.5rem;
-  /* hero heading */
-  --text-h2: 2.2rem;
+--text-h1: 2.5rem;  /* hero heading */
+  --text-h2: 1.rem;
   /* section heading */
   --text-body: 1.05rem;
   /* paragraph */
@@ -89,25 +87,6 @@
   .section {
     padding-top: var(--section-space);
     padding-bottom: var(--section-space);
-  }
-
-}
-
-@layer base {
-
-  h1 {
-    font-size: var(--text-h1);
-    font-weight: 700;
-    line-height: 1.1;
-  }
-
-  h2 {
-    font-size: var(--text-h2);
-    font-weight: 600;
-  }
-
-  p {
-    font-size: var(--text-body);
   }
 
 }
@@ -234,5 +213,29 @@
     @apply bg-background text-foreground;
   }
   
+  .superh1 {
+    font-size: var(--super-h1);
+    font-weight: 700;
+    line-height: 1.1;
+    color: white;
+  }
+    .text-h1 {
+    font-size: var(--text-h1);
+    font-weight: 700;
+    line-height: 1.1;
+    color:white;
+  }
+    .text-h2 {
+    font-size: var(--text-h2);
+    font-weight: 600;
+    color: #D2D2D2;
+  }
+
+  .text
+
+  p {
+    font-size: var(--text-body);
+  }
+
 }
 
