@@ -109,30 +109,41 @@ export default function ParallaxCardstrial() {
       {stickyCardsData.stickyCardsData.map((card, index) => (
         <section
           key={index}
-          className="sticky-card relative w-full h-svh p-6 flex gap-12 bg-white will-change-transform max-[1000px]:flex-col max-[1000px]:gap-0"
-        >
+className="sticky-card relative w-full h-svh p-6 flex gap-12 text-white will-change-transform max-[1000px]:flex-col max-[1000px]:gap-0 bg-[radial-gradient(circle_at_20%_20%,rgba(255,85,116,0.35),transparent_40%),radial-gradient(circle_at_80%_80%,rgba(231,103,249,0.25),transparent_40%),linear-gradient(135deg,#0f0f14_0%,#151521_40%,#1a1a2a_100%)]"           >
           {/* Overlay */}
           <div className="absolute inset-0 bg-black/50 opacity-[var(--after-opacity)] transition-opacity duration-100 pointer-events-none z-20" />
 
           {/* LEFT SIDE */}
-          <div className="mt-10 flex-2 text-6xl font-medium relative z-50 text-black">
-            {String(index + 1).padStart(2, "0")}
+          <div className="mt-20 w-[280px] relative z-50 max-[1000px]:w-full max-[1000px]:h-[220px]">
+            <div className="relative h-full w-full overflow-hidden rounded-2xl border border-white/10 shadow-lg">
+              {card.image ? (
+                <Image
+                  src={card.image}
+                  alt={card.title}
+                  fill
+                  className="object-cover"
+                  sizes="280px"
+                  priority={index === 0}
+                />
+              ) : (
+                // fallback gradient if no image provided
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(255,85,116,0.45),transparent_40%),linear-gradient(135deg,#1a1a2a,#0f0f14)]" />
+              )}
+            </div>
           </div>
 
           {/* CONTENT */}
-          <div className="mt-10 flex-4 pt-6 relative z-50 text-black">
+          <div className="mt-20 flex-4 pt-6 relative z-50 ">
 
             {/* WHO ARE WE */}
             {card.type === "who" && (
               <div className="flex flex-col gap-6 max-w-xl">
                 <h2 className="text-4xl font-semibold">{card.title}</h2>
-
-                <p className="text-base leading-relaxed">
-                  <SplitFadeText text={card.description} />
-                </p>
+                <SplitFadeText text={card.description} className="text-white"/>
+                
 
                 {/* tags */}
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 text-black">
                   {card.tags?.map((tag: string) => (
                     <span
                       key={tag}
@@ -144,7 +155,7 @@ export default function ParallaxCardstrial() {
                 </div>
 
                 {/* stats */}
-                <div className="grid grid-cols-3 gap-4 mt-4">
+                <div className="grid grid-cols-3 gap-4 mt-4 text-black">
                   {card.stats?.map((stat: any) => (
                     <div
                       key={stat.label}
@@ -167,10 +178,8 @@ export default function ParallaxCardstrial() {
             {card.type === "why" && (
               <div className="flex flex-col gap-8">
                 <h2 className="text-4xl font-semibold">{card.title}</h2>
-
-                <p className="text-base leading-relaxed">
-                  <SplitFadeText text={card.description} />
-                </p>
+                <SplitFadeText text={card.description} />
+                
 
 
                 <div className="grid md:grid-cols-3 gap-6">
@@ -179,7 +188,7 @@ export default function ParallaxCardstrial() {
                       key={item.title}
                       className="why-card p-6 rounded-xl bg-neutral-100 hover:bg-neutral-200 transition"
                     >
-                      <h3 className="text-lg font-semibold mb-2">
+                      <h3 className="text-lg font-semibold mb-2 text-black">
                         {item.title}
                       </h3>
                       <p className="text-sm text-neutral-700">
@@ -195,9 +204,7 @@ export default function ParallaxCardstrial() {
             {card.type === "serve" && (
               <div className="flex flex-col gap-10">
                 <h2 className="text-4xl font-semibold">{card.title}</h2>
-                <p className="text-base leading-relaxed">
-                  <SplitFadeText text={card.description} />
-                </p>
+                <SplitFadeText text={card.description} />
 
                 <div className="grid grid-cols-3 md:grid-cols-5 gap-12 items-center">
                   {card.logos?.map((logo: string) => (
@@ -209,7 +216,7 @@ export default function ParallaxCardstrial() {
                         src={logo}
                         alt="company logo"
                         fill
-                        className="object-contain"
+                        className="h-full w-full object-contain brightness-0 invert"
                       />
                     </div>
                   ))}

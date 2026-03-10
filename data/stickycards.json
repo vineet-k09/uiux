@@ -5,6 +5,7 @@
       "title": "Who Are We?",
       "description": "We are a global AI and data company helping enterprises scale.",
       "tags": ["AI", "Data", "Automation"],
+      "image": "/WhoAreWe.jpg",
       "stats": [
         { "value": 20, "suffix": "+", "label": "Locations" },
         { "value": 600, "suffix": "+", "label": "Markets" },
@@ -15,6 +16,7 @@
       "type": "why",
       "title": "Why us?",
       "description": "We combine cutting-edge AI with enterprise-grade infrastructure to deliver results.",
+      "image": "/WhyUs.jpg",
       "cards": [
         {
           "title": "AI Expertise",
@@ -34,6 +36,7 @@
       "type": "serve",
       "title": "Who we serve?",
       "description": "We serve leading enterprises across industries, including tech, finance, and retail.",
+      "image": "/WhoWeServe.jpg",
       "logos": [
         "/google.svg",
         "/reddit.svg",
