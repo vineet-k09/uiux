@@ -77,7 +77,7 @@ const TopicDetail = ({ domain, accentColor }: TopicDetailProps) => {
                 {/* connector */}
                 <div className="hidden md:flex items-center">
                   <div
-                    className="w-10 h-[2px]"
+                    className="w-10 h-0.5"
                     style={{
                       background: `linear-gradient(to right, ${accentColor}80, transparent)`,
                     }}
@@ -112,7 +112,7 @@ const TopicDetail = ({ domain, accentColor }: TopicDetailProps) => {
                 {/* connector */}
                 <div className="hidden md:flex items-center">
                   <div
-                    className="w-10 h-[2px]"
+                    className="w-10 h-0.5"
                     style={{
                       background: `linear-gradient(to right, ${accentColor}80, transparent)`,
                     }}

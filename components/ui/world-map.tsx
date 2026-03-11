@@ -38,7 +38,7 @@ export default function WorldMap({ dots = [] }: MapProps) {
   };
 
   return (
-    <div className="w-full aspect-[3/1] relative overflow-hidden">
+    <div className="w-full aspect-3/1 relative overflow-hidden">
       <img
         src={`data:image/svg+xml;utf8,${encodeURIComponent(svgMap)}`}
         className="h-full w-full pointer-events-none select-none"

@@ -59,21 +59,22 @@ const DomainSection = forwardRef<HTMLElement, DomainSectionProps>(
           className="absolute inset-0 pointer-events-none"
           style={{
             background: `
-                            linear-gradient(
-                            180deg,
-                            ${color}20 10%,
-                            ${oppositeColor}25 30%,
-                            transparent 75%
-                            ),
-                            linear-gradient(
-                            180deg,
-                            rgba(255,255,255,0.03) 0%,
-                            rgba(0,0,0,0.25) 100%
-                            )
-                        `,
+              linear-gradient(
+              180deg,
+              ${color}20 10%,
+              ${oppositeColor}25 30%,
+              transparent 75%
+              ),
+              linear-gradient(
+              180deg,
+              rgba(255,255,255,0.03) 0%,
+              rgba(0,0,0,0.25) 100%
+              )`,
           }}
         />
-        <div className="absolute inset-0 opacity-[0.08] bg-[radial-gradient(circle,white_1px,transparent_1px)] bg-size-[22px_22px]" />
+        <div className="absolute inset-0 opacity-[0.08] 
+        bg-[radial-gradient(circle,white_1px,transparent_1px)] 
+        bg-size-[22px_22px]" />
         {/* Top separator line with accent fade */}
         <div
           className="absolute top-0 left-0 right-0 h-px pointer-events-none"
@@ -93,7 +94,7 @@ const DomainSection = forwardRef<HTMLElement, DomainSectionProps>(
           <div className="flex items-center text-left gap-5 pt-2">
             <motion.div
               className="w-14 h-14 -top-7.5 relative 
-                            rounded-2xl flex items-center justify-center shrink-0"
+                rounded-2xl flex items-center justify-center shrink-0"
               style={{
                 backgroundColor: color + "18",
                 border: `1px solid ${color}35`,
@@ -104,7 +105,8 @@ const DomainSection = forwardRef<HTMLElement, DomainSectionProps>(
               <Icon size={26} style={{ color: color }} />
             </motion.div>
             <div>
-              <h2 className="text-6xl lg:text-superh1 xl:text-superh1 font-bold leading-[1.05] tracking-tight mb-3">
+              <h2 className="text-6xl lg:text-superh1 xl:text-superh1 
+              font-bold leading-[1.05] tracking-tight mb-3">
                 {domain.name}
               </h2>
 

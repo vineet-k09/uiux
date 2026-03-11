@@ -227,7 +227,7 @@ export default function Navbar() {
           <div className="w-[33%] flex justify-end items-center gap-4">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="sm:hidden flex flex-col justify-center items-center gap-[5px] p-2"
+              className="sm:hidden flex flex-col justify-center items-center gap-1.25 p-2"
             >
               <span
                 className={`block w-6 h-0.5 bg-white transition-transform duration-300 ${isOpen ? "rotate-45 translate-y-1.5" : ""}`}
