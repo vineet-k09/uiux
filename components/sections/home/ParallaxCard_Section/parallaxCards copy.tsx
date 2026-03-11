@@ -95,7 +95,7 @@ export default function ParallaxCardstrial() {
             snap: { innerText: 1 },
             scrollTrigger: {
               trigger: num,
-              start: "top 8 0%",
+              start: "top 80%",
             },
           }
         )
