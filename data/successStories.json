@@ -1,0 +1,43 @@
+{
+  "stories":[
+  {
+    "title": "AI Demand Forecasting",
+    "domain": "Retail",
+    "image": "/SuccessCard.jpg",
+    "challenge": "Retail chain struggled with inaccurate demand prediction causing stockouts and overstock.",
+    "solution": "Built a machine learning forecasting pipeline using historical sales, seasonality and external signals.",
+    "result": "Reduced stockouts by 32% and improved inventory turnover by 21%."
+  },
+  {
+    "title": "Fraud Detection System",
+    "domain": "FinTech",
+    "image": "/SuccessCard.jpg",
+    "challenge": "Financial platform needed real-time fraud detection for millions of transactions.",
+    "solution": "Implemented anomaly detection models with streaming data pipelines.",
+    "result": "Detected fraudulent activity 4x faster and reduced fraud losses by 18%."
+  },
+  {
+    "title": "Customer Support AI",
+    "domain": "Conversational",
+    "image": "/SuccessCard.jpg",
+    "challenge": "Customer support teams faced heavy ticket volumes and slow response times.",
+    "solution": "Developed AI-powered chatbot integrated with knowledge base and ticket routing.",
+    "result": "Automated 60% of incoming support queries."
+  },
+  {
+    "title": "Predictive Maintenance",
+    "domain": "Manufacturing",
+    "image": "/SuccessCard.jpg",
+    "challenge": "Frequent machine downtime caused operational inefficiencies.",
+    "solution": "IoT sensor data with predictive ML models for early failure detection.",
+    "result": "Reduced equipment downtime by 27%."
+  },
+  {
+    "title": "Personalized Recommendations",
+    "domain": "Ecommerce",
+    "image": "/SuccessCard.jpg",
+    "challenge": "Low product discovery and engagement on ecommerce platform.",
+    "solution": "Built recommendation engine using collaborative filtering and embeddings.",
+    "result": "Increased average order value by 22%."
+  }
+]}

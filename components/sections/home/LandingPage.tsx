@@ -11,6 +11,8 @@ import { useEffect } from 'react';
 import ParticleBackground from '@/components/ui/ParticleBackground';
 import HeroContent from './HeroContent';
 import WorldMapCard from './WorldMap';
+import SuccessStories1 from './successStories/expanded-cards';
+
 
 export default function LandingPage() {
   useEffect(() => {
@@ -35,6 +37,7 @@ export default function LandingPage() {
         <Projects />
         <ParallaxCardstrial />
         <Value />
+        <SuccessStories1 />
         <ContactUs />
       </main>
   )
