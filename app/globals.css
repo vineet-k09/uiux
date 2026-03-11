@@ -27,6 +27,7 @@
   /* Deep purple background */
   /* --brand-bg: #36013f; */
   --brand-bg: #000000; 
+  --color-blur: [radial-gradient(circle_at_20%_20%,rgba(255,85,116,0.35),transparent_40%),radial-gradient(circle_at_80%_80%,rgba(231,103,249,0.25),transparent_40%),linear-gradient(135deg,#0f0f14_0%,#151521_40%,#1a1a2a_100%)];
 
   /* Slightly lighter surface */
   --brand-surface: oklch(0.22 0.09 290);
@@ -42,8 +43,8 @@
   /* -------------------------
      TYPOGRAPHY SCALE
      ------------------------- */
---text-h1: 2.5rem;  /* hero heading */
-  --text-h2: 1.rem;
+  --text-h1: 2.5rem;  /* hero heading */
+  --text-h2: 1.25rem;
   /* section heading */
   --text-body: 1.05rem;
   /* paragraph */
@@ -63,6 +64,11 @@
   .bg-brand {
     background: var(--brand-bg);
   }
+
+  .bg-blur{
+    background: radial-gradient(circle at 20% 20%, rgba(255,85,116,0.35), transparent 40%), radial-gradient(circle at 80% 80%, rgba(231,103,249,0.25), transparent 40%), linear-gradient(135deg, #0f0f14 0%, #151521 40%, #1a1a2a 100%);
+  }
+
 
   /* card surface */
   .surface {

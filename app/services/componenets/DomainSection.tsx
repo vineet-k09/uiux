@@ -23,9 +23,9 @@ const DOMAIN_ICONS: Record<string, LucideIcon> = {
 
 export const DOMAIN_COLORS: Record<string, string> = {
     "customer-care": "#E60000",
-    "data-analytics": "#9C2AA0",
+    "data-analytics": "#E60000",
     "cloud-services": "#E60000",
-    "cyber-security": "#9C2AA0",
+    "cyber-security": "#E60000",
     "ai-automation": "#E60000",
 }
 
@@ -39,11 +39,10 @@ const DomainSection = forwardRef<HTMLElement, DomainSectionProps>(
         const Icon = DOMAIN_ICONS[domain.id] ?? Bot
         const color = DOMAIN_COLORS[domain.id] ?? "#6366f1"
         const OPPOSITE_COLORS: Record<string, string> = {
-            "#E60000": "#9C2AA0",
-            "#9C2AA0": "#E60000",
+            "#E60000": "#E60000"
         }
 
-        const oppositeColor = OPPOSITE_COLORS[color] ?? "#9C2AA0"
+        const oppositeColor = OPPOSITE_COLORS[color] ?? "#E60000"
 
         const totalUseCases = domain.services.reduce(
             (acc, s) => acc + s.use_cases.length,
@@ -54,29 +53,27 @@ const DomainSection = forwardRef<HTMLElement, DomainSectionProps>(
             <section
                 ref={ref}
                 id={domain.id}
-                className="relative min-h-screen pt-24 pb-28 px-10 lg:px-20"
+                className="relative h-screen pt-4 px-10 lg:px-20"
             >
-                {/* Ambient radial glow for domain */}
-
                 <div
                     className="absolute inset-0 pointer-events-none"
                     style={{
                         background: `
-linear-gradient(
-180deg,
-${color}20 10%,
-${oppositeColor}25 30%,
-transparent 75%
-),
-linear-gradient(
-180deg,
-rgba(255,255,255,0.03) 0%,
-rgba(0,0,0,0.25) 100%
-)
-`
+                            linear-gradient(
+                            180deg,
+                            ${color}20 10%,
+                            ${oppositeColor}25 30%,
+                            transparent 75%
+                            ),
+                            linear-gradient(
+                            180deg,
+                            rgba(255,255,255,0.03) 0%,
+                            rgba(0,0,0,0.25) 100%
+                            )
+                        `,
                     }}
                 />
-                <div className="absolute inset-0 opacity-[0.08] bg-[radial-gradient(circle,white_1px,transparent_1px)] [background-size:22px_22px]" />
+                <div className="absolute inset-0 opacity-[0.08] bg-[radial-gradient(circle,white_1px,transparent_1px)] bg-size-[22px_22px]" />
                 {/* Top separator line with accent fade */}
                 <div
                     className="absolute top-0 left-0 right-0 h-px pointer-events-none"
@@ -91,13 +88,13 @@ rgba(0,0,0,0.25) 100%
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-80px" }}
                     transition={{ duration: 0.65, ease: "easeOut" }}
-                    className="relative z-10 mb-14"
+                    className="relative z-10 mb-6"
                 >
 
-                    <div className="flex flex-col items-center text-center gap-5">
-
+                    <div className="flex items-center text-left gap-5 pt-2">
                         <motion.div
-                            className="w-14 h-14 rounded-2xl flex items-center justify-center shrink-0"
+                            className="w-14 h-14 -top-7.5 relative 
+                            rounded-2xl flex items-center justify-center shrink-0"
                             style={{
                                 backgroundColor: color + "18",
                                 border: `1px solid ${color}35`,
@@ -108,11 +105,11 @@ rgba(0,0,0,0.25) 100%
                             <Icon size={26} style={{ color: color }} />
                         </motion.div>
                         <div>
-                            <h2 className="text-5xl lg:text-superh1 xl:text-superh1 font-bold leading-[1.05] tracking-tight mb-3">
+                            <h2 className="text-6xl lg:text-superh1 xl:text-superh1 font-bold leading-[1.05] tracking-tight mb-3">
                                 {domain.name}
                             </h2>
 
-                            <p className="text-h2 leading-relaxed max-w-2xl mx-auto">
+                            <p className="text-h2 max-w-2xl mx-auto">
                                 {domain.description}
                             </p>
                         </div>
@@ -122,9 +119,9 @@ rgba(0,0,0,0.25) 100%
                 </motion.div>
 
                 {/* Divider */}
-                <div className="relative z-10 h-px bg-white/30 mb-12" />
+                <div className="z-10 h-px bg-white/30 mb-12" />
                 {/* ── Services ── */}
-                <div className="relative z-10 space-y-16">
+                <div className="relative z-10">
                     {domain.services.map((service, i) => (
                         <ServiceBlock
                             key={service.id}

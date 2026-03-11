@@ -99,7 +99,7 @@ export default function Navbar() {
         position: 'absolute', top: 20, left: '50%', transform: 'translateX(-50%)',
         width: 56, height: 20,
         backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)',
-        background: 'rgba(255,255,255,0.07)',
+        background: 'rgba(0,0,0,0.5)',
         borderRadius: '9999px 9999px 0 0',
         border: '1px solid rgba(255,255,255,0.1)', borderBottom: 'none',
       }} />
@@ -107,7 +107,7 @@ export default function Navbar() {
       {/* Panel */}
       <div style={{
         backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)',
-        background: 'rgba(255,255,255,0.07)',
+        background: 'rgba(0,0,0,0.5)',
         border: '1px solid rgba(255,255,255,0.1)',
         borderTop: 'none',
         borderRadius: 16, padding: 24,

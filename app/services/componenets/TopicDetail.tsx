@@ -17,27 +17,33 @@ const TopicDetail = ({ domain, accentColor }: TopicDetailProps) => {
         animate={{ opacity: 1, y: 0, scale: 1 }}
         exit={{ opacity: 0, y: -20, scale: 0.97 }}
         transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-        className="rounded-2xl border border-[hsl(0,0%,16%)] bg-[hsl(0,0%,7%)] p-6 md:p-10 shadow-lg max-h-[80vh] flex flex-col overflow-y-auto"
+        className="rounded-2xl border 
+        border-[hsl(0,0%,16%)] bg-[hsl(0,0%,7%)]
+        shadow-lg max-h-[40vh] 
+        flex overflow-y-auto"
       >
 
-        <div className="space-y-5">
+        <div className="">
 
           <motion.div
             initial={{ opacity: 0, x: -10 }}
             animate={{ opacity: 1, x: 0 }}
-            className="group rounded-xl border border-[hsl(0,0%,16%)] bg-[hsl(0,0%,9%)] p-6 md:p-7 relative overflow-hidden"
+            className="group rounded-xl border 
+            border-[hsl(0,0%,16%)] 
+            bg-[hsl(0,0%,9%)] md:p-7 relative 
+            overflow-hidden"
           >
 
             {/* hover glow */}
-<div
-  className="
-  absolute inset-0 
-  opacity-0 group-hover:opacity-50 
-  transition-opacity duration-500 
-  pointer-events-none
-  bg-[radial-gradient(circle_at_20%_20%,rgba(255,85,116,0.35),transparent_40%),radial-gradient(circle_at_80%_80%,rgba(231,103,249,0.25),transparent_40%),linear-gradient(135deg,#0f0f14_0%,#151521_40%,#1a1a2a_100%)]
-"
-/>
+          <div
+            className="
+            absolute inset-0 
+            opacity-0 group-hover:opacity-50 
+            transition-opacity duration-500 
+            pointer-events-none
+            bg-[radial-gradient(circle_at_20%_20%,rgba(255,85,116,0.35),transparent_40%),radial-gradient(circle_at_80%_80%,rgba(231,103,249,0.25),transparent_40%),linear-gradient(135deg,#0f0f14_0%,#151521_40%,#1a1a2a_100%)]
+          "
+          />
 
             <div className="relative z-10 space-y-5">
 

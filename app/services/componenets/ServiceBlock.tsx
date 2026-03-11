@@ -28,7 +28,7 @@ export default function ServiceBlock({
       transition={{ duration: 0.5, delay: serviceIndex * 0.07 }}
     >
       {/* Service header */}
-      <div className="flex items-stretch gap-4 mb-5">
+      <div className="flex items-stretch gap-4 mb-3 mt-5">
 
         <div
           className="w-0.75 rounded-full shrink-0"
@@ -37,8 +37,7 @@ export default function ServiceBlock({
 
         <div>
           <h3
-            className="text-h1 mb-1"
-            
+            className="text-4xl mb-1"
           >
             {service.name}
           </h3>
