@@ -14,7 +14,7 @@ const Footer = () => {
   const clipPath = useTransform(
     scrollYProgress,
     [0, 1],
-    ["inset(100% 0 0 0)", "inset(0% 0 0 0)"]
+    ["inset(100% 0 0 0)", "inset(0% 0 0 0)"],
   );
 
   return (

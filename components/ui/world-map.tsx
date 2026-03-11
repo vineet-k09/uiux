@@ -30,7 +30,7 @@ export default function WorldMap({ dots = [] }: MapProps) {
 
   const createCurvedPath = (
     start: { x: number; y: number },
-    end: { x: number; y: number }
+    end: { x: number; y: number },
   ) => {
     const midX = (start.x + end.x) / 2;
     const midY = Math.min(start.y, end.y) - 50;
@@ -92,14 +92,50 @@ export default function WorldMap({ dots = [] }: MapProps) {
           return (
             <g key={`points-${i}`}>
               <circle cx={sp.x} cy={sp.y} r="2" fill="url(#brand-grad)" />
-              <circle cx={sp.x} cy={sp.y} r="2" fill="oklch(0.6 0.2 280)" opacity="0.5">
-                <animate attributeName="r" from="2" to="8" dur="1.5s" repeatCount="indefinite" />
-                <animate attributeName="opacity" from="0.5" to="0" dur="1.5s" repeatCount="indefinite" />
+              <circle
+                cx={sp.x}
+                cy={sp.y}
+                r="2"
+                fill="oklch(0.6 0.2 280)"
+                opacity="0.5"
+              >
+                <animate
+                  attributeName="r"
+                  from="2"
+                  to="8"
+                  dur="1.5s"
+                  repeatCount="indefinite"
+                />
+                <animate
+                  attributeName="opacity"
+                  from="0.5"
+                  to="0"
+                  dur="1.5s"
+                  repeatCount="indefinite"
+                />
               </circle>
               <circle cx={ep.x} cy={ep.y} r="2" fill="url(#brand-grad)" />
-              <circle cx={ep.x} cy={ep.y} r="2" fill="oklch(0.72 0.22 340)" opacity="0.5">
-                <animate attributeName="r" from="2" to="8" dur="1.5s" repeatCount="indefinite" />
-                <animate attributeName="opacity" from="0.5" to="0" dur="1.5s" repeatCount="indefinite" />
+              <circle
+                cx={ep.x}
+                cy={ep.y}
+                r="2"
+                fill="oklch(0.72 0.22 340)"
+                opacity="0.5"
+              >
+                <animate
+                  attributeName="r"
+                  from="2"
+                  to="8"
+                  dur="1.5s"
+                  repeatCount="indefinite"
+                />
+                <animate
+                  attributeName="opacity"
+                  from="0.5"
+                  to="0"
+                  dur="1.5s"
+                  repeatCount="indefinite"
+                />
               </circle>
             </g>
           );
