@@ -10,6 +10,7 @@ import ContactUs from '@/components/sections/home/ContactUs';
 import { useEffect } from 'react';
 import ParticleBackground from '@/components/ui/ParticleBackground';
 import HeroContent from './HeroContent';
+import WorldMapCard from './WorldMap';
 
 export default function LandingPage() {
   useEffect(() => {
@@ -27,6 +28,7 @@ export default function LandingPage() {
         <ParticleBackground />
         <HeroContent />
         </section>
+        <WorldMapCard/>
         <Projects />
         <ParallaxCardstrial />
         <Value />

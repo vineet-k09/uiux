@@ -29,7 +29,7 @@ export default function Projects() {
     }, []);
 
     return (
-        <div ref={container} className="relative  text-white mt-[25vh] p-[10%]">
+        <div ref={container} className="relative  text-white mt-[5vh] p-[10%]">
 
             {/* Description Section */}
             <div className="flex h-175 justify-between gap-[5%] ">
