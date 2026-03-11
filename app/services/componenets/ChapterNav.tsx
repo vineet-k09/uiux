@@ -161,7 +161,10 @@ export default function ChapterNav({
     onDomainClick,
 }: ChapterNavProps) {
     return (
-        <aside className="sticky top-0 h-screen w-64 shrink-0 flex flex-col items-start justify-center gap-6 px-8 border-r border-neutral-800/60 bg-neutral-950/95 backdrop-blur-sm z-30">
+        <aside className="sticky top-0 h-screen w-64 shrink-0 flex flex-col items-start justify-center gap-6 px-8 border-r border-neutral-800/60 
+
+        bg-[radial-gradient(circle_at_20%_20%,rgba(255,85,116,0.35),transparent_40%),radial-gradient(circle_at_80%_80%,rgba(231,103,249,0.25),transparent_40%),linear-gradient(135deg,#0f0f14_0%,#151521_40%,#1a1a2a_100%)]
+        backdrop-blur-sm z-30">
 
             {/* vertical guide line */}
             <div  />

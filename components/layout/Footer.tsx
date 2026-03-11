@@ -22,7 +22,7 @@ const Footer = () => {
       {/* Sticky black panel that reveals via clip-path */}
       <motion.div
         style={{ clipPath }}
-        className="fixed inset-0 z-50 flex items-center justify-center"
+        className="fixed inset-0 z-0 flex items-center justify-center"
       >
         <div className="absolute inset-0 bg-viva" />
         <h2

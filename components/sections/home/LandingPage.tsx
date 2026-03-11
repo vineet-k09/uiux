@@ -24,9 +24,12 @@ export default function LandingPage() {
   return (
       <main>
         <section className="relative h-screen flex items-center justify-center overflow-hidden">
-{/* HOME HERO SECTION */}
-        <ParticleBackground />
-        <HeroContent />
+          <ParticleBackground />
+          {/* glass / dim / blur layer */}
+          <div className="absolute z-0 inset-0 backdrop-blur-[1px] bg-red/50 border border-white/10"></div>
+          <div className='z-20'>
+          <HeroContent />
+          </div>
         </section>
         <WorldMapCard/>
         <Projects />

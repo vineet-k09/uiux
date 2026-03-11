@@ -25,8 +25,8 @@
      ------------------------- */
 
   /* Deep purple background */
-  --brand-bg: #36013f;
-  /* --brand-bg: #000000;  */
+  /* --brand-bg: #36013f; */
+  --brand-bg: #000000; 
 
   /* Slightly lighter surface */
   --brand-surface: oklch(0.22 0.09 290);

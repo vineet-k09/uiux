@@ -1,6 +1,7 @@
 'use client'
 
 import { motion, Variants } from "framer-motion"
+import Link from "next/link"
 
 export default function HeroContent() {
 
@@ -41,7 +42,7 @@ export default function HeroContent() {
           variants={item}
           className="mt-8 text-6xl font-semibold leading-tight tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-pink-300 to-purple-300"
         >
-          Powering Vodafone's <br />
+          Powering Vivafone's <br />
           Intelligent Future
         </motion.h1>
 
@@ -52,7 +53,7 @@ export default function HeroContent() {
         >
           A centralized global AI and Data capability bringing over 2000+
           professionals to deliver scalable, secure and responsible AI
-          solutions across Vodafone
+          solutions across Vivafone
         </motion.p>
 
         {/* Buttons */}
@@ -60,15 +61,17 @@ export default function HeroContent() {
           variants={item}
           className="flex justify-center gap-6 mt-10"
         >
-
+<Link href={'/services'}>
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.97 }}
             className="px-8 py-4 font-medium text-white rounded-lg bg-gradient-to-r from-pink-500 to-purple-500 shadow-lg shadow-purple-500/30"
           >
+          
             Our Services
           </motion.button>
 
+          </Link>
         </motion.div>
 
       </motion.div>

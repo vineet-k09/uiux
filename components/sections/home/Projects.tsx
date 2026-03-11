@@ -35,10 +35,10 @@ export default function Projects() {
             <div className="flex h-175 justify-between gap-[5%] ">
 
                 {/* Pinned Image */}
+                <div className="w-[40%] flex-shrink-0">
                 <div
-                    ref={imageContainer}
-                    className="relative h-full w-[40%] "
-                >
+                    ref={imageContainer} className="relative h-full w-full"
+                > 
                     <Image
                         src="/Tower.jpg"
                         alt="project image"
@@ -46,19 +46,20 @@ export default function Projects() {
                         priority
                         className="object-cover"
                     />
+                    </div>
                 </div>
 
                 <div className="grid h-full w-[60%] grid-cols-2 grid-rows-2 gap-[3vw] ">
                     {projects.cards.map((card, index) => (
                         <div
                             key={index}
-                            className="flex flex-col justify-between rounded-lg border border-white/30 bg-white/5 p-[2vw] backdrop-blur-md transition-all duration-300 hover:-translate-y-2 hover:border-white/60"
+                            className="flex flex-col justify-between h-full rounded-lg border border-white/30 bg-white/5 p-[2vw] backdrop-blur-md transition-all duration-300 hover:-translate-y-2 hover:border-white/60"
                         >
-                            <h3 className="text-[1.6vw] uppercase tracking-wide">
+                            <h3 className="text-[18px] uppercase tracking-wide">
                                 {card.title}
                             </h3>
 
-                            <p className="text-[0.95vw] leading-relaxed opacity-80">
+                            <p className="text-[14px] leading-relaxed opacity-80">
                                 {card.desc}
                             </p>
                         </div>

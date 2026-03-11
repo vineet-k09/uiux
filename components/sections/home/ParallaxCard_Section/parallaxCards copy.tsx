@@ -109,7 +109,8 @@ export default function ParallaxCardstrial() {
       {stickyCardsData.stickyCardsData.map((card, index) => (
         <section
           key={index}
-className="sticky-card relative w-full h-svh p-6 flex gap-12 text-white will-change-transform max-[1000px]:flex-col max-[1000px]:gap-0 bg-[radial-gradient(circle_at_20%_20%,rgba(255,85,116,0.35),transparent_40%),radial-gradient(circle_at_80%_80%,rgba(231,103,249,0.25),transparent_40%),linear-gradient(135deg,#0f0f14_0%,#151521_40%,#1a1a2a_100%)]"           >
+className="sticky-card relative w-full h-svh p-6 flex gap-12 text-white will-change-transform max-[1000px]:flex-col max-[1000px]:gap-0 
+bg-[radial-gradient(circle_at_20%_20%,rgba(255,85,116,0.35),transparent_40%),radial-gradient(circle_at_80%_80%,rgba(231,103,249,0.25),transparent_40%),linear-gradient(135deg,#0f0f14_0%,#151521_40%,#1a1a2a_100%)]"           >
           {/* Overlay */}
           <div className="absolute inset-0 bg-black/50 opacity-(--after-opacity) transition-opacity duration-100 pointer-events-none z-20" />
 
