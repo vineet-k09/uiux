@@ -197,9 +197,6 @@ export default function ChapterNav({
                           onClick={(e) => {
                             e.stopPropagation()
                             onServiceClick?.(domain.id, service.id)
-                            // scroll to service section
-                            const el = document.getElementById(service.id)
-                            if (el) el.scrollIntoView({ behavior: "smooth", block: "start" })
                           }}
                           className="w-full flex items-center gap-2.5 px-3 py-2 rounded-lg text-[12px] hover:text-white hover:bg-white/5 transition-all duration-200 text-left group"
                           style={{ color: "rgba(255,255,255,0.45)" }}

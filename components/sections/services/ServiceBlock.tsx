@@ -70,6 +70,8 @@ export default function ServiceBlock({
   id,
 }: ServiceBlockProps) {
   return (
+    
+    
     <motion.div
       id={id}
       initial={{ opacity: 0, y: 28 }}
@@ -103,6 +105,7 @@ export default function ServiceBlock({
           />
         ))}
       </div>
+      
     </motion.div>
   )
 }
