@@ -135,6 +135,7 @@
 
 // DomainSection.displayName = "DomainSection";
 // export default DomainSection;
+
 "use client"
 
 import { forwardRef } from "react"
@@ -268,6 +269,7 @@ rgba(0,0,0,0.25) 100%
                             service={service}
                             accentColor={color}
                             serviceIndex={i}
+                            id={service.id}
                         />
                     ))}
                 </div>
