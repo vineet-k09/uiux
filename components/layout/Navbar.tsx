@@ -6,6 +6,7 @@ import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import Link from "next/link";
 import globals from "../../data/globals.json";
 import VIVA from "../ui/VIVA";
+import { usePathname } from "next/navigation";
 
 const services = [
   {
@@ -52,6 +53,9 @@ export default function Navbar() {
   const width = useTransform(smoothScroll, [0, 300], ["100vw", "70vw"]);
   const top = useTransform(smoothScroll, [0, 300], ["0px", "8px"]);
   const bRadius = useTransform(smoothScroll, [0, 300], ["0px", "40px"]);
+
+  const pathName = usePathname();
+  const disableScroll = pathName.startsWith("/services");
 
   useEffect(() => {
     setMounted(true);
@@ -150,7 +154,6 @@ export default function Navbar() {
             borderTop: "none",
             borderRadius: 16,
             padding: 24,
-            // boxShadow: '0 8px 32px rgba(0,0,0,0.3)',
           }}
         >
           <div
@@ -183,9 +186,13 @@ export default function Navbar() {
 
   return (
     <>
-      {dropdown}
+      {!disableScroll && dropdown}
       <motion.div
-        style={{ width, top, borderRadius: bRadius }}
+        style={
+          disableScroll
+            ? { width: "100vw", top: "0px", borderRadius: "0px" }
+            : { width, top, borderRadius: bRadius }
+        }
         className="fixed z-50 mx-auto left-0 right-0 backdrop-blur-md bg-white/5 border border-white/10 shadow-lg"
       >
         <nav ref={menuRef} className="px-7 py-2 relative flex items-center">
