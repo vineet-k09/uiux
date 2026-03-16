@@ -36,7 +36,7 @@ const Footer = () => {
       </motion.div>
 
       {/* FOOTER CONTENT */}
-      <div className="absolute bottom-0 left-0 w-full bg-black text-white z-10 pt-20 pb-4 px-10">
+      <div className="absolute bottom-0 left-0 w-full bg-black text-white z-10 pt-8 pb-4 px-10">
         <div className="grid grid-cols-3 gap-10 max-w-6xl mx-auto">
           <div>
             <h4 className="font-bold mb-4">Operational responsibilities</h4>
@@ -46,10 +46,6 @@ const Footer = () => {
           </div>
 
           <div>
-            {/* <h4 className="font-bold mb-4">Policies</h4>
-            <p>Privacy policy</p>
-            <p>Cookie notice</p>
-            <p>Terms & conditions</p> */}
           </div>
 
           <div className="flex flex-col items-end">
