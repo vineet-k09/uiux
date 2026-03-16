@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image"
-import { motion, spring } from "framer-motion"
+import { motion, spring, Variants } from "framer-motion"
 import { Rocket, Cpu, Database, Sparkles } from "lucide-react"
 import SplitFadeText from "@/components/motion/SplitText"
 import ValueProposition from "@/components/sections/home/Value"
@@ -29,7 +29,7 @@ const stats = [
 
 export default function AboutSection() {
 
-  const container = {
+  const container: Variants = {
   hidden: {},
   show: {
     transition: {
@@ -39,7 +39,7 @@ export default function AboutSection() {
   }
 }
 
-const card = {
+const card: Variants = {
   hidden: {
     opacity: 0,
     scale: 0.8,
