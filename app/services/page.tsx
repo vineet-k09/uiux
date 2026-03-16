@@ -81,8 +81,11 @@ export default function Services() {
               sectionRefs.current[i] = el
             }}
           />
+          
         ))}
+
       </main>
+
     </div>
   )
 }
