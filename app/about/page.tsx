@@ -4,11 +4,8 @@ import Image from "next/image"
 import { motion, spring, Variants } from "framer-motion"
 import { Rocket, Cpu, Database, Sparkles } from "lucide-react"
 import SplitFadeText from "@/components/motion/SplitText"
-import ValueProposition from "@/components/sections/home/Value"
 import MissionSection from "@/components/sections/about/mission"
 import HowWeWork from "@/components/sections/about/howwework"
-
-
 
 
 
@@ -170,7 +167,6 @@ const card: Variants = {
       </div>
       <MissionSection />
       <HowWeWork />
-      <ValueProposition />
 
     </section>
     

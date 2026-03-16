@@ -47,7 +47,7 @@ return(
 
 How We
 
-<span className="bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent ml-3">
+<span className="bg-linear-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent ml-3">
 Work
 </span>
 
@@ -63,15 +63,18 @@ Work
 
 <motion.div
 style={{ scaleY: scrollYProgress }}
-className="absolute left-5 top-0 w-px origin-top bg-gradient-to-b from-pink-500 to-purple-500"
+className="absolute left-5 top-0 w-px origin-top bg-linear-to-b from-pink-500 to-purple-500"
 />
 
 {steps.map((step,i)=>(
 
 <motion.div
 key={i}
-onViewportEnter={()=> setActive(i)}
-viewport={{ amount:0.5 }}
+onViewportEnter={() => setActive(i)}
+onViewportLeave={() => {
+  if (i === active) setActive(i - 1)
+}}
+viewport={{ amount:0.5, margin: "-100px" }}
 initial={{ opacity:0, y:40 }}
 whileInView={{ opacity:1, y:0 }}
 transition={{ duration:0.5 }}
@@ -85,7 +88,7 @@ animate={{ scale: active===i ? 1.2 : 1 }}
 className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-semibold border
 
 ${active===i
-? "bg-gradient-to-r from-pink-500 to-purple-500 text-white border-transparent shadow-[0_0_20px_rgba(236,72,153,0.6)]"
+? "bg-linear-to-r from-pink-500 to-purple-500 text-white border-transparent shadow-[0_0_20px_rgba(236,72,153,0.6)]"
 : "bg-neutral-900 border-white/20 text-gray-400"}
 `}
 >
@@ -102,7 +105,7 @@ ${active===i
 className={`text-3xl font-semibold mb-3 transition-all duration-300
 
 ${active===i
-? "text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500"
+? "text-transparent bg-clip-text bg-linear-to-r from-pink-500 to-purple-500"
 : "text-white"}
 `}
 >
