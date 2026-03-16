@@ -6,6 +6,7 @@ import { Rocket, Cpu, Database, Sparkles } from "lucide-react"
 import SplitFadeText from "@/components/motion/SplitText"
 import ValueProposition from "@/components/sections/home/Value"
 import MissionSection from "@/components/sections/about/mission"
+import HowWeWork from "@/components/sections/about/howwework"
 
 
 
@@ -168,6 +169,7 @@ const card = {
             
       </div>
       <MissionSection />
+      <HowWeWork />
       <ValueProposition />
 
     </section>

@@ -1,7 +1,7 @@
 "use client"
 
 import SplitFadeText from "@/components/motion/SplitText"
-import { motion } from "framer-motion"
+import { motion, Variants } from "framer-motion"
 import { Brain, Workflow, TrendingUp } from "lucide-react"
 
 const missions = [
@@ -22,7 +22,7 @@ const missions = [
   }
 ]
 
-const container = {
+const container: Variants = {
   hidden: {},
   show: {
     transition: {
@@ -31,7 +31,7 @@ const container = {
   }
 }
 
-const card = {
+const card: Variants = {
   hidden: {
     opacity: 0,
     y: 40,
