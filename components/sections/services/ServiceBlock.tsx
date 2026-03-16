@@ -57,7 +57,7 @@ export default function ServiceBlock({
       </div> */}
 
    {/* Use case cards VAR2 */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
   {service.use_cases.map((useCase, i) => (
     <TopicDetail
       key={i}

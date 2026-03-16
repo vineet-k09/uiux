@@ -102,7 +102,7 @@ rgba(0,0,0,0.25) 100%
                                 {domain.name}
                             </h2>
 
-                            <p className="text-h2 leading-relaxed max-w-2xl ">
+                            <p className="text-h2 leading-relaxed  ">
                                 {domain.description}
                             </p>
                         </div>

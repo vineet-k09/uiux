@@ -12,7 +12,7 @@
     {
       "title": "Automated Call Center Handling",
       "problem": "Customer support teams struggle with high call volumes during peak hours.",
-      "solution": "Deploy voice bots capable of answering common questions and routing complex issues to human agents.",
+      "solution": "Deploy voice bots capable of answering common questions and routing complex issues to agents.",
       "impact": "Reduced call waiting times and improved service efficiency."
     },
     {
