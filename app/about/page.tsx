@@ -1,9 +1,15 @@
 "use client"
 
 import Image from "next/image"
-import { motion } from "framer-motion"
+import { motion, spring } from "framer-motion"
 import { Rocket, Cpu, Database, Sparkles } from "lucide-react"
 import SplitFadeText from "@/components/motion/SplitText"
+import ValueProposition from "@/components/sections/home/Value"
+import MissionSection from "@/components/sections/about/mission"
+
+
+
+
 
 const capabilities = [
   "AI Solutions",
@@ -21,6 +27,37 @@ const stats = [
 ]
 
 export default function AboutSection() {
+
+  const container = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.15,
+      
+    }
+  }
+}
+
+const card = {
+  hidden: {
+    opacity: 0,
+    scale: 0.8,
+    y: 40
+  },
+  show: {
+    opacity: 1,
+    scale: 1,
+    y: 0,
+    transition: {
+      duration: 0.4,
+      ease: "easeOut",
+      type: spring,
+      stiffness: 200,
+      damping: 18
+    }
+  }
+}
+
   return (
     <section className="relative py-32 overflow-hidden">
 
@@ -67,7 +104,7 @@ export default function AboutSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0}}
           viewport={{ once: true }}
-          className="text-6xl md:text-7xl font-bold text-justify mb-20 tracking-tight"
+          className="text-6xl md:text-7xl font- text-justify mb-20 tracking-tight"
         >
             <p className="text-lg text-gray-300 leading-relaxed max-w-xl">
               We design and build intelligent systems that leverage{" "}
@@ -94,33 +131,46 @@ export default function AboutSection() {
 
             {/* divider */}
             <div className="h-px w-32 bg-linear-to-r from-pink-500 to-purple-500 my-10" />
-
-            {/* stats */}
-            <div className="grid grid-cols-2 gap-6">
-              {stats.map((s, i) => {
+              <motion.div
+                variants={container}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true }}
+                className="grid grid-cols-2 gap-6"
+              >
+              
+                {stats.map((s, i) => {
                 const Icon = s.icon
 
                 return (
                   <motion.div
                     key={i}
-                    whileHover={{ y: -4 }}
+                    variants={card}
+                    whileHover={{ y: -6 }}
                     className="p-4 rounded-xl border border-white/10 bg-white/5 backdrop-blur"
                   >
                     <Icon className="w-5 h-5 text-pink-400 mb-2" />
 
                     <p className="text-xl font-semibold text-white">
-                      <SplitFadeText text={s.value} />
+                      {s.value}
                     </p>
 
-                    <p className="text-sm text-gray-400">{s.label}</p>
+                    <p className="text-sm text-gray-400">
+                      {s.label}
+                    </p>
                   </motion.div>
                 )
               })}
-            </div>
+
+            </motion.div>
           </div>
         </div>
             
       </div>
+      <MissionSection />
+      <ValueProposition />
+
     </section>
+    
   )
 }
