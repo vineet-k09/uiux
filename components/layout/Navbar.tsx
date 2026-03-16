@@ -50,7 +50,7 @@ export default function Navbar() {
 
   const smoothScroll = useSpring(scrollY, { damping: 40, stiffness: 500 });
 
-  const width = useTransform(smoothScroll, [0, 300], ["100vw", "70vw"]);
+  const width = useTransform(smoothScroll, [0, 300], ["100vw", "85vw"]);
   const top = useTransform(smoothScroll, [0, 300], ["0px", "8px"]);
   const bRadius = useTransform(smoothScroll, [0, 300], ["0px", "40px"]);
 
@@ -195,18 +195,19 @@ export default function Navbar() {
         }
         className="fixed z-50 mx-auto left-0 right-0 backdrop-blur-md bg-white/5 border border-white/10 shadow-lg"
       >
-        <nav ref={menuRef} className="px-7 py-2 relative flex items-center">
+        <nav ref={menuRef} className="md:pl-10 pl-5 py-2 flex items-center">
           {/* LEFT */}
-          <div className="w-[33%] flex items-center">
-            <Link href="/" className="flex items-center gap-2">
+            <Link href="/" className="flex md:flex-row flex-col md:items-center md:gap-2">
               <VIVA />
-              <p className="text-white/80">{globals.subtitle}</p>
+              <p className="text-white/80 whitespace-nowrap">{globals.subtitle}</p>
             </Link>
-          </div>
 
-          {/* CENTER LINKS */}
-          <ul className="absolute left-1/2 transform -translate-x-1/2 flex gap-8 items-center text-lg font-semibold">
-            <li className="relative">
+          {/* PUSH EVERYTHING RIGHT */}
+          <div className="flex-1" />
+
+          {/* NAV LINKS */}
+          <ul className="flex gap-8 items-center text-lg font-semibold whitespace-nowrap">
+            <li>
               <Link
                 href="/about"
                 className="px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 rounded-md transition-all duration-300"
@@ -217,7 +218,6 @@ export default function Navbar() {
 
             <li
               ref={servicesLiRef}
-              className="relative"
               onMouseEnter={handleServicesEnter}
               onMouseLeave={() => setServicesOpen(false)}
             >
@@ -228,10 +228,20 @@ export default function Navbar() {
                 SERVICES
               </Link>
             </li>
+
+            <li>
+              <Link
+                href="/contact-us"
+                className="px-4 py-2 text-white/90 hover:text-white hover:bg-white/15 rounded-md transition-all duration-300"
+              >
+                CONTACT US
+              </Link>
+            </li>
           </ul>
+          <div className="block md:w-[33%]"></div>
 
           {/* RIGHT */}
-          <div className="w-[33%] flex justify-end items-center gap-4">
+          <div className="flex justify-end items-center gap-4">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="sm:hidden flex flex-col justify-center items-center gap-1.25 p-2"
