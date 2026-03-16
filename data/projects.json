@@ -1,9 +1,10 @@
-{ "projects":[
-    { "title": "Salar de Atacama", "src": "salar_de_atacama.jpg" },
-    { "title": "Valle de la luna", "src": "valle_de_la_muerte.jpeg" },
-    { "title": "Miscanti Lake", "src": "miscani_lake.jpeg" },
-    { "title": "Miniques Lagoons", "src": "miniques_lagoon.jpg" }
-],
+{ "projects": [
+    { "title": "Neptune Edge Network", "src": "home_projects/1.png" },
+    { "title": "Aurora Telecom Data Lake", "src": "home_projects/2.jpg" },
+    { "title": "Atlas 5G Deployment Suite", "src": "home_projects/3.jpg" },
+    { "title": "Nimbus Cloud Architecture", "src": "home_projects/4.jpg" },
+    { "title": "Helios Network Monitoring", "src": "home_projects/5.jpg" }
+  ],
 "cards": [
     {
         "title": "Innovation First",

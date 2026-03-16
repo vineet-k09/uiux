@@ -8,10 +8,6 @@ import ValueProposition from "@/components/sections/home/Value"
 import MissionSection from "@/components/sections/about/mission"
 import HowWeWork from "@/components/sections/about/howwework"
 
-
-
-
-
 const capabilities = [
   "AI Solutions",
   "Automation Systems",
@@ -105,7 +101,7 @@ const card: Variants = {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0}}
           viewport={{ once: true }}
-          className="text-6xl md:text-7xl font- text-justify mb-20 tracking-tight"
+          className="text-6xl md:text-7xl text-justify mb-20 tracking-tight"
         >
             <p className="text-lg text-gray-300 leading-relaxed max-w-xl">
               We design and build intelligent systems that leverage{" "}

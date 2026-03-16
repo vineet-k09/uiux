@@ -7,7 +7,9 @@ export default function ContactUs() {
         {/* LEFT SIDE */}
         <div className="flex items-center">
           <h1 className="text-7xl md:text-8xl font-extrabold leading-tight">
-            Contact <br className="hidden md:block" /> Us
+            Contact <br className="hidden md:block" /> <span className="bg-linear-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">
+            Us
+          </span>
           </h1>
         </div>
 

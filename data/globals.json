@@ -1,15 +1,15 @@
 {
-    "title": "VIVA",
-    "subtitle":"GS & BI SERVICE TOWER",
-    "IntroText":"Building Smarter Solutions for a Digital-First World",
-    "phrases": [
-  "We help businesses ",
-  "streamline operations, scale faster,",
-  " and make data-driven decisions  ",
-  "through innovative technology",
-  "and thoughtful design."
-],
-"stickyCardsData": [
+  "title": "VOIS",
+  "subtitle":"AI & DS SERVICE TOWER",
+  "IntroText":"Building Smarter Solutions for a Digital-First World",
+  "phrases": [
+    "We help businesses ",
+    "streamline operations, scale faster",
+    " and make data-driven decisions  ",
+    "through innovative technology",
+    "and thoughtful design."
+  ],
+  "stickyCardsData": [
     {
       "index": "01",
       "title": "What is Big brain department",

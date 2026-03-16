@@ -40,7 +40,7 @@ export default function HeroContent() {
           variants={item}
           className="mt-8 text-6xl font-semibold leading-tight tracking-tight text-transparent bg-clip-text bg-linear-to-r from-pink-300 to-purple-300"
         >
-          Powering Vivafone's <br />
+          Powering Vodafone's <br />
           Intelligent Future
         </motion.h1>
 
@@ -51,7 +51,7 @@ export default function HeroContent() {
         >
           A centralized global AI and Data capability bringing over 2000+
           professionals to deliver scalable, secure and responsible AI solutions
-          across Vivafone
+          across Vodafone
         </motion.p>
 
         {/* Buttons */}
