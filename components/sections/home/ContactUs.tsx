@@ -1,6 +1,6 @@
-import { Button } from "@/components/ui/button"
 import BlockReveal from "@/components/motion/BlockReveal"
 import SplitFadeText from "@/components/motion/SplitText"
+import FancyMotionButton from "@/components/ui/button"
 
 export default function ContactUs() {
     return (
@@ -19,9 +19,7 @@ export default function ContactUs() {
             </div>
 
             <div>
-                <Button size="lg">
-                    Reach Out
-                </Button>
+                <FancyMotionButton title="Reach Out" />
             </div>
 
         </section>

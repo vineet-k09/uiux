@@ -1,9 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
 
-export default function FancyMotionButton({title="Send Message"}: {title?:string}) {
+export default function FancyButton({title = "Send Message"}: {title?: string}) {
   const [pos, setPos] = useState({ x: 0, y: 0 });
 
   function handleMove(e: React.MouseEvent<HTMLButtonElement>) {
@@ -16,9 +15,7 @@ export default function FancyMotionButton({title="Send Message"}: {title?:string
   }
 
   return (
-    <motion.button
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.97 }}
+    <button
       onMouseMove={handleMove}
       className="relative overflow-hidden px-8 py-4 font-medium text-white rounded-lg
       bg-linear-to-r from-pink-500 to-purple-500
@@ -35,6 +32,6 @@ export default function FancyMotionButton({title="Send Message"}: {title?:string
       />
 
       <span className="relative z-10">{title}</span>
-    </motion.button>
+    </button>
   );
 }
