@@ -121,7 +121,7 @@ export default function Navbar() {
           top: dropdownPos.top - 40,
           left: dropdownPos.left,
           transform: "translateX(-50%)",
-          width: 650,
+          width: 200,
           zIndex: 9999,
           paddingTop: 40,
         }}
@@ -157,25 +157,19 @@ export default function Navbar() {
           }}
         >
           <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(3, 1fr)",
-              gap: 8,
-            }}
+           
           >
             {services.map((service) => (
               <Link
                 key={service.id}
                 href={`/services#${service.id}`}
                 onClick={() => setServicesOpen(false)}
-                className="group flex flex-col gap-1 p-4 rounded-xl hover:bg-white/10 transition-all duration-200"
+                className="group flex  gap-1 p-4 rounded-xl hover:bg-white/10 transition-all duration-200"
               >
                 <span className="text-l font-semibold text-white group-hover:text-white transition-colors tracking-wide">
                   {service.label}
                 </span>
-                <span className="text-md text-white/60 group-hover:text-white/60 transition-colors">
-                  {service.desc}
-                </span>
+              
               </Link>
             ))}
           </div>
