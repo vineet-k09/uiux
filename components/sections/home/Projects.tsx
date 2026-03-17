@@ -75,9 +75,20 @@ export default function Projects() {
                 {card.title}
               </h3>
 
-              <p className="text-[14px] leading-relaxed opacity-80">
+              
+
+              <p className="text-[14px] leading-relaxed opacity-80 text-justify">
                 {card.desc}
               </p>
+              <div className="flex justify-center items-center h-[120px]">
+              <Image
+                src= {card.image}
+                alt={card.title}
+                width={200}
+                height={100}
+                className="rounded-md object-cover mt-5"
+              />
+              </div>
             </div>
           ))}
         </div>

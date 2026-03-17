@@ -8,18 +8,22 @@
 "cards": [
     {
         "title": "Innovation First",
+        "image":"/projects-new/innovation.jpg" ,
         "desc": "We continuously explore new technologies to build smarter, faster, and future-ready solutions."
     },
     {
         "title": "User-Centered Design",
+        "image":"/projects-new/user.jpg",
         "desc": "Every product is crafted with real users in mind, ensuring intuitive experiences and lasting impact."
     },
     {
         "title": "Scalable Solutions",
+        "image":"/projects-new/scalable.jpg",
         "desc": "Our systems are designed to grow with your business, handling complexity without compromising performance."
     },
     {
         "title": "Trust & Transparency",
+        "image":"/projects-new/trust.jpg",
         "desc": "We believe in clear communication, reliable delivery, and building long-term partnerships."
     }
 ]
