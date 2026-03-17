@@ -94,7 +94,7 @@ export default function ContactUs() {
 
         </motion.div>
 
-      </div>~
+      </div>
     </section>
   )
 }
