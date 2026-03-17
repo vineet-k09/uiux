@@ -4,6 +4,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
+import PixelBlast from "../threejs/pixel_bg/PixelBlast";
 
 const Footer = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -24,8 +25,32 @@ const Footer = () => {
       {/* BACKGROUND PANEL */}
       <motion.div
         style={{ clipPath }}
-        className="fixed inset-0 z-0 flex items-center justify-center"
+        className="fixed inset-0 z-0 flex items-center justify-center w-full"
       >
+        <div
+          className="absolute bg-black"
+          style={{ width: "100%", height: "100" }}
+        >
+          <PixelBlast
+            variant="square"
+            pixelSize={4}
+            color="#E60000"
+            patternScale={2}
+            patternDensity={1}
+            pixelSizeJitter={0}
+            enableRipples
+            rippleSpeed={0.9}
+            rippleThickness={0.02}
+            rippleIntensityScale={1.5}
+            liquid={false}
+            liquidStrength={0.12}
+            liquidRadius={1.2}
+            liquidWobbleSpeed={5}
+            speed={0.5}
+            edgeFade={0.25}
+            transparent
+          />
+        </div>
         <div className="absolute inset-0 bg-viva" />
         <h2
           className="relative text-viva-foreground font-bold leading-none tracking-tighter select-none"
@@ -40,17 +65,27 @@ const Footer = () => {
         <div className="grid grid-cols-3 gap-10 max-w-6xl mx-auto">
           <div>
             <h4 className="font-bold mb-4">Operational responsibilities</h4>
-            <Link href="https://www.vodafone.com/sustainable-business/empowering-people" target="_blank">
+            <Link
+              href="https://www.vodafone.com/sustainable-business/empowering-people"
+              target="_blank"
+            >
               Code of Conduct
             </Link>
           </div>
 
-          <div>
-          </div>
+          <div></div>
 
           <div className="flex flex-col items-end">
-            <Image src="vodafonelogo_icon.svg" alt="Vodafone Logo" width={60} height={60} className="mb-2" />
-            <p>Powered by <b>VOIS</b></p>
+            <Image
+              src="vodafonelogo_icon.svg"
+              alt="Vodafone Logo"
+              width={60}
+              height={60}
+              className="mb-2"
+            />
+            <p>
+              Powered by <b>VOIS</b>
+            </p>
           </div>
         </div>
         <hr className="border-gray-600 my-4" />

@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import { Domain } from "@/types/services";
 import ServiceBlock from "./ServiceBlock";
+import ParticleBackground from "@/components/ui/ParticleBackground";
 
 const DOMAIN_ICONS: Record<string, LucideIcon> = {
   "customer-care": Headphones,
@@ -51,11 +52,13 @@ const DomainSection = forwardRef<HTMLElement, DomainSectionProps>(
     );
 
     return (
+      <>
+      <ParticleBackground />
       <section
         ref={ref}
         id={domain.id}
         className="relative min-h-screen pt-24 
-        pb-28 px-10 lg:px-20 mb-30"
+        pb-28 px-10 lg:px-20 mb-30 last:mb-0"
       >
         {/* Domain background */}
         <div
@@ -98,7 +101,9 @@ const DomainSection = forwardRef<HTMLElement, DomainSectionProps>(
             />
           ))}
         </div>
+        {/* <div className="relative z-10 mt-20 h-px bg-linear-to-r from-transparent via-white/20 to-transparent" /> */}
       </section>
+      </>
     );
   },
 );

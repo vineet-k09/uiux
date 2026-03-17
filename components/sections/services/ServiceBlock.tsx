@@ -26,29 +26,25 @@ export default function ServiceBlock({
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.5, delay: serviceIndex * 0.07 }}
     >
-      {/* Service header */}
-      <div className="flex items-stretch gap-4 mb-6">
-        <div
-          className="w-0.75 rounded-full shrink-0"
-          style={{ backgroundColor: accentColor + "70" }}
-        />
-        <div>
-          <h3 className="text-3xl font-bold mb-1">
-            {/* text-h1  */}
-            {service.name}
-          </h3>
-          <p className="text-sm md:text-base leading-relaxed">
-            {service.description}
-          </p>
-        </div>
-      </div>
 
       {/* Use case cards VAR2 */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+        <div className="flex flex-row items-center gap-4 mb-6">
+          <div>
+            <h3 className="text-3xl font-bold mb-1">
+              {/* text-h1  */}
+              {service.name}
+            </h3>
+            <p className="text-sm md:text-base leading-relaxed">
+              {service.description}
+            </p>
+          </div>
+        </div>
         {service.use_cases.map((useCase, i) => (
           <TopicDetail key={i} domain={useCase} accentColor={accentColor} />
         ))}
       </div>
+      <hr className="w-[80%] mx-auto my-20" />
     </motion.div>
   );
 }
