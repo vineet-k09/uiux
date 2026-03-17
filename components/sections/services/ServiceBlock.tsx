@@ -26,16 +26,14 @@ export default function ServiceBlock({
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.5, delay: serviceIndex * 0.07 }}
     >
-
       {/* Use case cards VAR2 */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
-        <div className="flex flex-row items-center gap-4 mb-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 items-stretch">
+        <div className="flex flex-row items-center  mb-6">
           <div>
             <h3 className="text-3xl font-bold mb-1">
-              {/* text-h1  */}
               {service.name}
             </h3>
-            <p className="text-sm md:text-base leading-relaxed">
+            <p className="text-[13px] leading-relaxed">
               {service.description}
             </p>
           </div>

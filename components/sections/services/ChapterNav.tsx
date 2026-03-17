@@ -61,9 +61,11 @@ export default function ChapterNav({
 }: ChapterNavProps) {
   return (
     <aside
-      className="sticky top-0 h-screen w-72 shrink-0 flex flex-col items-start justify-center gap-2 px-6 border-r border-neutral-800/60
+      className="sticky top-0 h-screen w-60 shrink-0 flex flex-col items-start 
+      justify-center gap-2 px-3 border-r border-neutral-800/60
       bg-[radial-gradient(circle_at_20%_20%,rgba(255,85,116,0.35),transparent_40%),radial-gradient(circle_at_80%_80%,rgba(231,103,249,0.25),transparent_40%),linear-gradient(135deg,#0f0f14_0%,#151521_40%,#1a1a2a_100%)]
-      backdrop-blur-sm z-30 overflow-y-auto"
+      backdrop-blur-sm z-30 overflow-y-auto
+      overflow-x-hidden"
     >
       <div className="mb-4 px-2">
         <h2 className="text-sm font-semibold uppercase tracking-widest text-white/40">
@@ -85,7 +87,9 @@ export default function ChapterNav({
               whileTap={{ scale: 0.97 }}
             >
               <motion.div
-                className="px-4 py-3 rounded-xl font-medium border w-full text-left flex items-center gap-3 transition-all duration-300 group-hover:border-white/20 group-hover:text-white"
+                className="px-4 py-3 rounded-xl font-medium border w-full text-left 
+                flex items-center gap-3 transition-all duration-300 
+                group-hover:border-white/20 group-hover:text-white"
                 animate={{
                   backgroundColor: isActive ? `${color}18` : "transparent",
                   borderColor: isActive
@@ -102,7 +106,7 @@ export default function ChapterNav({
                   }}
                 />
 
-                <span className="truncate flex-1 text-[15px] font-semibold">
+                <span className="truncate flex-1 text-[13px] font-semibold">
                   {domain.name}
                 </span>
 
@@ -118,7 +122,9 @@ export default function ChapterNav({
               {isActive && (
                 <motion.div
                   layoutId="chapterIndicator"
-                  className="absolute -right-4 top-1/2 -translate-y-1/2 w-1.5 h-9 rounded-full shadow-lg"
+                  className="absolute -right-4 top-1/2 -translate-y-1/2 w-1.5 h-9 
+                  rounded-full 
+                  shadow-lg"
                   style={{
                     backgroundColor: color,
                     boxShadow: `0 0 14px ${color}`,
@@ -152,7 +158,9 @@ export default function ChapterNav({
                             e.stopPropagation();
                             onServiceClick?.(domain.id, service.id);
                           }}
-                          className="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-[14px] hover:text-white hover:bg-white/5 transition-all duration-200 text-left group"
+                          className="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg 
+                          text-[12px] hover:text-white hover:bg-white/5 
+                          transition-all duration-200 text-left group"
                           style={{
                             color: "rgba(255,255,255,0.5)",
                           }}
@@ -163,7 +171,11 @@ export default function ChapterNav({
                             className="shrink-0 group-hover:scale-110 transition-transform"
                           />
 
-                          <span className="truncate">{service.name}</span>
+                          <span className="flex-1 min-w-0 overflow-hidden whitespace-nowrap">
+                            <span title={service.name} className="inline-block max-w-full overflow-hidden text-ellipsis">
+                              {service.name}
+                            </span>
+                          </span>
                         </button>
                       );
                     })}

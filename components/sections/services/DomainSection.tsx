@@ -53,56 +53,57 @@ const DomainSection = forwardRef<HTMLElement, DomainSectionProps>(
 
     return (
       <>
-      <ParticleBackground />
-      <section
-        ref={ref}
-        id={domain.id}
-        className="relative min-h-screen pt-24 
+        <ParticleBackground />
+        <section
+          ref={ref}
+          id={domain.id}
+          className="relative min-h-screen pt-16 
         pb-28 px-10 lg:px-20 mb-30 last:mb-0"
-      >
-        {/* Domain background */}
-        <div
-          className="absolute h-full inset-0 
-          pointer-events-none bg-gray-900 mb-30"
-        />
-
-        {/* ── Domain Hero ── */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.65, ease: "easeOut" }}
-          className="relative z-10 mb-14"
         >
-          <div className="flex flex-col gap-5">
-            <div>
-              <h2
-                className="text-4xl lg:text-superh1 xl:text-6xl 
-              font-bold leading-[1.05] tracking-tight mb-3"
-              >
-                {domain.name}
-              </h2>
-              <p className="text-sm md:text-base leading-relaxed  ">{domain.description}</p>
-            </div>
-          </div>
-        </motion.div>
+          {/* Domain background */}
+          <div
+            className="absolute h-full inset-0 
+          pointer-events-none bg-gray-900 mb-30"
+          />
 
-        {/* Divider */}
-        <div className="relative z-10 h-px bg-white/30 mb-12" />
-        {/* ── Services ── */}
-        <div className="relative z-10 space-y-16">
-          {domain.services.map((service, i) => (
-            <ServiceBlock
-              key={service.id}
-              service={service}
-              accentColor={color}
-              serviceIndex={i}
-              id={service.id}
-            />
-          ))}
-        </div>
-        {/* <div className="relative z-10 mt-20 h-px bg-linear-to-r from-transparent via-white/20 to-transparent" /> */}
-      </section>
+          {/* ── Domain Hero ── */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.65, ease: "easeOut" }}
+            className="relative z-10"
+          >
+            <div className="flex flex-col gap-5">
+              <div>
+                <h2
+                  className="text-3xl xl:text-6xl 
+              font-bold leading-[1.05] tracking-tight mb-3"
+                >
+                  {domain.name}
+                </h2>
+                <p className="text-[13px] leading-relaxed ">
+                  {domain.description}
+                </p>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Divider */}
+          <div className="relative z-10 h-px bg-white/30 my-5" />
+          {/* ── Services ── */}
+          <div className="relative z-10 space-y-16">
+            {domain.services.map((service, i) => (
+              <ServiceBlock
+                key={service.id}
+                service={service}
+                accentColor={color}
+                serviceIndex={i}
+                id={service.id}
+              />
+            ))}
+          </div>
+        </section>
       </>
     );
   },

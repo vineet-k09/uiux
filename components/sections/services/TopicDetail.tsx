@@ -187,7 +187,7 @@ const TopicDetail = ({ domain, accentColor }: TopicDetailProps) => {
                         {label}
                       </span>
                     </div>
-                    <p className="text-white leading-relaxed text-sm md:text-base pl-4">
+                    <p className="text-white leading-relaxed text-[13px] pl-4">
                       {text}
                     </p>
                   </div>
