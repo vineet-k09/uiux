@@ -1,6 +1,6 @@
-"use client"
-import { motion, AnimatePresence } from "framer-motion"
-import { Domain } from "@/types/services"
+"use client";
+import { motion, AnimatePresence } from "framer-motion";
+import { Domain } from "@/types/services";
 import {
   Headphones,
   BarChart3,
@@ -17,7 +17,7 @@ import {
   Sparkles,
   ChevronDown,
   type LucideIcon,
-} from "lucide-react"
+} from "lucide-react";
 
 export const DOMAIN_COLORS: Record<string, string> = {
   "customer-care": "#E60000",
@@ -25,7 +25,7 @@ export const DOMAIN_COLORS: Record<string, string> = {
   "cloud-services": "#E60000",
   "cyber-security": "#9C2AA0",
   "ai-automation": "#E60000",
-}
+};
 
 const DOMAIN_ICONS: Record<string, LucideIcon> = {
   "customer-care": Headphones,
@@ -33,7 +33,7 @@ const DOMAIN_ICONS: Record<string, LucideIcon> = {
   "cloud-services": Cloud,
   "cyber-security": Shield,
   "ai-automation": Bot,
-}
+};
 
 const SERVICE_ICONS: Record<string, LucideIcon> = {
   "cc-automation": MessageSquare,
@@ -44,13 +44,13 @@ const SERVICE_ICONS: Record<string, LucideIcon> = {
   "sec-soc": Radar,
   "ai-rpa": FileText,
   "ai-genai": Sparkles,
-}
+};
 
 interface ChapterNavProps {
-  domains: Domain[]
-  activeDomainId: string
-  onDomainClick: (id: string) => void
-  onServiceClick?: (domainId: string, serviceId: string) => void
+  domains: Domain[];
+  activeDomainId: string;
+  onDomainClick: (id: string) => void;
+  onServiceClick?: (domainId: string, serviceId: string) => void;
 }
 
 export default function ChapterNav({
@@ -72,9 +72,9 @@ export default function ChapterNav({
       </div>
 
       {domains.map((domain) => {
-        const color = DOMAIN_COLORS[domain.id] ?? "#6366f1"
-        const isActive = activeDomainId === domain.id
-        const Icon = DOMAIN_ICONS[domain.id] ?? Bot
+        const color = DOMAIN_COLORS[domain.id] ?? "#6366f1";
+        const isActive = activeDomainId === domain.id;
+        const Icon = DOMAIN_ICONS[domain.id] ?? Bot;
 
         return (
           <div key={domain.id} className="w-full">
@@ -143,14 +143,14 @@ export default function ChapterNav({
                 >
                   <div className="pl-8 pr-2 py-2 space-y-1">
                     {domain.services.map((service) => {
-                      const SIcon = SERVICE_ICONS[service.id] ?? Sparkles
+                      const SIcon = SERVICE_ICONS[service.id] ?? Sparkles;
 
                       return (
                         <button
                           key={service.id}
                           onClick={(e) => {
-                            e.stopPropagation()
-                            onServiceClick?.(domain.id, service.id)
+                            e.stopPropagation();
+                            onServiceClick?.(domain.id, service.id);
                           }}
                           className="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-[14px] hover:text-white hover:bg-white/5 transition-all duration-200 text-left group"
                           style={{
@@ -163,19 +163,17 @@ export default function ChapterNav({
                             className="shrink-0 group-hover:scale-110 transition-transform"
                           />
 
-                          <span className="truncate">
-                            {service.name}
-                          </span>
+                          <span className="truncate">{service.name}</span>
                         </button>
-                      )
+                      );
                     })}
                   </div>
                 </motion.div>
               )}
             </AnimatePresence>
           </div>
-        )
+        );
       })}
     </aside>
-  )
+  );
 }

@@ -1,16 +1,15 @@
+"use client";
+import { motion } from "framer-motion";
+import { Domain } from "@/types/services";
+import TopicDetail from "./TopicDetail";
 
-"use client"
-import { motion } from "framer-motion"
-import { Domain } from "@/types/services"
-import TopicDetail from "./TopicDetail"
-
-type Service = Domain["services"][number]
+type Service = Domain["services"][number];
 
 interface ServiceBlockProps {
-  service: Service
-  accentColor: string
-  serviceIndex: number
-  id?: string
+  service: Service;
+  accentColor: string;
+  serviceIndex: number;
+  id?: string;
 }
 
 export default function ServiceBlock({
@@ -20,8 +19,6 @@ export default function ServiceBlock({
   id,
 }: ServiceBlockProps) {
   return (
-    
-    
     <motion.div
       id={id}
       initial={{ opacity: 0, y: 28 }}
@@ -30,46 +27,28 @@ export default function ServiceBlock({
       transition={{ duration: 0.5, delay: serviceIndex * 0.07 }}
     >
       {/* Service header */}
-      <div className="flex items-stretch gap-4 mb-5">
+      <div className="flex items-stretch gap-4 mb-6">
         <div
           className="w-0.75 rounded-full shrink-0"
           style={{ backgroundColor: accentColor + "70" }}
         />
         <div>
-          <h3 className="text-3xl
-          mb-1">
+          <h3 className="text-3xl font-bold mb-1">
             {/* text-h1  */}
             {service.name}
           </h3>
-          <p className="text-h2 leading-relaxed max-w-2xl">
+          <p className="text-sm md:text-base leading-relaxed">
             {service.description}
           </p>
         </div>
       </div>
 
-      {/* Use case cards VAR1 */}
-      {/* <div className="flex flex-col gap-5">
+      {/* Use case cards VAR2 */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
         {service.use_cases.map((useCase, i) => (
-          <TopicDetail
-            key={i}
-            domain={useCase}
-            accentColor={accentColor}
-          />
+          <TopicDetail key={i} domain={useCase} accentColor={accentColor} />
         ))}
-      </div> */}
-
-   {/* Use case cards VAR2 */}
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
-  {service.use_cases.map((useCase, i) => (
-    <TopicDetail
-      key={i}
-      domain={useCase}
-      accentColor={accentColor}
-    />
-  ))}
-</div>
-      
-      
+      </div>
     </motion.div>
-  )
+  );
 }
