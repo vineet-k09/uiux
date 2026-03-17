@@ -1,6 +1,6 @@
 "use client"
 
-import SplitFadeText from "@/components/motion/SplitText"
+// import SplitFadeText from "@/components/motion/SplitText"
 import { motion, Variants } from "framer-motion"
 import { Brain, Workflow, TrendingUp } from "lucide-react"
 
@@ -71,7 +71,7 @@ export default function MissionSection() {
           </span>
         </motion.h2>
 
-        <SplitFadeText text="This is demo" className="text-center justify-center items-center mb-10 text-xl"/>
+        {/* <SplitFadeText text="This is demo" className="text-center justify-center items-center mb-10 text-xl"/> */}
 
         {/* Mission Cards */}
         <motion.div

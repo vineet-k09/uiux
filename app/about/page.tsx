@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import { motion, spring, Variants } from "framer-motion"
-import { Rocket, Cpu, Database, Sparkles } from "lucide-react"
-import SplitFadeText from "@/components/motion/SplitText"
-import MissionSection from "@/components/sections/about/mission"
-import HowWeWork from "@/components/sections/about/howwework"
+import Image from "next/image";
+import { motion, spring, Variants } from "framer-motion";
+import { Rocket, Cpu, Database, Sparkles } from "lucide-react";
+import SplitFadeText from "@/components/motion/SplitText";
+import MissionSection from "@/components/sections/about/mission";
+import HowWeWork from "@/components/sections/about/howwework";
 
 const capabilities = [
   "AI Solutions",
@@ -13,55 +13,51 @@ const capabilities = [
   "Data Engineering",
   "Cloud Pipelines",
   "Workflow Optimization",
-]
+];
 
 const stats = [
   { icon: Rocket, value: "50+", label: "Projects" },
   { icon: Cpu, value: "10+", label: "Technologies" },
   { icon: Database, value: "5+", label: "Domains" },
   { icon: Sparkles, value: "AI", label: "Driven" },
-]
+];
 
 export default function AboutSection() {
-
   const container: Variants = {
-  hidden: {},
-  show: {
-    transition: {
-      staggerChildren: 0.15,
-      
-    }
-  }
-}
+    hidden: {},
+    show: {
+      transition: {
+        staggerChildren: 0.15,
+      },
+    },
+  };
 
-const card: Variants = {
-  hidden: {
-    opacity: 0,
-    scale: 0.8,
-    y: 40
-  },
-  show: {
-    opacity: 1,
-    scale: 1,
-    y: 0,
-    transition: {
-      duration: 0.4,
-      ease: "easeOut",
-      type: spring,
-      stiffness: 200,
-      damping: 18
-    }
-  }
-}
+  const card: Variants = {
+    hidden: {
+      opacity: 0,
+      scale: 0.8,
+      y: 40,
+    },
+    show: {
+      opacity: 1,
+      scale: 1,
+      y: 0,
+      transition: {
+        duration: 0.4,
+        ease: "easeOut",
+        type: spring,
+        stiffness: 200,
+        damping: 18,
+      },
+    },
+  };
 
   return (
     <section className="relative py-32 overflow-hidden">
-
       {/* background glow */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,#9333ea20,transparent_70%)]" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-
         {/* Title */}
         <motion.h2
           initial={{ opacity: 0, y: 40 }}
@@ -78,7 +74,6 @@ const card: Variants = {
 
         {/* Main Grid */}
         <div className="grid md:grid-cols-2 gap-16 items-center">
-
           {/* Image */}
           <motion.div
             whileHover={{ scale: 1.03 }}
@@ -95,23 +90,23 @@ const card: Variants = {
 
           {/* Content */}
           <div>
-          <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0}}
-          viewport={{ once: true }}
-          className="text-6xl md:text-7xl text-justify mb-20 tracking-tight"
-        >
-            <p className="text-lg text-gray-300 leading-relaxed max-w-xl">
-              We design and build intelligent systems that leverage{" "}
-              <span className="text-transparent bg-clip-text bg-linear-to-r from-pink-500 to-purple-500">
-                artificial intelligence
-              </span>{" "}
-              and automation to solve complex business problems. Our solutions
-              streamline workflows, unlock insights, and empower organizations
-              to operate smarter.
-            </p>
-         </motion.div> 
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0 }}
+              viewport={{ once: true }}
+              className="text-6xl md:text-7xl text-justify mb-20 tracking-tight"
+            >
+              <p className="text-lg text-gray-300 leading-relaxed max-w-xl">
+                We design and build intelligent systems that leverage{" "}
+                <span className="text-transparent bg-clip-text bg-linear-to-r from-pink-500 to-purple-500">
+                  artificial intelligence
+                </span>{" "}
+                and automation to solve complex business problems. Our solutions
+                streamline workflows, unlock insights, and empower organizations
+                to operate smarter.
+              </p>
+            </motion.div>
             {/* capability pills */}
             <div className="flex flex-wrap gap-3 mt-8">
               {capabilities.map((item, i) => (
@@ -127,16 +122,15 @@ const card: Variants = {
 
             {/* divider */}
             <div className="h-px w-32 bg-linear-to-r from-pink-500 to-purple-500 my-10" />
-              <motion.div
-                variants={container}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: true }}
-                className="grid grid-cols-2 gap-6"
-              >
-              
-                {stats.map((s, i) => {
-                const Icon = s.icon
+            <motion.div
+              variants={container}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+              className="grid grid-cols-2 gap-6"
+            >
+              {stats.map((s, i) => {
+                const Icon = s.icon;
 
                 return (
                   <motion.div
@@ -151,22 +145,16 @@ const card: Variants = {
                       {s.value}
                     </p>
 
-                    <p className="text-sm text-gray-400">
-                      {s.label}
-                    </p>
+                    <p className="text-sm text-gray-400">{s.label}</p>
                   </motion.div>
-                )
+                );
               })}
-
             </motion.div>
           </div>
         </div>
-            
       </div>
       <MissionSection />
       <HowWeWork />
-
     </section>
-    
-  )
+  );
 }

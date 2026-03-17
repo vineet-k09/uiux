@@ -138,7 +138,30 @@
           "problem": "Sensitive customer data is vulnerable to unauthorized access.",
           "solution": "Implement encryption, role-based access controls, and secure key management.",
           "impact": "Improved compliance with data protection regulations and enhanced user trust."
-        }
+        },
+        {
+      "title": "Automated Call Center Handling",
+      "problem": "Customer support teams struggle with high call volumes during peak hours.",
+      "solution": "Deploy voice bots capable of answering common questions and routing complex issues to agents.",
+      "impact": "Reduced call waiting times and improved service efficiency."
+    },
+    {
+      "title": "Appointment Scheduling via Voice",
+      "problem": "Customers often need assistance booking appointments through support lines.",
+      "solution": "Voice assistants integrated with scheduling systems allow users to book or modify appointments.",
+      "impact": "Improved booking convenience and reduced manual scheduling workload."
+    },{
+      "title": "Automated Call Center Handling",
+      "problem": "Customer support teams struggle with high call volumes during peak hours.",
+      "solution": "Deploy voice bots capable of answering common questions and routing complex issues to agents.",
+      "impact": "Reduced call waiting times and improved service efficiency."
+    },
+    {
+      "title": "Appointment Scheduling via Voice",
+      "problem": "Customers often need assistance booking appointments through support lines.",
+      "solution": "Voice assistants integrated with scheduling systems allow users to book or modify appointments.",
+      "impact": "Improved booking convenience and reduced manual scheduling workload."
+    }
       ]
     }
   ]

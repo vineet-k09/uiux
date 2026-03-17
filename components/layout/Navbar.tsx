@@ -37,8 +37,6 @@ const services = [
 ];
 
 export default function Navbar() {
-  const [isTime, setIsTime] = useState(true);
-  const [time, setTime] = useState("");
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [dropdownPos, setDropdownPos] = useState({ top: 0, left: 0 });
@@ -59,27 +57,6 @@ export default function Navbar() {
 
   useEffect(() => {
     setMounted(true);
-  }, []);
-
-  useEffect(() => {
-    const update = () => {
-      const now = new Date();
-      const options: Intl.DateTimeFormatOptions = {
-        hour: "2-digit",
-        minute: "2-digit",
-        hour12: false,
-        timeZone: "Asia/Kolkata",
-      };
-      setTime(now.toLocaleTimeString("en-IN", options));
-    };
-    update();
-    const interval = setInterval(update, 60000);
-    return () => clearInterval(interval);
-  }, []);
-
-  useEffect(() => {
-    const toggle = setInterval(() => setIsTime((prev) => !prev), 5000);
-    return () => clearInterval(toggle);
   }, []);
 
   useEffect(() => {
@@ -118,16 +95,15 @@ export default function Navbar() {
         onMouseLeave={() => setServicesOpen(false)}
         style={{
           position: "fixed",
-          top: dropdownPos.top - 40,
+          top: dropdownPos.top - 55,
           left: dropdownPos.left,
           transform: "translateX(-50%)",
-          width: 200,
           zIndex: 9999,
           paddingTop: 40,
         }}
       >
         {/* Bulge */}
-        <div
+        {/* <div
           style={{
             position: "absolute",
             top: 20,
@@ -142,7 +118,7 @@ export default function Navbar() {
             border: "1px solid rgba(255,255,255,0.1)",
             borderBottom: "none",
           }}
-        />
+        /> */}
 
         {/* Panel */}
         <div
@@ -150,15 +126,13 @@ export default function Navbar() {
             backdropFilter: "blur(12px)",
             WebkitBackdropFilter: "blur(12px)",
             background: "rgba(0,0,0,0.5)",
-            border: "1px solid rgba(255,255,255,0.1)",
-            borderTop: "none",
+            border: "1px solid rgba(255,255,255,0.6)",
+            // borderTop: "none",
             borderRadius: 16,
             padding: 24,
           }}
         >
-          <div
-           
-          >
+          <div>
             {services.map((service) => (
               <Link
                 key={service.id}
@@ -169,7 +143,6 @@ export default function Navbar() {
                 <span className="text-l font-semibold text-white group-hover:text-white transition-colors tracking-wide">
                   {service.label}
                 </span>
-              
               </Link>
             ))}
           </div>
@@ -177,6 +150,11 @@ export default function Navbar() {
       </div>,
       document.body,
     );
+
+  const isActive = (path: string) => {
+    if (path === "/") return pathName === "/";
+    return pathName.startsWith(path);
+  };
 
   return (
     <>
@@ -191,10 +169,15 @@ export default function Navbar() {
       >
         <nav ref={menuRef} className="md:pl-10 pl-5 py-2 flex items-center">
           {/* LEFT */}
-            <Link href="/" className="flex md:flex-row flex-col md:items-center md:gap-2">
-              <VIVA />
-              <p className="text-white/80 whitespace-nowrap">{globals.subtitle}</p>
-            </Link>
+          <Link
+            href="/"
+            className="flex md:flex-row flex-col md:items-center md:gap-2"
+          >
+            <VIVA />
+            <p className="text-white/80 whitespace-nowrap">
+              {globals.subtitle}
+            </p>
+          </Link>
 
           {/* PUSH EVERYTHING RIGHT */}
           <div className="flex-1" />
@@ -204,7 +187,12 @@ export default function Navbar() {
             <li>
               <Link
                 href="/about"
-                className="px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 rounded-md transition-all duration-300"
+                className={`px-4 py-2 rounded-md transition-all duration-300
+                  ${
+                    isActive("/about")
+                      ? "text-white bg-white/20 shadow-md"
+                      : "text-white/90 hover:text-white hover:bg-white/10"
+                  }`}
               >
                 ABOUT
               </Link>
@@ -217,7 +205,12 @@ export default function Navbar() {
             >
               <Link
                 href="/services"
-                className="px-4 py-2 text-white/90 hover:text-white hover:bg-white/15 rounded-md transition-all duration-300"
+                className={`px-4 py-2 rounded-md transition-all duration-300
+                  ${
+                    isActive("/services")
+                      ? "text-white bg-white/20 shadow-md"
+                      : "text-white/90 hover:text-white hover:bg-white/15"
+                  }`}
               >
                 SERVICES
               </Link>
@@ -226,7 +219,12 @@ export default function Navbar() {
             <li>
               <Link
                 href="/contact-us"
-                className="px-4 py-2 text-white/90 hover:text-white hover:bg-white/15 rounded-md transition-all duration-300"
+                className={`px-4 py-2 rounded-md transition-all duration-300
+                  ${
+                    isActive("/contact-us")
+                      ? "text-white bg-white/20 shadow-md"
+                      : "text-white/90 hover:text-white hover:bg-white/15"
+                  }`}
               >
                 CONTACT US
               </Link>
