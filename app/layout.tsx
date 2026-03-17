@@ -30,8 +30,6 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased
           text-white bg-brand`}
-
-        // bg-linear-to-br from-zinc-950 via-black to-purple-800
       >
         <Navbar />
         {children}
