@@ -290,7 +290,7 @@ const TopicDetail = ({ domain, accentColor }: TopicDetailProps) => {
              */}
 
             {/* Content */}
-            <div className="relative z-10 flex flex-col gap-5 px-6 pb-8 -mt-3">
+            <div className="relative z-10 flex flex-col gap-5 px-6 pb-8 mt-2">
 
               {/* Title */}
               <h4 className="font-bold text-white text-1xl md:text-2xl" >
