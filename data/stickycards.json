@@ -4,12 +4,24 @@
       "type": "who",
       "title": "Who Are We?",
       "description": "We are a global AI and data company helping enterprises scale.",
-      "tags": ["AI", "Data", "Automation"],
+      "mission": "Our mission is to make enterprise-grade AI accessible, reliable, and impactful — turning raw data into decisions that drive real growth at every level of your organisation.",
+      "tags": ["AI", "Data", "Automation", "Machine Learning", "Analytics", "Cloud"],
       "image": "/WhoAreWe.jpg",
       "stats": [
         { "value": 20, "suffix": "+", "label": "Locations" },
         { "value": 600, "suffix": "+", "label": "Markets" },
         { "value": 5, "suffix": "M+", "label": "Users" }
+      ],
+      "milestones": [
+        { "year": "2018", "event": "Founded in Dubai" },
+        { "year": "2020", "event": "Reached 1M users" },
+        { "year": "2022", "event": "Expanded to 40 markets" },
+        { "year": "2024", "event": "5M+ active users" }
+      ],
+      "values": [
+        { "icon": "🔬", "title": "Research-First", "desc": "Every solution is grounded in rigorous data science and peer-reviewed methodology." },
+        { "icon": "🤝", "title": "Client-Centric", "desc": "We embed with your team — not as vendors, but as long-term growth partners." },
+        { "icon": "⚡", "title": "Move Fast", "desc": "From discovery to deployment in weeks, not quarters." }
       ]
     },
     {
@@ -18,18 +30,18 @@
       "description": "We combine cutting-edge AI with enterprise-grade infrastructure to deliver results.",
       "image": "/WhyUs.jpg",
       "cards": [
-        {
-          "title": "AI Expertise",
-          "description": "Deep expertise in machine learning and generative AI."
-        },
-        {
-          "title": "Scalable Systems",
-          "description": "Infrastructure designed for enterprise scale."
-        },
-        {
-          "title": "Fast Delivery",
-          "description": "Rapid product deployment cycles."
-        }
+        { "title": "AI Expertise", "description": "Deep expertise in machine learning and generative AI across vision, language, and structured data." },
+        { "title": "Scalable Systems", "description": "Infrastructure designed for enterprise scale — from 100 to 100 million events per day." },
+        { "title": "Fast Delivery", "description": "Rapid product deployment cycles with CI/CD pipelines built for zero-downtime releases." },
+        { "title": "Data Security", "description": "SOC2 compliant with end-to-end encryption and zero data leakage guarantees." },
+        { "title": "Dedicated Support", "description": "A named account team available 24/7 — not a ticket queue, a real partnership." },
+        { "title": "Proven ROI", "description": "Clients report an average 3.2× return on AI investment within the first 12 months." }
+      ],
+      "process": [
+        { "step": "01", "label": "Discover", "desc": "Audit your data landscape and map opportunity areas." },
+        { "step": "02", "label": "Design", "desc": "Architect the right solution with your engineering team." },
+        { "step": "03", "label": "Deploy", "desc": "Ship to production fast with full monitoring built-in." },
+        { "step": "04", "label": "Optimise", "desc": "Continuous improvement loop driven by real usage data." }
       ]
     },
     {
@@ -43,6 +55,26 @@
         "/microstrategy.svg",
         "/meta.svg",
         "/relianceindustrieslimited.svg"
+      ],
+      "industries": [
+        { "name": "FinTech", "desc": "Fraud detection, risk scoring, algorithmic trading" },
+        { "name": "Healthcare", "desc": "Diagnostics AI, patient flow, drug discovery" },
+        { "name": "Retail", "desc": "Demand forecasting, personalisation, inventory AI" },
+        { "name": "Logistics", "desc": "Route optimisation, warehouse automation" },
+        { "name": "Media", "desc": "Content recommendation, audience intelligence" },
+        { "name": "Government", "desc": "Civic analytics, policy modelling, public safety" }
+      ],
+      "testimonials": [
+        {
+          "quote": "VOIS cut our data processing time by 70% in under three months. It fundamentally changed how our teams make decisions.",
+          "author": "Sarah Chen",
+          "role": "CTO, Meridian Financial"
+        },
+        {
+          "quote": "The team embedded with us seamlessly. Within weeks they had shipped models our internal team had been trying to build for over a year.",
+          "author": "James Okafor",
+          "role": "VP Engineering, Lumi Health"
+        }
       ]
     }
   ]
