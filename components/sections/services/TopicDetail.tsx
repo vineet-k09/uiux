@@ -325,12 +325,12 @@ const TopicDetail = ({ domain, accentColor }: TopicDetailProps) => {
                       {text}
                     </p>
 
-                    {i < sections.length - 1 && (
+                    {/* {i < sections.length - 1 && (
                       <div
                         className="ml-1 mt-1 w-px h-4 self-start"
                         style={{ background: `linear-gradient(to bottom, ${accentColor}60, transparent)` }}
                       />
-                    )}
+                    )} */}
 
                   </div>
                 ))}
