@@ -17,7 +17,10 @@ export default function FancyButton({title = "Send Message"}: {title?: string}) 
   return (
     <button
       onMouseMove={handleMove}
-      className="relative overflow-hidden px-8 py-4 font-medium text-white rounded-lg
+      className="relative overflow-hidden
+      px-5 py-3 sm:px-6 sm:py-3 md:px-8 md:py-4
+      text-sm sm:text-base
+      font-medium text-white rounded-lg
       bg-linear-to-r from-pink-500 to-purple-500
       shadow-lg shadow-purple-500/30 group"
     >
