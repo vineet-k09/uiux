@@ -98,7 +98,9 @@ rgba(0,0,0,0.25) 100%
                     <div className="flex flex-col  gap-5">
 
                         <div>
-                            <h2 className="text-5xl lg:text-superh1 xl:text-6xl font-bold leading-[1.05] tracking-tight mb-3">
+                            <h2 className="text-4xl
+                            lg:text-superh1 xl:text-6xl font-bold leading-[1.05] tracking-tight mb-3">
+                                {/* text-5xl  */}
                                 {domain.name}
                             </h2>
 

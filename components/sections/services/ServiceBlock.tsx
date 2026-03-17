@@ -36,7 +36,9 @@ export default function ServiceBlock({
           style={{ backgroundColor: accentColor + "70" }}
         />
         <div>
-          <h3 className="text-h1 mb-1">
+          <h3 className="text-3xl
+          mb-1">
+            {/* text-h1  */}
             {service.name}
           </h3>
           <p className="text-h2 leading-relaxed max-w-2xl">

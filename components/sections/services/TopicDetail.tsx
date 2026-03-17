@@ -255,15 +255,15 @@ const TopicDetail = ({ domain, accentColor }: TopicDetailProps) => {
             />
 
             {/* Banner with tech pattern */}
-            <div className="relative w-full h-32 overflow-hidden shrink-0">
+            {/* <div className="relative w-full h-32 overflow-hidden shrink-0">
 
-              {/* Dark base */}
+              {/* Dark base
               <div
                 className="absolute inset-0"
                 style={{ background: `linear-gradient(135deg, #0a0a0f 0%, #111118 100%)` }}
               />
 
-              {/* Accent glow blob */}
+              /* Accent glow blob
               <div
                 className="absolute -top-6 -left-6 w-48 h-48 rounded-full blur-3xl opacity-30"
                 style={{ background: accentColor }}
@@ -273,12 +273,12 @@ const TopicDetail = ({ domain, accentColor }: TopicDetailProps) => {
                 style={{ background: accentColor }}
               />
 
-              {/* SVG pattern */}
+              /* SVG pattern
               <div className="absolute inset-0">
                 <TechPattern accentColor={accentColor} seed={patternSeed} />
               </div>
 
-              {/* Fade into card bg at bottom */}
+              {/* Fade into card bg at bottom 
               <div
                 className="absolute inset-0"
                 style={{
@@ -287,6 +287,7 @@ const TopicDetail = ({ domain, accentColor }: TopicDetailProps) => {
               />
 
             </div>
+             */}
 
             {/* Content */}
             <div className="relative z-10 flex flex-col gap-5 px-6 pb-8 -mt-3">
@@ -308,10 +309,10 @@ const TopicDetail = ({ domain, accentColor }: TopicDetailProps) => {
                   <div key={label} className="flex flex-col gap-2">
 
                     <div className="flex items-center gap-2">
-                      <div
+                      {/* <div
                         className="w-2 h-2 rounded-full shrink-0"
                         style={{ backgroundColor: accentColor }}
-                      />
+                      /> */}
                       <span
                         className="px-2.5 py-0.5 rounded-full font-semibold text-md uppercase tracking-wider"
                         style={{ backgroundColor: accentColor + "15", color: accentColor }}
