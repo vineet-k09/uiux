@@ -57,14 +57,11 @@ const DomainSection = forwardRef<HTMLElement, DomainSectionProps>(
         <section
           ref={ref}
           id={domain.id}
-          className="relative min-h-screen pt-16 
-        pb-28 px-10 lg:px-20 mb-30 last:mb-0"
-        >
+          className="pt-16 pb-28 px-10 lg:px-20 mt-4 mb-30 last:mb-0">
           {/* Domain background */}
-          <div
-            className="absolute h-full inset-0 
-          pointer-events-none bg-gray-900 mb-30"
-          />
+          {/* <div
+            className="pointer-events-none bg-gray-900 mb-30"
+          /> */}
 
           {/* ── Domain Hero ── */}
           <motion.div

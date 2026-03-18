@@ -42,7 +42,7 @@ export default function Services() {
   }, []);
 
   return (
-    <div className="text-white min-h-screen flex" suppressHydrationWarning>
+    <div className="flex flex-col gap-20" suppressHydrationWarning>
       <ChapterNav
         domains={domains}
         activeDomainId={activeDomainId}
