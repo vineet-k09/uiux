@@ -32,11 +32,8 @@
       "cards": [
         { "title": "AI Expertise", "description": "Deep expertise in machine learning and generative AI across vision, language, and structured data." },
         { "title": "Scalable Systems", "description": "Infrastructure designed for enterprise scale — from 100 to 100 million events per day." },
-        { "title": "Fast Delivery", "description": "Rapid product deployment cycles with CI/CD pipelines built for zero-downtime releases." },
-        { "title": "Data Security", "description": "SOC2 compliant with end-to-end encryption and zero data leakage guarantees." },
-        { "title": "Dedicated Support", "description": "A named account team available 24/7 — not a ticket queue, a real partnership." },
-        { "title": "Proven ROI", "description": "Clients report an average 3.2× return on AI investment within the first 12 months." }
-      ],
+        { "title": "Fast Delivery", "description": "Rapid product deployment cycles with CI/CD pipelines built for zero-downtime releases." }
+        ],
       "process": [
         { "step": "01", "label": "Discover", "desc": "Audit your data landscape and map opportunity areas." },
         { "step": "02", "label": "Design", "desc": "Architect the right solution with your engineering team." },
