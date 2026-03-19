@@ -56,7 +56,7 @@ const Footer = () => {
           className="relative text-viva-foreground font-bold leading-none tracking-tighter select-none"
           style={{ fontSize: "clamp(6rem, 25vw, 28rem)" }}
         >
-          vois
+          VOIS
         </h2>
       </motion.div>
 
