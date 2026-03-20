@@ -31,28 +31,31 @@ export default function Services() {
   const scrollToDomain = useCallback((id: string) => {
     setActiveDomainId(id);
     const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: "instant" });
-  }, []);
-  const scrollToService = useCallback((domainId: string, serviceId: string) => {
-    setActiveDomainId(domainId);
-    const el = document.getElementById(serviceId);
     if (el) {
-      const top = el.getBoundingClientRect().top + window.scrollY - 120;
-      window.scrollTo({ top, behavior: "instant" });
+      const top = el.getBoundingClientRect().top + window.scrollY - 150;
+      window.scrollTo({ top, behavior: "smooth" });
     }
   }, []);
+  // const scrollToService = useCallback((domainId: string, serviceId: string) => {
+    // setActiveDomainId(domainId);
+    // const el = document.getElementById(domainId);
+    // if (el) {
+    //   const top = el.getBoundingClientRect().top + window.scrollY - 2220;
+    //   window.scrollTo({ top, behavior: "instant" });
+    // }
+  // }, []);
 
   return (
     <div suppressHydrationWarning>
       <ParticleBackground />
       <div className="">
         {/* this div block is pushing down the DomainSection - otherwise it will come under the ChapterNav */}
-        <div className="z-30 w-full h-38 solid">
+        <div className="z-30 w-full h-40 solid ">
           <ChapterNav
             domains={domains}
             activeDomainId={activeDomainId}
             onDomainClick={scrollToDomain}
-            onServiceClick={scrollToService}
+            // onServiceClick={scrollToService}
             />
         </div>
         <main className="h-max px-10">

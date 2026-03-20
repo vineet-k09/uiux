@@ -42,7 +42,6 @@ export default function ServiceBlock({
           <TopicDetail key={i} domain={useCase} accentColor={accentColor} />
         ))}
       </div>
-      <hr className="w-[80%] mx-auto my-20" />
     </motion.div>
   );
 }

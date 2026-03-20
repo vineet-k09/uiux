@@ -2,25 +2,8 @@
 
 import { forwardRef } from "react";
 import { motion } from "framer-motion";
-import {
-  Headphones,
-  BarChart3,
-  Cloud,
-  Shield,
-  Bot,
-  type LucideIcon,
-} from "lucide-react";
 import { Domain } from "@/types/services";
 import ServiceBlock from "./ServiceBlock";
-import ParticleBackground from "@/components/ui/ParticleBackground";
-
-const DOMAIN_ICONS: Record<string, LucideIcon> = {
-  "customer-care": Headphones,
-  "data-analytics": BarChart3,
-  "cloud-services": Cloud,
-  "cyber-security": Shield,
-  "ai-automation": Bot,
-};
 
 export const DOMAIN_COLORS: Record<string, string> = {
   "customer-care": "#E60000",
@@ -43,8 +26,9 @@ const DomainSection = forwardRef<HTMLElement, DomainSectionProps>(
         <section
           ref={ref}
           id={domain.id}
-          className="pb-28 lg:px-20 mb-30 last:mb-0">
-          {/* ── Domain Hero ── */}
+          className="pb-5 pt-5 lg:px-12 mb-30 last:mb-0
+          bg-[#2A0134] rounded-4xl ">
+
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -67,6 +51,7 @@ const DomainSection = forwardRef<HTMLElement, DomainSectionProps>(
           <div className="relative h-px bg-white/30 my-5" />
           <div className="relative space-y-16">
             {domain.services.map((service, i) => (
+              <>
               <ServiceBlock
                 key={service.id}
                 service={service}
@@ -74,6 +59,8 @@ const DomainSection = forwardRef<HTMLElement, DomainSectionProps>(
                 serviceIndex={i}
                 id={service.id}
               />
+              <hr className="w-[80%] mx-auto my-20 last:hidden" />
+              </>
             ))}
           </div>
         </section>
