@@ -4,6 +4,7 @@ import domainsData from "@/data/services.json";
 import { Domain } from "@/types/services";
 import ChapterNav from "@/components/sections/services/ChapterNav";
 import DomainSection from "@/components/sections/services/DomainSection";
+import ParticleBackground from "@/components/ui/ParticleBackground";
 
 const domains = domainsData.domains as Domain[];
 
@@ -42,25 +43,31 @@ export default function Services() {
   }, []);
 
   return (
-    <div className="flex flex-col gap-20" suppressHydrationWarning>
-      <ChapterNav
-        domains={domains}
-        activeDomainId={activeDomainId}
-        onDomainClick={scrollToDomain}
-        onServiceClick={scrollToService}
-      />
-      <main className="">
-        {domains.map((domain, i) => (
-          <DomainSection
+    <div suppressHydrationWarning>
+      <ParticleBackground />
+      <div className="">
+        {/* this div block is pushing down the DomainSection - otherwise it will come under the ChapterNav */}
+        <div className="z-30 w-full h-38 solid">
+          <ChapterNav
+            domains={domains}
+            activeDomainId={activeDomainId}
+            onDomainClick={scrollToDomain}
+            onServiceClick={scrollToService}
+            />
+        </div>
+        <main className="h-max px-10">
+          {domains.map((domain, i) => (
+            <DomainSection
             key={domain.id}
             domain={domain}
             index={i}
             ref={(el: HTMLElement | null) => {
-              sectionRefs.current[i] = el;
-            }}
-          />
-        ))}
-      </main>
+                sectionRefs.current[i] = el;
+              }}
+              />
+            ))}
+        </main>
+      </div>
     </div>
   );
 }

@@ -28,7 +28,7 @@ export default function ServiceBlock({
     >
       {/* Use case cards VAR2 */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 items-stretch">
-        <div className="flex flex-row items-center  mb-6">
+        <div className="items-center flex">
           <div>
             <h3 className="text-3xl font-bold mb-1">
               {service.name}

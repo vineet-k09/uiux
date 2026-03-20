@@ -36,43 +36,22 @@ interface DomainSectionProps {
 }
 
 const DomainSection = forwardRef<HTMLElement, DomainSectionProps>(
-  ({ domain, index }, ref) => {
-    const Icon = DOMAIN_ICONS[domain.id] ?? Bot;
+  ({ domain }, ref) => {
     const color = DOMAIN_COLORS[domain.id] ?? "#6366f1";
-    const OPPOSITE_COLORS: Record<string, string> = {
-      "#E60000": "#9C2AA0",
-      "#9C2AA0": "#E60000",
-    };
-
-    const oppositeColor = OPPOSITE_COLORS[color] ?? "#9C2AA0";
-
-    const totalUseCases = domain.services.reduce(
-      (acc, s) => acc + s.use_cases.length,
-      0,
-    );
 
     return (
-      <>
-        <ParticleBackground />
         <section
           ref={ref}
           id={domain.id}
-          className="pt-16 pb-28 px-10 lg:px-20 mt-4 mb-30 last:mb-0">
-          {/* Domain background */}
-          {/* <div
-            className="pointer-events-none bg-gray-900 mb-30"
-          /> */}
-
+          className="pb-28 lg:px-20 mb-30 last:mb-0">
           {/* ── Domain Hero ── */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.65, ease: "easeOut" }}
-            className="relative z-10"
           >
-            <div className="flex flex-col gap-5">
-              <div>
+            <div>
                 <h2
                   className="text-3xl xl:text-6xl 
               font-bold leading-[1.05] tracking-tight mb-3"
@@ -82,14 +61,11 @@ const DomainSection = forwardRef<HTMLElement, DomainSectionProps>(
                 <p className="text-[13px] leading-relaxed ">
                   {domain.description}
                 </p>
-              </div>
             </div>
           </motion.div>
 
-          {/* Divider */}
-          <div className="relative z-10 h-px bg-white/30 my-5" />
-          {/* ── Services ── */}
-          <div className="relative z-10 space-y-16">
+          <div className="relative h-px bg-white/30 my-5" />
+          <div className="relative space-y-16">
             {domain.services.map((service, i) => (
               <ServiceBlock
                 key={service.id}
@@ -101,7 +77,6 @@ const DomainSection = forwardRef<HTMLElement, DomainSectionProps>(
             ))}
           </div>
         </section>
-      </>
     );
   },
 );
