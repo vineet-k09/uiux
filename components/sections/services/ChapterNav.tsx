@@ -62,7 +62,7 @@ export default function ChapterNav({
       className="top-14 fixed w-screen
       border-r border-neutral-800/60
       backdrop-blur-sm z-30
-      py-4 flex flex-col 
+      py-4 px-10 flex flex-col 
       items-center"
     >
       <div className="flex gap-7">
@@ -74,12 +74,12 @@ export default function ChapterNav({
           <div key={domain.id} className="">
             <motion.button
               onClick={() => onDomainClick(domain.id)}
-              className="z-30 group max-w-50"
+              className="z-30 group md:max-w-50 max-w-20"
               whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.97 }}
               >
               <motion.div
-                className="px-4 py-3 rounded-xl font-medium border 
+                className="md:px-4 py-3 rounded-xl font-medium border 
                 items-center
                 gap-3 transition-all duration-300 
                 group-hover:border-white/20 group-hover:text-white"
@@ -94,12 +94,13 @@ export default function ChapterNav({
                 >
                 <Icon
                   size={18}
+                  className="hidden md:block"
                   style={{
                     color: isActive ? color : "rgba(255,255,255,0.4)",
                   }}
                   />
 
-                <span className="truncate flex-1 text-[13px] font-semibold">
+                <span className="text-[13px] font-semibold">
                   {domain.name}
                 </span>
               </motion.div>

@@ -26,8 +26,9 @@ const DomainSection = forwardRef<HTMLElement, DomainSectionProps>(
         <section
           ref={ref}
           id={domain.id}
-          className="pb-5 pt-5 lg:px-12 mb-30 last:mb-0
-          bg-[#2A0134] rounded-4xl ">
+          className="pb-5 pt-5 px-12 mb-30 last:mb-0
+          bg-black 
+          rounded-4xl ">
 
           <motion.div
             initial={{ opacity: 0, y: 40 }}
