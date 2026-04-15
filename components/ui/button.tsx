@@ -20,8 +20,7 @@ export default function FancyMotionButton({title="Send Message"}: {title?:string
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.97 }}
       onMouseMove={handleMove}
-      className="relative overflow-hidden px-8 py-4 font-medium text-white rounded-lg
-      bg-linear-to-r from-pink-500 to-purple-500
+      className="relative overflow-hidden px-8 py-4 font-medium text-white rounded-lg bg-linear-to-r from-pink-500 to-purple-500
       shadow-lg shadow-purple-500/30 group"
     >
       {/* expanding hover circle */}

@@ -31,7 +31,7 @@ export default function HeroContent() {
         {/* Pill */}
         <motion.div variants={item}>
           <span className="inline-block px-5 py-2 text-sm font-medium tracking-wide text-white/80 rounded-full bg-white/10 backdrop-blur-md border border-white/10">
-            AI & DATA SERVICE TOWER
+            AI & Data Service Tower
           </span>
         </motion.div>
 
