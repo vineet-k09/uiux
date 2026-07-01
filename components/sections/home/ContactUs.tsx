@@ -1,6 +1,7 @@
 import BlockReveal from "@/components/motion/BlockReveal"
 import SplitFadeText from "@/components/motion/SplitText"
 import FancyButton from "@/components/ui/button2"
+import globals from "@/data/globals.json";
 
 export default function ContactUs() {
     return (
@@ -8,18 +9,18 @@ export default function ContactUs() {
 
             <BlockReveal>
                 <h2 className="text-5xl md:text-6xl font-bold text-center bg-linear-to-r from-[#ff5874] to-[#e767f9] bg-clip-text text-transparent">
-                    LETS SHAPE WHATS NEXT - TOGETHER
+                    {globals.contactUs.heading}
                 </h2>
             </BlockReveal>
 
             <div className="max-w-3xl text-xl text-center text-gray-300">
                 <SplitFadeText
-                    text="Whether you are exploring AI opportunities, modernizing data platforms, or scaling proven solutions, the AI & Data Service Tower is here to help."
+                    text={globals.contactUs.subtitle}
                 />
             </div>
 
             <div>
-                <FancyButton title="Reach Out" />
+                <FancyButton title={globals.contactUs.buttonText} />
             </div>
 
         </section>

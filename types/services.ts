@@ -15,6 +15,7 @@ export interface Service {
 export interface Domain {
   id: string
   name: string
+  color?: string
   description: string
   services: Service[]
 }

@@ -1,7 +1,7 @@
 {
   "title": "VOIS",
-  "subtitle":"AIDA TOWER",
-  "IntroText":"Building Smarter Solutions for a Digital-First World",
+  "subtitle": "AIDA TOWER",
+  "IntroText": "Building Smarter Solutions for a Digital-First World",
   "phrases": [
     "We help businesses ",
     "streamline operations, scale faster",
@@ -9,27 +9,36 @@
     "through innovative technology",
     "and thoughtful design."
   ],
+  "hero": {
+    "pill": "AI & Data Service Tower",
+    "titleLine1": "Powering Vodafone's",
+    "titleLine2": "Intelligent Future",
+    "subtitle": "A centralized global AI and Data capability bringing over 2000+ professionals to deliver scalable, secure and responsible AI solutions across Vodafone",
+    "buttonText": "Our Services"
+  },
+  "contactUs": {
+    "heading": "LETS SHAPE WHATS NEXT - TOGETHER",
+    "subtitle": "Whether you are exploring AI opportunities, modernizing data platforms, or scaling proven solutions, the AI & Data Service Tower is here to help.",
+    "buttonText": "Reach Out"
+  },
   "stickyCardsData": [
     {
       "index": "01",
       "title": "What is Big brain department",
       "image": "/sticky-cards/card_1.png",
-      "description":
-        "Every element is built to snap into place. We design modular systems where clarity, structure, and reuse come first—no clutter, no excess."
+      "description": "Every element is built to snap into place. We design modular systems where clarity, structure, and reuse come first—no clutter, no excess."
     },
     {
       "index": "02",
       "title": "Who we serve",
       "image": "/sticky-cards/card_2.png",
-      "description":
-        "From soft gradients to hard edges, our design language draws from real-world materials—elevating interfaces that feel both digital and tangible."
+      "description": "From soft gradients to hard edges, our design language draws from real-world materials—elevating interfaces that feel both digital and tangible."
     },
     {
       "index": "03",
       "title": "How we work",
       "image": "/sticky-cards/card_3.png",
-      "description":
-        "Details matter. We work with intention—aligning pixels, calibrating contrast, and obsessing over every edge until it just feels right."
+      "description": "Details matter. We work with intention—aligning pixels, calibrating contrast, and obsessing over every edge until it just feels right."
     }
   ]
 }

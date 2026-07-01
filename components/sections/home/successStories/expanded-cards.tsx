@@ -16,6 +16,7 @@ type Story = {
 };
 
 const stories: Story[] = storiesData.stories;
+const heading = storiesData.heading;
 
 export default function SuccessStories1() {
   const [active, setActive] = useState<number | null>(null);
@@ -23,7 +24,7 @@ export default function SuccessStories1() {
   return (
     <section className="w-full py-28 text-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-4xl font-bold mb-14">Success Stories</h2>
+        <h2 className="text-4xl font-bold mb-14">{heading}</h2>
 
         <motion.div layout className="flex gap-3">
           {stories.map((story: Story, i: number) => {

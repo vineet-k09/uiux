@@ -3,6 +3,7 @@
 import { motion, Variants } from "framer-motion";
 import Link from "next/link";
 import FancyMotionButton from "@/components/ui/button";
+import globals from "@/data/globals.json";
 
 export default function HeroContent() {
   const container: Variants = {
@@ -31,7 +32,7 @@ export default function HeroContent() {
         {/* Pill */}
         <motion.div variants={item}>
           <span className="inline-block px-5 py-2 text-sm font-medium tracking-wide text-white/80 rounded-full bg-white/10 backdrop-blur-md border border-white/10">
-            AI & Data Service Tower
+            {globals.hero.pill}
           </span>
         </motion.div>
 
@@ -40,8 +41,8 @@ export default function HeroContent() {
           variants={item}
           className="mt-8 text-6xl font-semibold leading-tight tracking-tight text-transparent bg-clip-text bg-linear-to-r from-pink-300 to-purple-300"
         >
-          Powering Vodafone's <br />
-          Intelligent Future
+          {globals.hero.titleLine1} <br />
+          {globals.hero.titleLine2}
         </motion.h1>
 
         {/* Subtitle */}
@@ -49,15 +50,13 @@ export default function HeroContent() {
           variants={item}
           className="mt-6 text-lg text-white/70 max-w-2xl mx-auto"
         >
-          A centralized global AI and Data capability bringing over 2000+
-          professionals to deliver scalable, secure and responsible AI solutions
-          across Vodafone
+          {globals.hero.subtitle}
         </motion.p>
 
         {/* Buttons */}
         <motion.div variants={item} className="flex justify-center gap-6 mt-10">
           <Link href={"/services"}>
-            <FancyMotionButton title="Our Services" />
+            <FancyMotionButton title={globals.hero.buttonText} />
           </Link>
         </motion.div>
       </motion.div>

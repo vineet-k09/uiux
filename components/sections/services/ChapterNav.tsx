@@ -19,14 +19,6 @@ import {
   type LucideIcon,
 } from "lucide-react";
 
-export const DOMAIN_COLORS: Record<string, string> = {
-  "customer-care": "#E60000",
-  "data-analytics": "#9C2AA0",
-  "cloud-services": "#E60000",
-  "cyber-security": "#9C2AA0",
-  "ai-automation": "#E60000",
-};
-
 const DOMAIN_ICONS: Record<string, LucideIcon> = {
   "customer-care": Headphones,
   "data-analytics": BarChart3,
@@ -74,7 +66,7 @@ export default function ChapterNav({
       </div>
 
       {domains.map((domain) => {
-        const color = DOMAIN_COLORS[domain.id] ?? "#6366f1";
+        const color = domain.color ?? "#6366f1";
         const isActive = activeDomainId === domain.id;
         const Icon = DOMAIN_ICONS[domain.id] ?? Bot;
 

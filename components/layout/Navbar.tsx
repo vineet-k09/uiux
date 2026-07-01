@@ -6,17 +6,12 @@ import { motion, useScroll, useTransform, useSpring, AnimatePresence } from "fra
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import globals from "../../data/globals.json";
+import servicesData from "../../data/services.json";
 import VIVA from "../ui/VIVA";
 import { usePathname } from "next/navigation";
 import { ChevronDown, X } from "lucide-react";
 
-const services = [
-  { id: "customer-care", label: "Customer Care" },
-  { id: "data-analytics", label: "Data Analytics" },
-  { id: "cloud-services", label: "Cloud Services" },
-  { id: "cyber-security", label: "Cyber Security" },
-  { id: "ai-automation", label: "AI Automation" },
-];
+const services = servicesData.domains.map(d => ({ id: d.id, label: d.name }));
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);

@@ -1,0 +1,38 @@
+{
+  "heading": "Value Proposition",
+  "subtitle": "Transforming data into intelligent systems that drive measurable outcomes and sustained business value.",
+  "cards": [
+    {
+      "title": "Key Differentiators",
+      "items": [
+        { "icon": "Brain", "color": "text-pink-400", "text": "Deep AI expertise across predictive and generative systems" },
+        { "icon": "ShieldCheck", "color": "text-purple-400", "text": "Enterprise-grade reliability and data governance" },
+        { "icon": "Zap", "color": "text-red-400", "text": "Rapid deployment of production-ready AI solutions" }
+      ]
+    },
+    {
+      "title": "Innovation & Insights",
+      "items": [
+        { "icon": "Sparkles", "color": "text-pink-400", "text": "AI-driven discovery of hidden patterns in complex datasets" },
+        { "icon": "Cpu", "color": "text-purple-400", "text": "Advanced ML models powering intelligent automation" },
+        { "icon": "LineChart", "color": "text-red-400", "text": "Strategic insights enabling data-informed decision making" }
+      ]
+    },
+    {
+      "title": "Functional Outcomes",
+      "items": [
+        { "icon": "Workflow", "color": "text-pink-400", "text": "Operational automation across data workflows" },
+        { "icon": "Database", "color": "text-purple-400", "text": "Unified data ecosystems for scalable analytics" },
+        { "icon": "Rocket", "color": "text-red-400", "text": "Accelerated digital transformation and innovation" }
+      ]
+    }
+  ],
+  "benefitEnablers": {
+    "title": "Benefit Enablers",
+    "items": [
+      { "icon": "Sparkles", "color": "text-pink-400", "label": "Intelligence" },
+      { "icon": "Cpu", "color": "text-purple-400", "label": "Automation" },
+      { "icon": "LineChart", "color": "text-red-400", "label": "Scalability" }
+    ]
+  }
+}

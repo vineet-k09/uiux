@@ -22,14 +22,6 @@ const DOMAIN_ICONS: Record<string, LucideIcon> = {
   "ai-automation": Bot,
 };
 
-export const DOMAIN_COLORS: Record<string, string> = {
-  "customer-care": "#E60000",
-  "data-analytics": "#9C2AA0",
-  "cloud-services": "#E60000",
-  "cyber-security": "#9C2AA0",
-  "ai-automation": "#E60000",
-};
-
 interface DomainSectionProps {
   domain: Domain;
   index: number;
@@ -38,7 +30,7 @@ interface DomainSectionProps {
 const DomainSection = forwardRef<HTMLElement, DomainSectionProps>(
   ({ domain, index }, ref) => {
     const Icon = DOMAIN_ICONS[domain.id] ?? Bot;
-    const color = DOMAIN_COLORS[domain.id] ?? "#6366f1";
+    const color = domain.color ?? "#6366f1";
     const OPPOSITE_COLORS: Record<string, string> = {
       "#E60000": "#9C2AA0",
       "#9C2AA0": "#E60000",
